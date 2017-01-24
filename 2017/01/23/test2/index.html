@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -74,52 +74,30 @@
 
 
 
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
-
+  <link rel="alternate" href="/atom.xml" title="fanlili's blog" type="application/atom+xml" />
 
 
 
 
+  <link rel="shortcut icon" type="image/x-icon" href="/images/fll.jpg?v=5.1.0" />
 
-<meta name="description" content="了解一下markdown
-小点
-不想跟你废话
-再怎么说
 
-耿静异步
-你想说什么呢
-来啊互相伤害啊
-岁月催人老">
+
+
+
+
+<meta name="description" content="总结一下有关markdown的使用技巧">
 <meta property="og:type" content="article">
 <meta property="og:title" content="fanlili's blog">
 <meta property="og:url" content="http://yoursite.com/2017/01/23/test2/index.html">
 <meta property="og:site_name" content="fanlili's blog">
-<meta property="og:description" content="了解一下markdown
-小点
-不想跟你废话
-再怎么说
-
-耿静异步
-你想说什么呢
-来啊互相伤害啊
-岁月催人老">
+<meta property="og:description" content="总结一下有关markdown的使用技巧">
 <meta property="og:image" content="http://mouapp.com/Mou_128.png">
 <meta property="og:image" content="http://yoursite.com/images/fll.jpg">
-<meta property="og:updated_time" content="2017-01-23T08:10:36.267Z">
+<meta property="og:updated_time" content="2017-01-23T15:15:06.744Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="fanlili's blog">
-<meta name="twitter:description" content="了解一下markdown
-小点
-不想跟你废话
-再怎么说
-
-耿静异步
-你想说什么呢
-来啊互相伤害啊
-岁月催人老">
+<meta name="twitter:description" content="总结一下有关markdown的使用技巧">
 <meta name="twitter:image" content="http://mouapp.com/Mou_128.png">
 
 
@@ -128,7 +106,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -215,6 +193,16 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-folder"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -352,7 +340,8 @@
       
 
       
-        <h3 id="了解一下markdown"><a href="#了解一下markdown" class="headerlink" title="了解一下markdown"></a>了解一下markdown</h3><ul>
+        <p>总结一下有关markdown的使用技巧<br><a id="more"></a></p>
+<h2 id="hshshshshs"><a href="#hshshshshs" class="headerlink" title="hshshshshs"></a>hshshshshs</h2><h3 id="了解一下markdown"><a href="#了解一下markdown" class="headerlink" title="了解一下markdown"></a>了解一下markdown</h3><ul>
 <li>小点</li>
 <li>不想跟你废话</li>
 <li>再怎么说</li>
@@ -365,6 +354,7 @@
 </li>
 </ol>
 <p><img src="http://mouapp.com/Mou_128.png" alt="Mou icon"><br><img src="/images/fll.jpg" alt="img"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">package jdbc;</div><div class="line"></div><div class="line">import java.sql.Connection;</div><div class="line">import java.sql.DriverManager;</div><div class="line">import java.sql.ResultSet;</div><div class="line">import java.sql.SQLException;</div><div class="line">import java.sql.Statement;</div><div class="line"></div><div class="line">public class JdbcDriver </div><div class="line">&#123;</div><div class="line"></div><div class="line"></div><div class="line">    static String driverClass=<span class="string">"oracle.jdbc.driver.OracleDriver"</span>;//定义保存数据库驱动的变量</div><div class="line">    String url=<span class="string">"jdbc:oracle:thin:@127.0.0.1:1521:orcl"</span>;</div><div class="line">    String username=<span class="string">"TEACHER1"</span>;</div><div class="line">    String password=<span class="string">"fanlili1994"</span>;</div><div class="line">    Connection con = null;//声明Connection对象的实例</div><div class="line">    Statement <span class="built_in">stat</span> = null;// 声明Statement对象的实例</div><div class="line">    Statement stm = null;</div><div class="line">    ResultSet rs = null;// 声明ResultSet对象的实例</div><div class="line"></div><div class="line">    public <span class="function"><span class="title">JdbcDriver</span></span>() </div><div class="line">    &#123;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -477,10 +467,10 @@
 
           
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories">
                 <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">分类</span>
-              
+              </a>
             </div>
           
 
@@ -496,8 +486,35 @@
         </nav>
 
         
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/fllqa" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/xiao-fan-xiao-xiao/activities" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-graduation-cap"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
           
         </div>
 
@@ -522,7 +539,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#了解一下markdown"><span class="nav-number">1.</span> <span class="nav-text">了解一下markdown</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#耿静异步"><span class="nav-number">2.</span> <span class="nav-text">耿静异步</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#hshshshshs"><span class="nav-number">1.</span> <span class="nav-text">hshshshshs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#了解一下markdown"><span class="nav-number">1.1.</span> <span class="nav-text">了解一下markdown</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#耿静异步"><span class="nav-number">1.2.</span> <span class="nav-text">耿静异步</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -558,7 +575,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 
@@ -626,6 +643,13 @@
   
   
 
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
@@ -682,6 +706,8 @@
 
   
 
+  
+  
 
 </body>
 </html>

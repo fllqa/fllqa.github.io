@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="练习," />
 
 
 
@@ -88,15 +88,15 @@
 
 <meta name="description" content="总结一下有关markdown的使用技巧">
 <meta property="og:type" content="article">
-<meta property="og:title" content="fanlili's blog">
+<meta property="og:title" content="markdown">
 <meta property="og:url" content="http://yoursite.com/2017/01/25/test2/index.html">
 <meta property="og:site_name" content="fanlili's blog">
 <meta property="og:description" content="总结一下有关markdown的使用技巧">
 <meta property="og:image" content="http://mouapp.com/Mou_128.png">
 <meta property="og:image" content="http://yoursite.com/images/fll.jpg">
-<meta property="og:updated_time" content="2017-01-23T15:15:06.744Z">
+<meta property="og:updated_time" content="2017-01-25T16:36:01.287Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="fanlili's blog">
+<meta name="twitter:title" content="markdown">
 <meta name="twitter:description" content="总结一下有关markdown的使用技巧">
 <meta name="twitter:image" content="http://mouapp.com/Mou_128.png">
 
@@ -115,9 +115,9 @@
       author: '博主'
     },
     algolia: {
-      applicationID: '5U9T8XSIIZ',
-      apiKey: '58795ee1ad9373dd1f91a81b53bcbbd0',
-      indexName: 'fanlili's blog',
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
@@ -132,7 +132,7 @@
 
 
 
-  <title>  | fanlili's blog </title>
+  <title> markdown | fanlili's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -236,6 +236,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-readnotes">
+          <a href="/categories/读书笔记/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            读书笔记
+          </a>
+        </li>
+      
 
       
         <li class="menu-item menu-item-search">
@@ -255,27 +265,12 @@
   
     <div class="site-search">
       
-  
-  <div class="algolia-popup popup">
-    <div class="algolia-search">
-      <div class="algolia-search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <div class="algolia-search-input" id="algolia-search-input"></div>
-    </div>
-
-    <div class="algolia-results">
-      <div id="algolia-stats"></div>
-      <div id="algolia-hits"></div>
-      <div id="algolia-pagination" class="algolia-pagination"></div>
-    </div>
-
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-  </div>
-
-
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
 
 
     </div>
@@ -328,7 +323,7 @@
             
             
               
-                
+                markdown
               
             
           </h1>
@@ -354,6 +349,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -364,6 +381,11 @@
           
           
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-eye"> </i>阅读次数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
           
 
           
@@ -395,7 +417,7 @@
 </li>
 </ol>
 <p><img src="http://mouapp.com/Mou_128.png" alt="Mou icon"><br><img src="/images/fll.jpg" alt="img"></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">package jdbc;</div><div class="line"></div><div class="line">import java.sql.Connection;</div><div class="line">import java.sql.DriverManager;</div><div class="line">import java.sql.ResultSet;</div><div class="line">import java.sql.SQLException;</div><div class="line">import java.sql.Statement;</div><div class="line"></div><div class="line">public class JdbcDriver </div><div class="line">&#123;</div><div class="line"></div><div class="line"></div><div class="line">    static String driverClass=<span class="string">"oracle.jdbc.driver.OracleDriver"</span>;//定义保存数据库驱动的变量</div><div class="line">    String url=<span class="string">"jdbc:oracle:thin:@127.0.0.1:1521:orcl"</span>;</div><div class="line">    String username=<span class="string">"TEACHER1"</span>;</div><div class="line">    String password=<span class="string">"fanlili1994"</span>;</div><div class="line">    Connection con = null;//声明Connection对象的实例</div><div class="line">    Statement <span class="built_in">stat</span> = null;// 声明Statement对象的实例</div><div class="line">    Statement stm = null;</div><div class="line">    ResultSet rs = null;// 声明ResultSet对象的实例</div><div class="line"></div><div class="line">    public <span class="function"><span class="title">JdbcDriver</span></span>() </div><div class="line">    &#123;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">package jdbc;</div><div class="line"></div><div class="line">import java.sql.Connection;</div><div class="line">import java.sql.DriverManager;</div><div class="line">import java.sql.ResultSet;</div><div class="line">import java.sql.SQLException;</div><div class="line">import java.sql.Statement;</div><div class="line"></div><div class="line">public class JdbcDriver </div><div class="line">&#123;</div><div class="line"></div><div class="line"></div><div class="line">    static String driverClass=&quot;oracle.jdbc.driver.OracleDriver&quot;;//定义保存数据库驱动的变量</div><div class="line">    String url=&quot;jdbc:oracle:thin:@127.0.0.1:1521:orcl&quot;;</div><div class="line">    String username=&quot;TEACHER1&quot;;</div><div class="line">    String password=&quot;fanlili1994&quot;;</div><div class="line">    Connection con = null;//声明Connection对象的实例</div><div class="line">    Statement stat = null;// 声明Statement对象的实例</div><div class="line">    Statement stm = null;</div><div class="line">    ResultSet rs = null;// 声明ResultSet对象的实例</div><div class="line"></div><div class="line">    public JdbcDriver() </div><div class="line">    &#123;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -417,6 +439,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/练习/" rel="tag"># 练习</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
@@ -431,6 +459,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/25/test5/" rel="prev" title="test5">
+                test5 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -500,7 +532,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -509,7 +541,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -518,7 +550,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -609,22 +641,29 @@
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
 
 
 
 
 
         
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">本站访客数<i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv">本站总访问量<i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
 
         
       </div>
@@ -741,6 +780,130 @@
 
   
   
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
 
   
 
@@ -749,19 +912,6 @@
   
 
   
-
-  
-  
-  
-  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
-
-  
-  
-  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
-  
-
-  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
-
 
 <script type="text/javascript" src="/js/src/canvas-nest.min.js"></script>  
 </body>

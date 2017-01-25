@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    
+    <entry>
+      <title><![CDATA[test5]]></title>
+      <url>%2F2017%2F01%2F25%2Ftest5%2F</url>
+      <content type="text"><![CDATA[哥哥哥哥哥哥哥哥过过过过过过过过]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[markdown]]></title>
+      <url>%2F2017%2F01%2F25%2Ftest2%2F</url>
+      <content type="text"><![CDATA[总结一下有关markdown的使用技巧 hshshshshs了解一下markdown 小点 不想跟你废话 再怎么说 耿静异步 你想说什么呢 来啊互相伤害啊 岁月催人老 123456789101112131415161718192021222324package jdbc;import java.sql.Connection;import java.sql.DriverManager;import java.sql.ResultSet;import java.sql.SQLException;import java.sql.Statement;public class JdbcDriver &#123; static String driverClass=&quot;oracle.jdbc.driver.OracleDriver&quot;;//定义保存数据库驱动的变量 String url=&quot;jdbc:oracle:thin:@127.0.0.1:1521:orcl&quot;; String username=&quot;TEACHER1&quot;; String password=&quot;fanlili1994&quot;; Connection con = null;//声明Connection对象的实例 Statement stat = null;// 声明Statement对象的实例 Statement stm = null; ResultSet rs = null;// 声明ResultSet对象的实例 public JdbcDriver() &#123; &#125;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>%2F2017%2F01%2F25%2Fhello-world%2F</url>
+      <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[你好]]></title>
+      <url>%2F2017%2F01%2F21%2Ftet%2F</url>
+      <content type="text"><![CDATA[首先需要明白在这里怎么发表博客怎么来玩]]></content>
+    </entry>
+
+    
+  
+  
+</search>

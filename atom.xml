@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-25T16:16:05.778Z</updated>
+  <updated>2017-01-28T10:38:34.115Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,73 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test5</title>
-    <link href="http://yoursite.com/2017/01/25/test5/"/>
-    <id>http://yoursite.com/2017/01/25/test5/</id>
-    <published>2017-01-25T15:31:52.000Z</published>
-    <updated>2017-01-25T16:16:05.778Z</updated>
-    
-    <content type="html"><![CDATA[<p>哥哥哥哥哥哥哥哥过过过过过过过过</p>
-]]></content>
-    
-    <summary type="html">
-    
-      进行测试描述
-    
-    </summary>
-    
-      <category term="后台" scheme="http://yoursite.com/categories/%E5%90%8E%E5%8F%B0/"/>
-    
-    
-      <category term="后台" scheme="http://yoursite.com/tags/%E5%90%8E%E5%8F%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>markdown</title>
-    <link href="http://yoursite.com/2017/01/25/test2/"/>
-    <id>http://yoursite.com/2017/01/25/test2/</id>
-    <published>2017-01-24T16:48:04.882Z</published>
-    <updated>2017-01-25T16:36:01.287Z</updated>
-    
-    <content type="html"><![CDATA[<p>总结一下有关markdown的使用技巧<br><a id="more"></a></p>
-<h2 id="hshshshshs"><a href="#hshshshshs" class="headerlink" title="hshshshshs"></a>hshshshshs</h2><h3 id="了解一下markdown"><a href="#了解一下markdown" class="headerlink" title="了解一下markdown"></a>了解一下markdown</h3><ul>
-<li>小点</li>
-<li>不想跟你废话</li>
-<li>再怎么说</li>
-</ul>
-<h3 id="耿静异步"><a href="#耿静异步" class="headerlink" title="耿静异步"></a>耿静异步</h3><ol>
-<li>你想说什么呢</li>
-<li>来啊互相伤害啊<blockquote>
-<p>岁月催人老</p>
-</blockquote>
-</li>
-</ol>
-<p><img src="http://mouapp.com/Mou_128.png" alt="Mou icon"><br><img src="/images/fll.jpg" alt="img"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">package jdbc;</div><div class="line"></div><div class="line">import java.sql.Connection;</div><div class="line">import java.sql.DriverManager;</div><div class="line">import java.sql.ResultSet;</div><div class="line">import java.sql.SQLException;</div><div class="line">import java.sql.Statement;</div><div class="line"></div><div class="line">public class JdbcDriver </div><div class="line">&#123;</div><div class="line"></div><div class="line"></div><div class="line">    static String driverClass=&quot;oracle.jdbc.driver.OracleDriver&quot;;//定义保存数据库驱动的变量</div><div class="line">    String url=&quot;jdbc:oracle:thin:@127.0.0.1:1521:orcl&quot;;</div><div class="line">    String username=&quot;TEACHER1&quot;;</div><div class="line">    String password=&quot;fanlili1994&quot;;</div><div class="line">    Connection con = null;//声明Connection对象的实例</div><div class="line">    Statement stat = null;// 声明Statement对象的实例</div><div class="line">    Statement stm = null;</div><div class="line">    ResultSet rs = null;// 声明ResultSet对象的实例</div><div class="line"></div><div class="line">    public JdbcDriver() </div><div class="line">    &#123;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;总结一下有关markdown的使用技巧&lt;br&gt;
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://yoursite.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="练习" scheme="http://yoursite.com/tags/%E7%BB%83%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hello World</title>
     <link href="http://yoursite.com/2017/01/25/hello-world/"/>
     <id>http://yoursite.com/2017/01/25/hello-world/</id>
     <published>2017-01-24T16:48:04.881Z</published>
-    <updated>2017-01-21T07:57:36.805Z</updated>
+    <updated>2017-01-28T10:38:34.115Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br><a id="more"></a></p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
@@ -95,33 +35,10 @@
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;br&gt;
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>你好</title>
-    <link href="http://yoursite.com/2017/01/21/tet/"/>
-    <id>http://yoursite.com/2017/01/21/tet/</id>
-    <published>2017-01-21T09:27:47.000Z</published>
-    <updated>2017-01-25T16:27:19.777Z</updated>
-    
-    <content type="html"><![CDATA[<p>首先需要明白在这里怎么发表博客怎么来玩<br>    <img src="/images/fll.jpg" alt="img"><br>    <img src="http://ok9uy2u37.bkt.clouddn.com/fll.jpg" alt="img"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;首先需要明白在这里怎么发表博客怎么来玩&lt;br&gt;    &lt;img src=&quot;/images/fll.jpg&quot; alt=&quot;img&quot;&gt;&lt;br&gt;    &lt;img src=&quot;http://ok9uy2u37.bkt.clouddn.com/fll.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p
-    
-    </summary>
-    
-      <category term="测试" scheme="http://yoursite.com/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="练习" scheme="http://yoursite.com/tags/%E7%BB%83%E4%B9%A0/"/>
     
   </entry>
   

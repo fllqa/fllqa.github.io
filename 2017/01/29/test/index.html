@@ -94,7 +94,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/01/29/test/index.html">
 <meta property="og:site_name" content="fanlili's blog">
 <meta property="og:description" content="hwhwhwhwhwhwhwhwwhwhhwhwhwhwhwwwwwwwww是护手霜上海市">
-<meta property="og:updated_time" content="2017-01-28T17:17:50.336Z">
+<meta property="og:updated_time" content="2017-01-29T06:58:14.098Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="test">
 <meta name="twitter:description" content="hwhwhwhwhwhwhwhwwhwhhwhwhwhwhwwwwwwwww是护手霜上海市">
@@ -154,7 +154,6 @@
 
   <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
-
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-meta ">
   
@@ -338,6 +337,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -346,6 +367,17 @@
           
 
           
+          
+             <span id="/2017/01/29/test/" class="leancloud_visitors" data-flag-title="test">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>(次)
+             </span>
           
  <!--字数、阅读时长统计-->
          <span class="post-time">
@@ -356,6 +388,7 @@
            <span class="post-meta-item-text">字数统计:</span>
            <span class="post-count">17(字)</span>          
          </span>
+		<!--
 		<span class="post-time">
 	       &nbsp; | &nbsp;
            <span class="post-meta-item-icon">
@@ -364,16 +397,8 @@
            <span class="post-meta-item-text">阅读时长:</span>
            <span class="post-count">0(分)</span>         
          </span>
+		-->
 		
-           <span class="post-meta-divider">
-		    &nbsp; | &nbsp;
-			<span class="post-meta-item-icon">
-              <i class="fa fa-eye"> </i>
-           </span>
-           <span class="page-pv">阅读次数:</span>
-           <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>(次)
-         </span>
-        
 		
           
 
@@ -503,7 +528,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -595,7 +620,6 @@
   <span class="author" itemprop="copyrightHolder">fanlili</span>
 </div>
 
-	
 
 
 
@@ -862,9 +886,118 @@
   
 
   
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("oHkCWpMq1sV06lwsFj2qnL4D-gzGzoHsz", "q5bqVVIUQUHCt5OMa7nElI7x");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
+  
+
+
+<a href="https://github.com/fllqa"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 <script type="text/javascript" src="/js/src/canvas-nest.min.js"></script>  
 <script>
 (function(){

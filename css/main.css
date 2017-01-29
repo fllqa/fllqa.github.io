@@ -274,7 +274,7 @@ h6 {
   }
 }
 p {
-  margin: 0 0 25px 0;
+  margin: 0 0 45px 0;
 }
 a {
   color: #555;
@@ -1496,7 +1496,7 @@ pre .javascript .function {
 }
 .posts-expand .post-eof {
   display: block;
-  margin: 80px auto 60px;
+  margin: 60px auto 60px;
   width: 100%;
   height: 1px;
   background: #ccc;
@@ -1686,7 +1686,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1aff3e;
+  background: #b3faa2;
 }
 .links-of-blogroll {
   font-size: 13px;

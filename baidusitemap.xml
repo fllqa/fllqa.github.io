@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/01/29/tet/</loc>
+    <lastmod>2017-01-29T04:08:28.790Z</lastmod>
+    <data>
+        <display>
+        <title>你好</title>
+        <pubTime>2017-01-29T04:04:28.000Z</pubTime>
+        
+        <tag>练习</tag>
+         
+         
+           
+             
+              <breadCrumb title="测试" url="http://yoursite.com/categories/%E6%B5%8B%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/01/29/test/</loc>
     <lastmod>2017-01-28T17:17:50.336Z</lastmod>
     <data>

@@ -4,28 +4,8 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/02/19/extends/</loc>
-    <lastmod>2017-02-23T03:04:10.616Z</lastmod>
-    <data>
-        <display>
-        <title>extends</title>
-        <pubTime>2017-02-19T11:40:58.000Z</pubTime>
-        
-        <tag>读书笔记</tag>
-         
-         
-           
-             
-              <breadCrumb title="读书笔记" url="http://yoursite.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2017/02/18/Collection/</loc>
-    <lastmod>2017-02-23T03:03:50.612Z</lastmod>
+    <lastmod>2017-02-23T03:48:14.854Z</lastmod>
     <data>
         <display>
         <title>Java集合</title>
@@ -45,7 +25,7 @@
     
   <url>
     <loc>http://yoursite.com/2017/02/19/variable/</loc>
-    <lastmod>2017-02-23T03:03:23.795Z</lastmod>
+    <lastmod>2017-02-23T03:46:43.483Z</lastmod>
     <data>
         <display>
         <title>variable</title>
@@ -58,6 +38,41 @@
              
               <breadCrumb title="读书笔记" url="http://yoursite.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/02/19/extends/</loc>
+    <lastmod>2017-02-23T03:40:33.761Z</lastmod>
+    <data>
+        <display>
+        <title>extends</title>
+        <pubTime>2017-02-19T11:40:58.000Z</pubTime>
+        
+        <tag>读书笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="读书笔记" url="http://yoursite.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/01/25/hello-world/</loc>
+    <lastmod>2017-02-23T03:34:31.760Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2017-01-24T16:48:04.881Z</pubTime>
+        
+         
+           
         </display>
     </data>
     </url>
@@ -156,21 +171,6 @@
              
               <breadCrumb title="测试" url="http://yoursite.com/categories/%E6%B5%8B%E8%AF%95/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/01/25/hello-world/</loc>
-    <lastmod>2017-01-28T10:38:34.115Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2017-01-24T16:48:04.881Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>

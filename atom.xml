@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-20T07:35:08.016Z</updated>
+  <updated>2017-02-24T09:34:16.675Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>thread</title>
-    <link href="http://yoursite.com/2017/02/20/thread/"/>
-    <id>http://yoursite.com/2017/02/20/thread/</id>
-    <published>2017-02-20T07:35:07.000Z</published>
-    <updated>2017-02-20T07:35:08.016Z</updated>
+    <title>UML</title>
+    <link href="http://yoursite.com/2017/02/24/UML/"/>
+    <id>http://yoursite.com/2017/02/24/UML/</id>
+    <published>2017-02-24T08:47:30.000Z</published>
+    <updated>2017-02-24T09:34:16.675Z</updated>
+    
+    <content type="html"><![CDATA[<p>在UML图中常见的有以下几种关系,泛化，实现，关联，聚合，组合，依赖。<br><a id="more"></a></p>
+<h2 id="泛化"><a href="#泛化" class="headerlink" title="泛化"></a>泛化</h2><h3 id="关系定义"><a href="#关系定义" class="headerlink" title="关系定义"></a>关系定义</h3><p>是一种继承关系，表示一般与特殊的关系，它指定了子类如何特化父类的所有特征和行为。例如：老虎是动物的一种，即有老虎的特性也有动物的共性。</p>
+<h3 id="表示方法"><a href="#表示方法" class="headerlink" title="表示方法"></a>表示方法</h3><p>带三角箭头的实线，箭头指向父类</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h3 id="关系定义-1"><a href="#关系定义-1" class="headerlink" title="关系定义"></a>关系定义</h3><p>是一种类与接口的关系，表示类是接口所有特征和行为的实现.</p>
+<h3 id="表示方法-1"><a href="#表示方法-1" class="headerlink" title="表示方法"></a>表示方法</h3><p>带三角箭头的虚线，箭头指向接口</p>
+<h2 id="关联"><a href="#关联" class="headerlink" title="关联"></a>关联</h2><h3 id="关系定义-2"><a href="#关系定义-2" class="headerlink" title="关系定义"></a>关系定义</h3><p>是一种拥有的关系，它使一个类知道另一个类的属性和方法；如：老师与学生，丈夫与妻子关联可以是双向的，也可以是单向的。双向的关联可以有两个箭头或者没有箭头，单向的关联有一个箭头。</p>
+<h3 id="表示方法-2"><a href="#表示方法-2" class="headerlink" title="表示方法"></a>表示方法</h3><p>带普通箭头的实心线，指向被拥有者<br><img src="/images/UML关联.png" alt="img"></p>
+<h2 id="聚合"><a href="#聚合" class="headerlink" title="聚合"></a>聚合</h2><h3 id="关系定义-3"><a href="#关系定义-3" class="headerlink" title="关系定义"></a>关系定义</h3><p>是整体与部分的关系，且部分可以离开整体而单独存在。如车和轮胎是整体和部分的关系，轮胎离开车仍然可以存在。</p>
+<h3 id="表示方法-3"><a href="#表示方法-3" class="headerlink" title="表示方法"></a>表示方法</h3><p>带空心菱形的实心线加普通箭头，菱形指向整体<br><img src="/images/UML聚合.jpg" alt="img"></p>
+<h2 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h2><h3 id="关系定义-4"><a href="#关系定义-4" class="headerlink" title="关系定义"></a>关系定义</h3><p>是整体与部分的关系，但部分不能离开整体而单独存在。如公司和部门是整体和部分的关系，没有公司就不存在部门。<br>组合关系是关联关系的一种，是比聚合关系还要强的关系，它要求普通的聚合关系中代表整体的对象负责代表部分的对象的生命周期</p>
+<h3 id="表示方法-4"><a href="#表示方法-4" class="headerlink" title="表示方法"></a>表示方法</h3><p>带实心菱形的实线加普通箭头，菱形指向整体</p>
+<h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><h3 id="关系定义-5"><a href="#关系定义-5" class="headerlink" title="关系定义"></a>关系定义</h3><p>是一种使用的关系，即一个类的实现需要另一个类的协助，所以要尽量不使用双向的互相依赖.比如人与计算机</p>
+<h3 id="表示方法-5"><a href="#表示方法-5" class="headerlink" title="表示方法"></a>表示方法</h3><p>带普通箭头的虚线，指向被使用者</p>
+<h2 id="各种关系的强弱顺序"><a href="#各种关系的强弱顺序" class="headerlink" title="各种关系的强弱顺序"></a>各种关系的强弱顺序</h2><p>泛化 = 实现 &gt; 组合 &gt; 聚合 &gt; 关联 &gt; 依赖 </p>
+<h2 id="展示各类关系"><a href="#展示各类关系" class="headerlink" title="展示各类关系"></a>展示各类关系</h2><p><img src="/images/UML.png" alt="img"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在UML图中常见的有以下几种关系,泛化，实现，关联，聚合，组合，依赖。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SearchS</title>
+    <link href="http://yoursite.com/2017/02/24/SearchS/"/>
+    <id>http://yoursite.com/2017/02/24/SearchS/</id>
+    <published>2017-02-24T06:54:08.000Z</published>
+    <updated>2017-02-24T06:54:08.291Z</updated>
     
     <summary type="html">
     
@@ -30,16 +65,265 @@
   </entry>
   
   <entry>
-    <title>exception</title>
-    <link href="http://yoursite.com/2017/02/20/exception/"/>
-    <id>http://yoursite.com/2017/02/20/exception/</id>
-    <published>2017-02-20T07:34:43.000Z</published>
-    <updated>2017-02-20T07:34:43.383Z</updated>
+    <title>Tree</title>
+    <link href="http://yoursite.com/2017/02/24/Tree/"/>
+    <id>http://yoursite.com/2017/02/24/Tree/</id>
+    <published>2017-02-24T06:52:50.000Z</published>
+    <updated>2017-02-24T06:52:50.435Z</updated>
     
     <summary type="html">
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>LinearList</title>
+    <link href="http://yoursite.com/2017/02/24/LinearList/"/>
+    <id>http://yoursite.com/2017/02/24/LinearList/</id>
+    <published>2017-02-24T06:52:26.000Z</published>
+    <updated>2017-02-26T14:12:15.822Z</updated>
+    
+    <content type="html"><![CDATA[<p>线性表中第一个元素的存储地址为线性表的起始地址，称为头指针，若果有头结点，头结点没有数据，指向头结点的指针称为头指针。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;线性表中第一个元素的存储地址为线性表的起始地址，称为头指针，若果有头结点，头结点没有数据，指向头结点的指针称为头指针。&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JavaDesign</title>
+    <link href="http://yoursite.com/2017/02/23/JavaDesign/"/>
+    <id>http://yoursite.com/2017/02/23/JavaDesign/</id>
+    <published>2017-02-23T04:39:06.000Z</published>
+    <updated>2017-02-24T07:30:07.371Z</updated>
+    
+    <content type="html"><![CDATA[<p>23种设计模式总结<br>特别喜欢这句话，招式与内功哪个更重要，Java、C#、C++等编程语言，Eclipse、Visual Studio等开发工具，JSP、ASP.net等开发技术，Struts、Hibernate等框架技术，所有这些我们都可以认为是招式;而数据结构、算法、设计模式、重构、软件工程等则为内功。招式可以很快学会，但是内功的修炼需要更长的时间。</p>
+<h2 id="常用设计模式一览表"><a href="#常用设计模式一览表" class="headerlink" title="常用设计模式一览表"></a>常用设计模式一览表</h2><h3 id="创建型模式"><a href="#创建型模式" class="headerlink" title="创建型模式"></a>创建型模式</h3><p><img src="/images/创建型模式.jpg" alt="img"></p>
+<h3 id="结构型模式"><a href="#结构型模式" class="headerlink" title="结构型模式"></a>结构型模式</h3><p><img src="/images/结构型模式.jpg" alt="img"></p>
+<h3 id="行为型模式"><a href="#行为型模式" class="headerlink" title="行为型模式"></a>行为型模式</h3><p><img src="/images/行为型模式.jpg" alt="img"></p>
+<h2 id="7种面向对象设计原则"><a href="#7种面向对象设计原则" class="headerlink" title="7种面向对象设计原则"></a>7种面向对象设计原则</h2><p><img src="/images/面向对象设计原则.jpg" alt="img"></p>
+<h2 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h2><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
+<li>Head First 设计模式</li>
+<li>网上的其他资料</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;23种设计模式总结&lt;br&gt;特别喜欢这句话，招式与内功哪个更重要，Java、C#、C++等编程语言，Eclipse、Visual Studio等开发工具，JSP、ASP.net等开发技术，Struts、Hibernate等框架技术，所有这些我们都可以认为是招式;而数据结构、算
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://yoursite.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="读书笔记" scheme="http://yoursite.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mybatis</title>
+    <link href="http://yoursite.com/2017/02/23/Mybatis/"/>
+    <id>http://yoursite.com/2017/02/23/Mybatis/</id>
+    <published>2017-02-23T04:36:34.000Z</published>
+    <updated>2017-02-23T04:36:34.989Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SpringMvc</title>
+    <link href="http://yoursite.com/2017/02/23/SpringMvc/"/>
+    <id>http://yoursite.com/2017/02/23/SpringMvc/</id>
+    <published>2017-02-23T04:36:25.000Z</published>
+    <updated>2017-02-23T04:36:25.098Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Spring</title>
+    <link href="http://yoursite.com/2017/02/23/Spring/"/>
+    <id>http://yoursite.com/2017/02/23/Spring/</id>
+    <published>2017-02-23T04:36:08.000Z</published>
+    <updated>2017-02-23T04:36:08.740Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>thread</title>
+    <link href="http://yoursite.com/2017/02/20/thread/"/>
+    <id>http://yoursite.com/2017/02/20/thread/</id>
+    <published>2017-02-20T07:35:07.000Z</published>
+    <updated>2017-02-23T14:38:07.276Z</updated>
+    
+    <content type="html"><![CDATA[<p>在 Java 语言中使用多线程要远比在C++ 中来得简单。</p>
+<p>在操作系统中两个比较容易混淆的概念是进程（process）和线程（thread）。</p>
+<p>##</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在 Java 语言中使用多线程要远比在C++ 中来得简单。&lt;/p&gt;
+&lt;p&gt;在操作系统中两个比较容易混淆的概念是进程（process）和线程（thread）。&lt;/p&gt;
+&lt;p&gt;##&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://yoursite.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="读书笔记" scheme="http://yoursite.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>exception</title>
+    <link href="http://yoursite.com/2017/02/20/exception/"/>
+    <id>http://yoursite.com/2017/02/20/exception/</id>
+    <published>2017-02-20T07:34:43.000Z</published>
+    <updated>2017-02-23T06:48:40.211Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文主要是深入理解一下Java异常处理机制。异常指不期而至的各种状况，Java通 过API中Throwable类的众多子类描述各种不同的异常。因而，Java异常都是对象，是Throwable子类的实例，描述了出现在一段编码中的错误条件。<br><a id="more"></a></p>
+<h1 id="java异常类层次结构图"><a href="#java异常类层次结构图" class="headerlink" title="java异常类层次结构图"></a>java异常类层次结构图</h1><p><img src="/images/java异常类层次结构图.jpg" alt="img"></p>
+<h2 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h2><p>表示运行应用程序中较严重问题,大多数错误与代码编写者执行的操作无关，而表示代码运行时 JVM（Java 虚拟机）出现的问题,出现这种情况你唯一能做的就是听之任之，交由JVM来处理，不过JVM在大多数情况下会选择终止线程。<br>这些错误表示故障发生于虚拟机自身、或者发生在虚拟机试图执行应用时，如Java虚拟机运行错误（Virtual MachineError）、类定义错误（NoClassDefFoundError）等。这些错误是不可查的，因为它们在应用程序的控制和处理能力之 外，而且绝大多数是程序运行时不允许出现的状况。</p>
+<h2 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h2><p>是应用程序中可能的可预测、可恢复问题。一般大多数异常表示中度到轻度的问题。异常一般是在特定环境下产生的，通常出现在代码的特定方法和操作中。<br>Exception 这种异常分两大类运行时异常和非运行时异常(编译异常)。</p>
+<h3 id="运行时异常"><a href="#运行时异常" class="headerlink" title="运行时异常"></a>运行时异常</h3><p>都是RuntimeException类及其子类异常，如NullPointerException(空指针异常)、IndexOutOfBoundsException(下标越界异常)等，这些异常是不检查异常，程序中可以选择捕获处理，也可以不处理。这些异常一般是由程序逻辑错误引起的，程序应该从逻辑角度尽可能避免这类异常的发生。<br>运行时异常的特点是Java编译器不会检查它，也就是说，当程序中可能出现这类异常，即使没有用try-catch语句捕获它，也没有用throws子句声明抛出它，也会编译通过。</p>
+<h3 id="非运行时异常-（编译异常）"><a href="#非运行时异常-（编译异常）" class="headerlink" title="非运行时异常 （编译异常）"></a>非运行时异常 （编译异常）</h3><p>是RuntimeException以外的异常，从程序语法角度讲是必须进行处理的异常，如果不处理，程序就不能编译通过。如IOException、SQLException等以及用户自定义的Exception异常，一般情况下不自定义检查异常。</p>
+<h1 id="Java-异常分类"><a href="#Java-异常分类" class="headerlink" title="Java 异常分类"></a>Java 异常分类</h1><p>Java 异常可分为可检测异常，非检测异常和自定义异常。</p>
+<h2 id="可检测异常"><a href="#可检测异常" class="headerlink" title="可检测异常"></a>可检测异常</h2><p>可检测异常经编译器验证，对于声明抛出异常的任何方法，编译器将强制执行处理或声明规则，例如：sqlExecption 这个异常就是一个检测异常。你连接 JDBC 时，不捕捉这个异常，编译器就通不过，不允许编译。</p>
+<h2 id="非检测异常"><a href="#非检测异常" class="headerlink" title="非检测异常"></a>非检测异常</h2><p>非检测异常不遵循处理或声明规则。在产生此类异常时，不一定非要采取任何适当操作，编译器不会检查是否已解决了这样一个异常。例如：一个数组为 3 个长度，当你使用下标为３时，就会产生数组下标越界异常。这个异常 JVM 不会进行检测，要靠程序员来判断。有两个主要类定义非检测异常：RuntimeException 和 Error。</p>
+<h2 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h2><p>自定义异常是为了表示应用程序的一些错误类型，为代码可能发生的一个或多个问题提供新含义。</p>
+<h1 id="一个测试代码"><a href="#一个测试代码" class="headerlink" title="一个测试代码"></a>一个测试代码</h1><pre><code>package exception;
+
+public class TestException 
+{  
+    public TestException()
+    { }  
+
+    boolean testEx() throws Exception 
+    {  
+        boolean ret = true;  
+        try 
+        {  
+            ret = testEx1();  
+        } catch (Exception e) 
+        {  
+            System.out.println(&quot;testEx, catch exception&quot;);  
+            ret = false;  
+            throw e;  
+        } finally 
+        {  
+            System.out.println(&quot;testEx, finally; return value=&quot; + ret);  
+            return ret;  
+        }  
+    }  
+
+    boolean testEx1() throws Exception 
+    {  
+        boolean ret = true;  
+        try 
+        {  
+            ret = testEx2();  
+            if (!ret) 
+            {  
+                return false;  
+            }  
+            System.out.println(&quot;testEx1, at the end of try&quot;);  
+            return ret;  
+        } catch (Exception e) 
+        {  
+            System.out.println(&quot;testEx1, catch exception&quot;);  
+            ret = false;  
+            throw e;  
+        } finally 
+        {  
+            System.out.println(&quot;testEx1, finally; return value=&quot; + ret);  
+            return ret;  
+        }  
+    }  
+
+    boolean testEx2() throws Exception 
+    {  
+        boolean ret = true;  
+        try {  
+                int b = 12;  
+                int c;  
+                for (int i = 2; i &gt;= -2; i--) {  
+                    c = b / i;  
+                    System.out.println(&quot;i=&quot; + i);  
+            }  
+            return true;  
+        } catch (Exception e) 
+        {  
+            System.out.println(&quot;testEx2, catch exception&quot;);  
+            ret = false;  
+            throw e;  
+        } finally
+        {  
+            System.out.println(&quot;testEx2, finally; return value=&quot; + ret);  
+            return ret;  
+        }  
+    }  
+
+    public static void main(String[] args) 
+    {  
+        TestException testException1 = new TestException();  
+        try 
+        {  
+            testException1.testEx();  
+        } catch (Exception e)
+        {  
+            e.printStackTrace();  
+        }  
+    }  
+} 
+</code></pre><h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><pre><code>i=2
+i=1
+testEx2, catch exception
+testEx2, finally; return value=false
+testEx1, finally; return value=false
+testEx, finally; return value=false
+</code></pre><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>testEx()的try调用testEx1(),testEx1()的try调用testEx2(),12/2,12/1,12/0异常，执行testEx2()的catch,然后执行testEx2()的finally,接着执行testEx1()的finally,最后执行testEx()的finally。<br>需要注意的是在testEx2()catch后并没有执行testEx1()的catch。</p>
+<h1 id="Java-异常的处理"><a href="#Java-异常的处理" class="headerlink" title="Java 异常的处理"></a>Java 异常的处理</h1><p>在 Java 应用程序中，对异常的处理有两种方式：处理异常和声明异常。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ol>
+<li><a href="http://blog.csdn.net/hguisu/article/details/6155636" target="_blank" rel="external">http://blog.csdn.net/hguisu/article/details/6155636</a></li>
+<li>Java核心技术I</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文主要是深入理解一下Java异常处理机制。异常指不期而至的各种状况，Java通 过API中Throwable类的众多子类描述各种不同的异常。因而，Java异常都是对象，是Throwable子类的实例，描述了出现在一段编码中的错误条件。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://yoursite.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="读书笔记" scheme="http://yoursite.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -62,20 +346,36 @@
     <link href="http://yoursite.com/2017/02/19/variable/"/>
     <id>http://yoursite.com/2017/02/19/variable/</id>
     <published>2017-02-19T12:46:32.000Z</published>
-    <updated>2017-02-23T03:46:43.483Z</updated>
+    <updated>2017-03-02T13:31:00.200Z</updated>
     
     <content type="html"><![CDATA[<p>Java 中的成员变量、局部变量、静态变量、类变量、非静态变量、实例变量。<br>在Java中变量大致上可以分为成员变量与局部变量两大类。<br><a id="more"></a></p>
-<h2 id="成员变量"><a href="#成员变量" class="headerlink" title="成员变量"></a>成员变量</h2><ol>
+<h1 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h1><p>全局变量也叫成员变量</p>
+<ol>
 <li>在类里面定义的变量称为成员变量。</li>
 <li>如果前面有static修饰，则该成员变量为静态变量或者类变量。</li>
-<li>如果前面无static修饰，则该成员变量为非静态变量或实例变量。<h3 id="静态变量"><a href="#静态变量" class="headerlink" title="静态变量"></a>静态变量</h3></li>
-<li>变量属于类本身</li>
-<li>类变量不依赖类的实例，类变量只在初始化时候在栈内存中被分配一次空间，无论类的实例被创建几次，都不再为类变量分配空间</li>
+<li>如果前面无static修饰，则该成员变量为非静态变量或实例变量。</li>
+<li></li>
+<li>全局变量不需要初始化。</li>
+<li><p>存在于堆内存中。</p>
+<h2 id="静态变量"><a href="#静态变量" class="headerlink" title="静态变量"></a>静态变量</h2><p>静态全局变量</p>
+<h3 id="静态全局变量的定义"><a href="#静态全局变量的定义" class="headerlink" title="静态全局变量的定义"></a>静态全局变量的定义</h3><p>静态的类成员变量</p>
+<h3 id="生存时间"><a href="#生存时间" class="headerlink" title="生存时间"></a>生存时间</h3><p>静态全局变量随着类的字节码文件加载而加载产生，随着字节码文件的消失而消失，生存时间比类的对象还要长；</p>
+<h3 id="是否初始化"><a href="#是否初始化" class="headerlink" title="是否初始化"></a>是否初始化</h3><p>凡是全局变量都是可以不要初始化的，静态变量也是一样，系统会自动根据其数据类型进行赋默认值，但是建议变量在声明时都进行初始化；</p>
+<h3 id="创建位置"><a href="#创建位置" class="headerlink" title="创建位置"></a>创建位置</h3><p>静态变量是存在于堆内存中的，所以静态全局变量也是存在于堆内存中的。</p>
+</li>
+<li><p>类变量不依赖类的实例，类变量只在初始化时候在栈内存中被分配一次空间，无论类的实例被创建几次，都不再为类变量分配空间，即而且所有对象的同一个类变量都是共享同一块内存空间的</p>
+</li>
 <li>通过类的任意一个实例来访问类变量，底层都将将其转为通过类本身来访问类变量，它们的效果是一样的</li>
 <li>一旦类变量的值被改变，通过类或类的任意一个实例来访问类变量，得到的都将是被改变后的值</li>
-<li>将在类的初始化之前初始化<h3 id="实例变量"><a href="#实例变量" class="headerlink" title="实例变量"></a>实例变量</h3></li>
-<li>变量属于类的实例对象</li>
-<li>随着类的实例被创建而分配内存空间。<h2 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h2>形参、方法内定义的变量、代码块中定义的变量。<h3 id="呵呵呵"><a href="#呵呵呵" class="headerlink" title="呵呵呵"></a>呵呵呵</h3></li>
+<li><p>将在类的初始化之前初始化</p>
+<h2 id="非静态变量"><a href="#非静态变量" class="headerlink" title="非静态变量"></a>非静态变量</h2><h3 id="非静态全局变量的定义"><a href="#非静态全局变量的定义" class="headerlink" title="非静态全局变量的定义"></a>非静态全局变量的定义</h3><p>非静态全局变量都是定在类中，是类的成员变量或者说是成员属性属于类的一部分（或 者说是对象的一部分）；</p>
+<h3 id="生存时间-1"><a href="#生存时间-1" class="headerlink" title="生存时间"></a>生存时间</h3><p>非静态全局变量加载在堆内存中，随着声明初始化而创建，随着对象消亡而消亡；</p>
+<h3 id="是否需要初始化"><a href="#是否需要初始化" class="headerlink" title="是否需要初始化"></a>是否需要初始化</h3><p>全局变量都是不需要被强制初始化的，系统都会默认根据其数据类型进行默认赋值；但是建议在声明时都进行初始化操作；</p>
+<h3 id="创建位置-1"><a href="#创建位置-1" class="headerlink" title="创建位置"></a>创建位置</h3><p>创建在堆内存中，因为非静态的全局变量数对象的成员变量是对象的一部分；</p>
+</li>
+<li><p>变量属于类的实例对象</p>
+</li>
+<li>随着类的实例被创建而分配内存空间。<h1 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h1>形参、方法内定义的变量、代码块中定义的变量。<h2 id="生存时间-2"><a href="#生存时间-2" class="headerlink" title="生存时间"></a>生存时间</h2>局部变量的生存时间和方法的生存时间一致，调用该方法声明该局部变量并初始化的时，该局部变量被创建并分配内存空间；直到该方法调用结束局部变量也就结束了；<h2 id="是否需要初始化-1"><a href="#是否需要初始化-1" class="headerlink" title="是否需要初始化"></a>是否需要初始化</h2>局部变量在使用前必须进行初始化，系统默认不会对局部变量进行初始化数据操作，如果局部 变量在使用前没有进行初始化则会在编译器报错；如果局部变量进行了声明没有进行初始化， 但是也一直没有被使用的话编译也是不会报错的；（局部变量使用前必须初始化话）<h2 id="创建位置-2"><a href="#创建位置-2" class="headerlink" title="创建位置"></a>创建位置</h2>局部变量是创建在栈内存中的<h1 id="在使用变量时需要遵循的原则"><a href="#在使用变量时需要遵循的原则" class="headerlink" title="在使用变量时需要遵循的原则"></a>在使用变量时需要遵循的原则</h1>就近原则<h3 id="呵呵呵"><a href="#呵呵呵" class="headerlink" title="呵呵呵"></a>呵呵呵</h3></li>
 </ol>
 ]]></content>
     
@@ -97,7 +397,7 @@
     <link href="http://yoursite.com/2017/02/19/extends/"/>
     <id>http://yoursite.com/2017/02/19/extends/</id>
     <published>2017-02-19T11:40:58.000Z</published>
-    <updated>2017-02-23T03:40:33.761Z</updated>
+    <updated>2017-02-23T05:34:56.387Z</updated>
     
     <content type="html"><![CDATA[<p>这次主要分析一下类的关键字</p>
 <a id="more"></a>
@@ -198,10 +498,10 @@
     <link href="http://yoursite.com/2017/02/18/Collection/"/>
     <id>http://yoursite.com/2017/02/18/Collection/</id>
     <published>2017-02-18T10:38:23.000Z</published>
-    <updated>2017-02-23T03:48:14.854Z</updated>
+    <updated>2017-02-23T05:13:34.355Z</updated>
     
     <content type="html"><![CDATA[<p>Java集合框架为不同类型的集合定义了大量的接口，这里主要讲解Collection接口，Map接口，Iterator接口。<br><a id="more"></a></p>
-<h2 id="Collection接口"><a href="#Collection接口" class="headerlink" title="Collection接口"></a>Collection接口</h2><h3 id="Collection集合体系继承树"><a href="#Collection集合体系继承树" class="headerlink" title="Collection集合体系继承树"></a>Collection集合体系继承树</h3><p> <img src="/images/Collection集合体系继承树.jpg" alt="img"></p>
+<h2 id="Collection接口"><a href="#Collection接口" class="headerlink" title="Collection接口"></a>Collection接口</h2><h3 id="Collection集合体系继承树"><a href="#Collection集合体系继承树" class="headerlink" title="Collection集合体系继承树"></a>Collection集合体系继承树</h3><p><img src="/images/Collection集合体系继承树.jpg" alt="img"></p>
 <h3 id="Collection接口定义的常用方法"><a href="#Collection接口定义的常用方法" class="headerlink" title="Collection接口定义的常用方法"></a>Collection接口定义的常用方法</h3><ol>
 <li>Set中的数据对象没有顺序且不可以重复。</li>
 <li><p>List中的数据对象有顺序且可以重复。</p>

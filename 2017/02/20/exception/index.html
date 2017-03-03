@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="读书笔记," />
 
 
 
@@ -88,16 +88,18 @@
 
 
 
-<meta name="description" content="一个搬砖的女娃">
+<meta name="description" content="本文主要是深入理解一下Java异常处理机制。异常指不期而至的各种状况，Java通 过API中Throwable类的众多子类描述各种不同的异常。因而，Java异常都是对象，是Throwable子类的实例，描述了出现在一段编码中的错误条件。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="exception">
 <meta property="og:url" content="http://yoursite.com/2017/02/20/exception/index.html">
 <meta property="og:site_name" content="fanlili's blog">
-<meta property="og:description" content="一个搬砖的女娃">
-<meta property="og:updated_time" content="2017-02-20T07:34:43.383Z">
+<meta property="og:description" content="本文主要是深入理解一下Java异常处理机制。异常指不期而至的各种状况，Java通 过API中Throwable类的众多子类描述各种不同的异常。因而，Java异常都是对象，是Throwable子类的实例，描述了出现在一段编码中的错误条件。">
+<meta property="og:image" content="http://yoursite.com/images/java异常类层次结构图.jpg">
+<meta property="og:updated_time" content="2017-02-23T06:48:40.211Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="exception">
-<meta name="twitter:description" content="一个搬砖的女娃">
+<meta name="twitter:description" content="本文主要是深入理解一下Java异常处理机制。异常指不期而至的各种状况，Java通 过API中Throwable类的众多子类描述各种不同的异常。因而，Java异常都是对象，是Throwable子类的实例，描述了出现在一段编码中的错误条件。">
+<meta name="twitter:image" content="http://yoursite.com/images/java异常类层次结构图.jpg">
 
 
 
@@ -337,6 +339,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -364,7 +388,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">字数统计:</span>
-           <span class="post-count">0(字)</span>          
+           <span class="post-count">1,196(字)</span>          
          </span>
 		<!--
 		<span class="post-time">
@@ -373,7 +397,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">阅读时长:</span>
-           <span class="post-count">0(分)</span>         
+           <span class="post-count">5(分)</span>         
          </span>
 		-->
 		
@@ -395,7 +419,113 @@
       
 
       
-        
+        <p>本文主要是深入理解一下Java异常处理机制。异常指不期而至的各种状况，Java通 过API中Throwable类的众多子类描述各种不同的异常。因而，Java异常都是对象，是Throwable子类的实例，描述了出现在一段编码中的错误条件。<br><a id="more"></a></p>
+<h1 id="java异常类层次结构图"><a href="#java异常类层次结构图" class="headerlink" title="java异常类层次结构图"></a>java异常类层次结构图</h1><p><img src="/images/java异常类层次结构图.jpg" alt="img"></p>
+<h2 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h2><p>表示运行应用程序中较严重问题,大多数错误与代码编写者执行的操作无关，而表示代码运行时 JVM（Java 虚拟机）出现的问题,出现这种情况你唯一能做的就是听之任之，交由JVM来处理，不过JVM在大多数情况下会选择终止线程。<br>这些错误表示故障发生于虚拟机自身、或者发生在虚拟机试图执行应用时，如Java虚拟机运行错误（Virtual MachineError）、类定义错误（NoClassDefFoundError）等。这些错误是不可查的，因为它们在应用程序的控制和处理能力之 外，而且绝大多数是程序运行时不允许出现的状况。</p>
+<h2 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h2><p>是应用程序中可能的可预测、可恢复问题。一般大多数异常表示中度到轻度的问题。异常一般是在特定环境下产生的，通常出现在代码的特定方法和操作中。<br>Exception 这种异常分两大类运行时异常和非运行时异常(编译异常)。</p>
+<h3 id="运行时异常"><a href="#运行时异常" class="headerlink" title="运行时异常"></a>运行时异常</h3><p>都是RuntimeException类及其子类异常，如NullPointerException(空指针异常)、IndexOutOfBoundsException(下标越界异常)等，这些异常是不检查异常，程序中可以选择捕获处理，也可以不处理。这些异常一般是由程序逻辑错误引起的，程序应该从逻辑角度尽可能避免这类异常的发生。<br>运行时异常的特点是Java编译器不会检查它，也就是说，当程序中可能出现这类异常，即使没有用try-catch语句捕获它，也没有用throws子句声明抛出它，也会编译通过。</p>
+<h3 id="非运行时异常-（编译异常）"><a href="#非运行时异常-（编译异常）" class="headerlink" title="非运行时异常 （编译异常）"></a>非运行时异常 （编译异常）</h3><p>是RuntimeException以外的异常，从程序语法角度讲是必须进行处理的异常，如果不处理，程序就不能编译通过。如IOException、SQLException等以及用户自定义的Exception异常，一般情况下不自定义检查异常。</p>
+<h1 id="Java-异常分类"><a href="#Java-异常分类" class="headerlink" title="Java 异常分类"></a>Java 异常分类</h1><p>Java 异常可分为可检测异常，非检测异常和自定义异常。</p>
+<h2 id="可检测异常"><a href="#可检测异常" class="headerlink" title="可检测异常"></a>可检测异常</h2><p>可检测异常经编译器验证，对于声明抛出异常的任何方法，编译器将强制执行处理或声明规则，例如：sqlExecption 这个异常就是一个检测异常。你连接 JDBC 时，不捕捉这个异常，编译器就通不过，不允许编译。</p>
+<h2 id="非检测异常"><a href="#非检测异常" class="headerlink" title="非检测异常"></a>非检测异常</h2><p>非检测异常不遵循处理或声明规则。在产生此类异常时，不一定非要采取任何适当操作，编译器不会检查是否已解决了这样一个异常。例如：一个数组为 3 个长度，当你使用下标为３时，就会产生数组下标越界异常。这个异常 JVM 不会进行检测，要靠程序员来判断。有两个主要类定义非检测异常：RuntimeException 和 Error。</p>
+<h2 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h2><p>自定义异常是为了表示应用程序的一些错误类型，为代码可能发生的一个或多个问题提供新含义。</p>
+<h1 id="一个测试代码"><a href="#一个测试代码" class="headerlink" title="一个测试代码"></a>一个测试代码</h1><pre><code>package exception;
+
+public class TestException 
+{  
+    public TestException()
+    { }  
+
+    boolean testEx() throws Exception 
+    {  
+        boolean ret = true;  
+        try 
+        {  
+            ret = testEx1();  
+        } catch (Exception e) 
+        {  
+            System.out.println(&quot;testEx, catch exception&quot;);  
+            ret = false;  
+            throw e;  
+        } finally 
+        {  
+            System.out.println(&quot;testEx, finally; return value=&quot; + ret);  
+            return ret;  
+        }  
+    }  
+
+    boolean testEx1() throws Exception 
+    {  
+        boolean ret = true;  
+        try 
+        {  
+            ret = testEx2();  
+            if (!ret) 
+            {  
+                return false;  
+            }  
+            System.out.println(&quot;testEx1, at the end of try&quot;);  
+            return ret;  
+        } catch (Exception e) 
+        {  
+            System.out.println(&quot;testEx1, catch exception&quot;);  
+            ret = false;  
+            throw e;  
+        } finally 
+        {  
+            System.out.println(&quot;testEx1, finally; return value=&quot; + ret);  
+            return ret;  
+        }  
+    }  
+
+    boolean testEx2() throws Exception 
+    {  
+        boolean ret = true;  
+        try {  
+                int b = 12;  
+                int c;  
+                for (int i = 2; i &gt;= -2; i--) {  
+                    c = b / i;  
+                    System.out.println(&quot;i=&quot; + i);  
+            }  
+            return true;  
+        } catch (Exception e) 
+        {  
+            System.out.println(&quot;testEx2, catch exception&quot;);  
+            ret = false;  
+            throw e;  
+        } finally
+        {  
+            System.out.println(&quot;testEx2, finally; return value=&quot; + ret);  
+            return ret;  
+        }  
+    }  
+
+    public static void main(String[] args) 
+    {  
+        TestException testException1 = new TestException();  
+        try 
+        {  
+            testException1.testEx();  
+        } catch (Exception e)
+        {  
+            e.printStackTrace();  
+        }  
+    }  
+} 
+</code></pre><h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><pre><code>i=2
+i=1
+testEx2, catch exception
+testEx2, finally; return value=false
+testEx1, finally; return value=false
+testEx, finally; return value=false
+</code></pre><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>testEx()的try调用testEx1(),testEx1()的try调用testEx2(),12/2,12/1,12/0异常，执行testEx2()的catch,然后执行testEx2()的finally,接着执行testEx1()的finally,最后执行testEx()的finally。<br>需要注意的是在testEx2()catch后并没有执行testEx1()的catch。</p>
+<h1 id="Java-异常的处理"><a href="#Java-异常的处理" class="headerlink" title="Java 异常的处理"></a>Java 异常的处理</h1><p>在 Java 应用程序中，对异常的处理有两种方式：处理异常和声明异常。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ol>
+<li><a href="http://blog.csdn.net/hguisu/article/details/6155636" target="_blank" rel="external">http://blog.csdn.net/hguisu/article/details/6155636</a></li>
+<li>Java核心技术I</li>
+</ol>
+
 	  
 
     </div>
@@ -416,6 +546,12 @@
 
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/读书笔记/" rel="tag"># 读书笔记</a>
+          
+        </div>
       
 
       
@@ -481,8 +617,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/fll.jpg"
@@ -495,7 +640,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -504,7 +649,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -574,6 +719,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#java异常类层次结构图"><span class="nav-number">1.</span> <span class="nav-text">java异常类层次结构图</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Error"><span class="nav-number">1.1.</span> <span class="nav-text">Error</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Exception"><span class="nav-number">1.2.</span> <span class="nav-text">Exception</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#运行时异常"><span class="nav-number">1.2.1.</span> <span class="nav-text">运行时异常</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非运行时异常-（编译异常）"><span class="nav-number">1.2.2.</span> <span class="nav-text">非运行时异常 （编译异常）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-异常分类"><span class="nav-number">2.</span> <span class="nav-text">Java 异常分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#可检测异常"><span class="nav-number">2.1.</span> <span class="nav-text">可检测异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非检测异常"><span class="nav-number">2.2.</span> <span class="nav-text">非检测异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义异常"><span class="nav-number">2.3.</span> <span class="nav-text">自定义异常</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一个测试代码"><span class="nav-number">3.</span> <span class="nav-text">一个测试代码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#运行结果"><span class="nav-number">3.1.</span> <span class="nav-text">运行结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分析"><span class="nav-number">3.2.</span> <span class="nav-text">分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-异常的处理"><span class="nav-number">4.</span> <span class="nav-text">Java 异常的处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>

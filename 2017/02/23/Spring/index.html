@@ -88,16 +88,40 @@
 
 
 
-<meta name="description" content="一个搬砖的女娃">
+<meta name="description" content="Spring 采用以下4种关键策略
+
+基于POJO的轻量级和最小侵入性编程
+通过依赖注入与面向接口实现松耦合
+基于切面与惯例进行声明式编程
+通过切面和模板减少样板式代码装配beanSpring 容器负责创建应用程序中的bean并通过DI来协调这些对象之间的关系。有3种装配bean的方式。
+在XML中进行显示配置
+在java中进行显示配置
+隐式的bean发现机制与自动装配(组件扫描+自动装配）自动装">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring">
 <meta property="og:url" content="http://yoursite.com/2017/02/23/Spring/index.html">
 <meta property="og:site_name" content="fanlili's blog">
-<meta property="og:description" content="一个搬砖的女娃">
-<meta property="og:updated_time" content="2017-02-23T04:36:08.740Z">
+<meta property="og:description" content="Spring 采用以下4种关键策略
+
+基于POJO的轻量级和最小侵入性编程
+通过依赖注入与面向接口实现松耦合
+基于切面与惯例进行声明式编程
+通过切面和模板减少样板式代码装配beanSpring 容器负责创建应用程序中的bean并通过DI来协调这些对象之间的关系。有3种装配bean的方式。
+在XML中进行显示配置
+在java中进行显示配置
+隐式的bean发现机制与自动装配(组件扫描+自动装配）自动装">
+<meta property="og:updated_time" content="2017-03-19T12:06:32.952Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring">
-<meta name="twitter:description" content="一个搬砖的女娃">
+<meta name="twitter:description" content="Spring 采用以下4种关键策略
+
+基于POJO的轻量级和最小侵入性编程
+通过依赖注入与面向接口实现松耦合
+基于切面与惯例进行声明式编程
+通过切面和模板减少样板式代码装配beanSpring 容器负责创建应用程序中的bean并通过DI来协调这些对象之间的关系。有3种装配bean的方式。
+在XML中进行显示配置
+在java中进行显示配置
+隐式的bean发现机制与自动装配(组件扫描+自动装配）自动装">
 
 
 
@@ -374,7 +398,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">字数统计:</span>
-           <span class="post-count">0(字)</span>          
+           <span class="post-count">893(字)</span>          
          </span>
 		<!--
 		<span class="post-time">
@@ -383,7 +407,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">阅读时长:</span>
-           <span class="post-count">0(分)</span>         
+           <span class="post-count">4(分)</span>         
          </span>
 		-->
 		
@@ -405,7 +429,102 @@
       
 
       
-        
+        <p>Spring 采用以下4种关键策略</p>
+<ol>
+<li>基于POJO的轻量级和最小侵入性编程</li>
+<li>通过依赖注入与面向接口实现松耦合</li>
+<li>基于切面与惯例进行声明式编程</li>
+<li>通过切面和模板减少样板式代码<h1 id="装配bean"><a href="#装配bean" class="headerlink" title="装配bean"></a>装配bean</h1>Spring 容器负责创建应用程序中的bean并通过DI来协调这些对象之间的关系。有3种装配bean的方式。</li>
+<li>在XML中进行显示配置</li>
+<li>在java中进行显示配置</li>
+<li>隐式的bean发现机制与自动装配(组件扫描+自动装配）<h2 id="自动装配"><a href="#自动装配" class="headerlink" title="自动装配"></a>自动装配</h2>自动装配就是一个组件扫描（找到bean)+自动装配（找到bean之间的依赖关系）<h3 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明"></a>举例说明</h3>CD与CD播放器的例子<br>两个bean<h2 id="java中显示配置-JavaConfig"><a href="#java中显示配置-JavaConfig" class="headerlink" title="java中显示配置 JavaConfig"></a>java中显示配置 JavaConfig</h2></li>
+<li>@Configuration :表明该类是一个配置类，包含Spring在上下文中如何创建bean。</li>
+<li>@Bean：使用该注解的方法将返回一个对象，该对象要注册成为Spring应用上下文的bean。</li>
+<li>怎么进行装配：采用构造器或者Setter     return new CDPlayer(compactDisc);  <h2 id="自动装配-1"><a href="#自动装配-1" class="headerlink" title="自动装配"></a>自动装配</h2></li>
+<li>@Component：这个注解表明该类会作为组件类，并且告诉Spring要为这个类创建Bean。（组件扫描默认是不启用的，需要配置，这样才会去找@Component，进而为其创建bean。)<br>怎么开启： @ComponentScan 该注解会在Spring中启用组件扫描，默认扫描与配置类相同的包。<pre><code>&lt;context:Component-scan base-package=&quot;com.beanStudyAuto&quot;&gt;
+</code></pre></li>
+<li>@Autowired 默认按类型匹配,自动装配(Srping提供的)<h2 id="在XML中进行显示配置"><a href="#在XML中进行显示配置" class="headerlink" title="在XML中进行显示配置"></a>在XML中进行显示配置</h2><h3 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h3><h3 id="借助构造器初始化"><a href="#借助构造器初始化" class="headerlink" title="借助构造器初始化"></a>借助构造器初始化</h3><constructor-arg> ref,创建爱你一个CDplayer实例，然后将id为compactDisc的bean引用传递到<br>CDplayer的构造器中。<h3 id="设置属性"><a href="#设置属性" class="headerlink" title="设置属性"></a>设置属性</h3><h1 id="来看看IOC与DI"><a href="#来看看IOC与DI" class="headerlink" title="来看看IOC与DI"></a>来看看IOC与DI</h1>一直以来对这两个概念十分的模糊。起初觉得这两个是一样的，其实不是。<h2 id="DIP"><a href="#DIP" class="headerlink" title="DIP"></a>DIP</h2><h2 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h2></constructor-arg></li>
+</ol>
+<h3 id="DI"><a href="#DI" class="headerlink" title="DI"></a>DI</h3><h4 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h4><h4 id="为什么"><a href="#为什么" class="headerlink" title="为什么"></a>为什么</h4><p>如果没有DI的话代码将会非常的耦合，高层模块（被依赖对象）的实现依赖于低层模块（依赖对象），没有IOC,我们将在被依赖的模块类中直接同过new来进行依赖。这种方式有几个缺点<br>举个例子：</p>
+<pre><code>public class SqlserverManger 
+{
+    //连接SQLserver数据库
+    //在数据库中插入一条数据
+    public  void insert()
+    {
+        System.out.println(&quot;在数据库中添加一条订单!&quot;);
+    }
+}
+
+public class Order
+{
+    SqlserverManger sqlm=new SqlserverManger();
+    //添加商品的逻辑
+    public  void add()
+    {
+        sqlm.insert();
+        System.out.println(&quot;所有的逻辑处理已经完成&quot;);
+    }
+}
+
+public class Controller 
+{
+    public static void main(String[] args) 
+    {
+        Order order=new Order();
+        order.add();
+    }
+}
+</code></pre><p>如果需要更换数据库的时候，无论是修改SqlserverManger这个类，还是在增加另个一数据库的处理类，都需要修改一部分代码。（DAo+service+Controller)</p>
+<h4 id="怎么实现"><a href="#怎么实现" class="headerlink" title="怎么实现"></a>怎么实现</h4><h5 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h5><pre><code>public interface SqlManger 
+{
+     void insert();
+}
+//再增加一个Oracle的
+public class oracleManger implements  SqlManger
+{
+    //连接oracle数据库
+    //在数据库中插入一条数据
+    public  void insert()
+    {
+        System.out.println(&quot;在oracle数据库中添加一条订单!&quot;);
+    }
+}
+
+public class order2 
+{
+    private SqlManger sqlmanger;
+    public order2(SqlManger sqlmanger)
+    {
+        this.sqlmanger=sqlmanger;
+    }
+    public void add()
+    {
+        sqlmanger.insert();
+        System.out.println(&quot;所有的逻辑处理已经完成&quot;);
+    } 
+}
+
+SqlserverManger sqlm=new SqlserverManger();
+oracleManger oracle=new oracleManger();
+order2 order=new order2(sqlm);
+order.add();
+order2 ordert=new order2(oracle);
+ordert.add();
+</code></pre><h5 id="setter注入"><a href="#setter注入" class="headerlink" title="setter注入"></a>setter注入</h5><h5 id="构造器方法注入"><a href="#构造器方法注入" class="headerlink" title="构造器方法注入"></a>构造器方法注入</h5><h5 id="接口注入"><a href="#接口注入" class="headerlink" title="接口注入"></a>接口注入</h5><p>## </p>
+<h1 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h1><h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><ol>
+<li>通知</li>
+<li>连接点</li>
+<li>切点</li>
+<li>前面</li>
+<li>引入</li>
+<li>Spring提供了4种类型的AOP支持</li>
+<li>基于代理的经典Spring AOP</li>
+<li>纯POJO切面</li>
+<li>@AspectJ注解驱动的切面</li>
+<li>注入式AspectJ切面</li>
+</ol>
+
 	  
 
     </div>
@@ -493,8 +612,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/fll.jpg"
@@ -507,7 +635,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -525,7 +653,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -586,6 +714,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#装配bean"><span class="nav-number">1.</span> <span class="nav-text">装配bean</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#自动装配"><span class="nav-number">1.1.</span> <span class="nav-text">自动装配</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#举例说明"><span class="nav-number">1.1.1.</span> <span class="nav-text">举例说明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#java中显示配置-JavaConfig"><span class="nav-number">1.2.</span> <span class="nav-text">java中显示配置 JavaConfig</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动装配-1"><span class="nav-number">1.3.</span> <span class="nav-text">自动装配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在XML中进行显示配置"><span class="nav-number">1.4.</span> <span class="nav-text">在XML中进行显示配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#声明"><span class="nav-number">1.4.1.</span> <span class="nav-text">声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#借助构造器初始化"><span class="nav-number">1.4.2.</span> <span class="nav-text">借助构造器初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置属性"><span class="nav-number">1.4.3.</span> <span class="nav-text">设置属性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#来看看IOC与DI"><span class="nav-number">2.</span> <span class="nav-text">来看看IOC与DI</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#DIP"><span class="nav-number">2.1.</span> <span class="nav-text">DIP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IOC"><span class="nav-number">2.2.</span> <span class="nav-text">IOC</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DI"><span class="nav-number">2.2.1.</span> <span class="nav-text">DI</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#是什么"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么"><span class="nav-number">2.2.1.2.</span> <span class="nav-text">为什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#怎么实现"><span class="nav-number">2.2.1.3.</span> <span class="nav-text">怎么实现</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#构造器"><span class="nav-number">2.2.1.3.1.</span> <span class="nav-text">构造器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#setter注入"><span class="nav-number">2.2.1.3.2.</span> <span class="nav-text">setter注入</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#构造器方法注入"><span class="nav-number">2.2.1.3.3.</span> <span class="nav-text">构造器方法注入</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#接口注入"><span class="nav-number">2.2.1.3.4.</span> <span class="nav-text">接口注入</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#AOP"><span class="nav-number">3.</span> <span class="nav-text">AOP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#术语"><span class="nav-number">3.1.</span> <span class="nav-text">术语</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>

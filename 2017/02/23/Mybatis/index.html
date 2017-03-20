@@ -88,16 +88,19 @@
 
 
 
-<meta name="description" content="一个搬砖的女娃">
+<meta name="description" content="Mybatis是一个半自动映射的框架，需要手工匹配提供POJO,SQL和映射关系，而Hibernate只需要提供POJO与映射关系即可。
+基本构成SqlSessionFactoryBuilder(构造器)：根据配置信息或者代码来生成SQLSessionFactory。SqlsessionFactory(工厂接口)：依靠这个工厂来生成sqlsession。Sqlsession(会话）：可以发送SQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mybatis">
 <meta property="og:url" content="http://yoursite.com/2017/02/23/Mybatis/index.html">
 <meta property="og:site_name" content="fanlili's blog">
-<meta property="og:description" content="一个搬砖的女娃">
-<meta property="og:updated_time" content="2017-02-23T04:36:34.989Z">
+<meta property="og:description" content="Mybatis是一个半自动映射的框架，需要手工匹配提供POJO,SQL和映射关系，而Hibernate只需要提供POJO与映射关系即可。
+基本构成SqlSessionFactoryBuilder(构造器)：根据配置信息或者代码来生成SQLSessionFactory。SqlsessionFactory(工厂接口)：依靠这个工厂来生成sqlsession。Sqlsession(会话）：可以发送SQL">
+<meta property="og:updated_time" content="2017-03-16T12:57:06.616Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mybatis">
-<meta name="twitter:description" content="一个搬砖的女娃">
+<meta name="twitter:description" content="Mybatis是一个半自动映射的框架，需要手工匹配提供POJO,SQL和映射关系，而Hibernate只需要提供POJO与映射关系即可。
+基本构成SqlSessionFactoryBuilder(构造器)：根据配置信息或者代码来生成SQLSessionFactory。SqlsessionFactory(工厂接口)：依靠这个工厂来生成sqlsession。Sqlsession(会话）：可以发送SQL">
 
 
 
@@ -374,7 +377,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">字数统计:</span>
-           <span class="post-count">0(字)</span>          
+           <span class="post-count">283(字)</span>          
          </span>
 		<!--
 		<span class="post-time">
@@ -383,7 +386,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">阅读时长:</span>
-           <span class="post-count">0(分)</span>         
+           <span class="post-count">1(分)</span>         
          </span>
 		-->
 		
@@ -405,7 +408,35 @@
       
 
       
-        
+        <p>Mybatis是一个半自动映射的框架，需要手工匹配提供POJO,SQL和映射关系，而Hibernate只需要提供POJO与映射关系即可。</p>
+<h1 id="基本构成"><a href="#基本构成" class="headerlink" title="基本构成"></a>基本构成</h1><p>SqlSessionFactoryBuilder(构造器)：根据配置信息或者代码来生成SQLSessionFactory。<br>SqlsessionFactory(工厂接口)：依靠这个工厂来生成sqlsession。<br>Sqlsession(会话）：可以发送SQL去执行并返回结果，也可以获取Mapper接口。<br>SQL Mapper:由一个JAva接口和XML文件构成的，负责发送SQL去执行，并返回结果。</p>
+<p>Mybatis的构成.png</p>
+<h1 id="第一个Mybatis应用"><a href="#第一个Mybatis应用" class="headerlink" title="第一个Mybatis应用"></a>第一个Mybatis应用</h1><h2 id="构建SqlsessionFactory"><a href="#构建SqlsessionFactory" class="headerlink" title="构建SqlsessionFactory"></a>构建SqlsessionFactory</h2><ol>
+<li>可以通过XML配置方式来构建</li>
+<li>通过代码来构建<h3 id="使用XML的方式来构建"><a href="#使用XML的方式来构建" class="headerlink" title="使用XML的方式来构建"></a>使用XML的方式来构建</h3></li>
+<li>获取数据库连接实例的数据源DataSource</li>
+<li>事物管理器（决定事物范围以及控制方式）</li>
+<li>SQL Mapper</li>
+</ol>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;configuration&gt;&lt;!--配置--&gt;
+    &lt;properties/&gt;&lt;!--属性--&gt;
+    &lt;settings/&gt;&lt;!--设置--&gt;
+    &lt;typeAliases/&gt;&lt;!--类型命名--&gt;
+    &lt;typeHandlers/&gt;&lt;!--类型处理器--&gt;
+    &lt;objectFactory/&gt;&lt;!--对象工厂--&gt;
+    &lt;plugins/&gt;&lt;!--插件--&gt;
+    &lt;environments/&gt;&lt;!--配置环境--&gt;
+        &lt;environment/&gt;&lt;!--环境变量--&gt;
+            &lt;transactionManager/&gt;&lt;!--事务管理器--&gt;
+            &lt;datasourse/&gt;&lt;!--数据源--&gt;
+        &lt;enviroment/&gt;
+    &lt;environments/&gt;
+    &lt;databaseIdProvider/&gt;&lt;!--数据库厂商标识--&gt;
+    &lt;mappers/&gt;&lt;!--映射器--&gt;
+&lt;/configuration&gt;
+</code></pre><p>Mapper映射器</p>
+
 	  
 
     </div>
@@ -493,8 +524,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/fll.jpg"
@@ -507,7 +547,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -525,7 +565,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -586,6 +626,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本构成"><span class="nav-number">1.</span> <span class="nav-text">基本构成</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一个Mybatis应用"><span class="nav-number">2.</span> <span class="nav-text">第一个Mybatis应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#构建SqlsessionFactory"><span class="nav-number">2.1.</span> <span class="nav-text">构建SqlsessionFactory</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用XML的方式来构建"><span class="nav-number">2.1.1.</span> <span class="nav-text">使用XML的方式来构建</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>

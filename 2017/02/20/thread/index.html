@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="读书笔记," />
+  <meta name="keywords" content="Java," />
 
 
 
@@ -90,20 +90,32 @@
 
 <meta name="description" content="在 Java 语言中使用多线程要远比在C++ 中来得简单。
 在操作系统中两个比较容易混淆的概念是进程（process）和线程（thread）。
-##">
+一些小的概念
+进程:计算机中特定功能的程序在数据集上的一次运行。（电脑的任务管理器里面有很多进程）
+线程：进程的一个单元。（视频播放器）
+多线程：一个进程里面有多个线程在同时进行。（迅雷下载）
+并行：多个cpu实例或者多台机器同时执行一段处理逻辑，是真正的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="thread">
 <meta property="og:url" content="http://yoursite.com/2017/02/20/thread/index.html">
 <meta property="og:site_name" content="fanlili's blog">
 <meta property="og:description" content="在 Java 语言中使用多线程要远比在C++ 中来得简单。
 在操作系统中两个比较容易混淆的概念是进程（process）和线程（thread）。
-##">
-<meta property="og:updated_time" content="2017-02-23T14:38:07.276Z">
+一些小的概念
+进程:计算机中特定功能的程序在数据集上的一次运行。（电脑的任务管理器里面有很多进程）
+线程：进程的一个单元。（视频播放器）
+多线程：一个进程里面有多个线程在同时进行。（迅雷下载）
+并行：多个cpu实例或者多台机器同时执行一段处理逻辑，是真正的">
+<meta property="og:updated_time" content="2017-03-17T12:11:48.571Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="thread">
 <meta name="twitter:description" content="在 Java 语言中使用多线程要远比在C++ 中来得简单。
 在操作系统中两个比较容易混淆的概念是进程（process）和线程（thread）。
-##">
+一些小的概念
+进程:计算机中特定功能的程序在数据集上的一次运行。（电脑的任务管理器里面有很多进程）
+线程：进程的一个单元。（视频播放器）
+多线程：一个进程里面有多个线程在同时进行。（迅雷下载）
+并行：多个cpu实例或者多台机器同时执行一段处理逻辑，是真正的">
 
 
 
@@ -343,28 +355,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">读书笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -402,7 +392,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">字数统计:</span>
-           <span class="post-count">45(字)</span>          
+           <span class="post-count">1,292(字)</span>          
          </span>
 		<!--
 		<span class="post-time">
@@ -411,7 +401,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">阅读时长:</span>
-           <span class="post-count">0(分)</span>         
+           <span class="post-count">5(分)</span>         
          </span>
 		-->
 		
@@ -435,7 +425,86 @@
       
         <p>在 Java 语言中使用多线程要远比在C++ 中来得简单。</p>
 <p>在操作系统中两个比较容易混淆的概念是进程（process）和线程（thread）。</p>
-<p>##</p>
+<h1 id="一些小的概念"><a href="#一些小的概念" class="headerlink" title="一些小的概念"></a>一些小的概念</h1><ol>
+<li>进程:计算机中特定功能的程序在数据集上的一次运行。（电脑的任务管理器里面有很多进程）</li>
+<li>线程：进程的一个单元。（视频播放器）</li>
+<li>多线程：一个进程里面有多个线程在同时进行。（迅雷下载）</li>
+<li>并行：多个cpu实例或者多台机器同时执行一段处理逻辑，是真正的同时。</li>
+<li>并发：通过cpu调度算法，让用户看上去同时执行，实际上从cpu操作层面不是真正的同时。</li>
+<li>java虚拟机是多线程，有垃圾回收机制清理没有被引用的对象。</li>
+<li>共享资源：可以被一个以上任务使用的资源叫做共享资源。为了防止数据被破坏，每个任务在与共享资源打交道时，必须独占该资源。</li>
+<li>同步(Synchronized)：服务器执行任务必须等上一个任务执行完后，才执行下一个任务。</li>
+<li>对于并发安全性</li>
+<li>生产者：有水果就不生产，消费者买走后通知生产者，生产者去生产。</li>
+<li>消费者：没有水果就等待，生产者生产出通知，消费者去买。<h1 id="线程的生命周期"><a href="#线程的生命周期" class="headerlink" title="线程的生命周期"></a>线程的生命周期</h1>线程的生命周期.png<h2 id="新建"><a href="#新建" class="headerlink" title="新建"></a>新建</h2></li>
+<li>线程被new出来。</li>
+<li>处于创建状态的线程只是一个空的线程对象，系统不为它分配资源。<h2 id="就绪"><a href="#就绪" class="headerlink" title="就绪"></a>就绪</h2></li>
+<li>具有执行的资格，没有执行的权利，即线程调用了start()方法，但是这个时候不一定是运行状态（不一定可以抢占到CPU资源）<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2></li>
+<li>具备执行的资格与权利<h2 id="阻塞"><a href="#阻塞" class="headerlink" title="阻塞"></a>阻塞</h2></li>
+<li>没有执行的资格与权利。</li>
+<li><p>当发生下列事件时，处于运行状态的线程会转入到不可运行状态：</p>
+<p> 调用了sleep()方法；</p>
+<p> 线程调用wait()方法等待特定条件的满足；</p>
+<p> 线程输入/输出阻塞。</p>
+</li>
+<li><p>发生下列事件时返回可运行状态：</p>
+<p>处于睡眠状态的线程在指定的时间过去后；</p>
+</li>
+</ol>
+<p>　　如果线程在等待某一条件，另一个对象必须通过notify()或notifyAll()方法通知等待线程条件的改变；</p>
+<p>　 等待输入输出完成。</p>
+<h2 id="销毁"><a href="#销毁" class="headerlink" title="销毁"></a>销毁</h2><ol>
+<li>当线程的run()方法执行结束或这是调用了stop()方法，释放资源。<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1></li>
+<li><p>通过Thread类，将类声明为Thread的子类，该子类重写Thread类的run方法，接下来分配并启动该子例的实例，然后通过实例启动线程（这里不是单纯的调用run方法，这样并不是在执行多线程。start）。</p>
+<pre><code>public class ThreadDemo extends Thread
+{
+    @Override
+    public void run()
+    {
+        for(int i=0;i&lt;50;i++)
+        {
+            System.out.println(this.getName()+&quot;hello&quot;+i);
+        }
+    }
+}
+
+//创建线程的示例对象
+ThreadDemo thr=new ThreadDemo();
+ThreadDemo thr1=new ThreadDemo();
+thr.start();
+thr1.start();
+</code></pre></li>
+<li><p>声明实现Ruunable接口的类，然后该类实现run方法。然后分配该类的实例，在创建线程时作为一个参数来传递</p>
+<pre><code>public class ThreadSecond implements Runnable
+{
+    @Override
+    public void run()
+    {
+        for(int i=0;i&lt;50;i++)
+        {
+            System.out.println(Thread.currentThread().getName()+&quot;hello&quot;+i);
+        }
+    }
+}
+
+ThreadSecond th1=new ThreadSecond();
+Thread t1 =new Thread(th1,&quot;线程1&quot;);
+ThreadSecond th2=new ThreadSecond();
+Thread t2=new Thread(th2);
+t1.start();
+t2.start();
+</code></pre></li>
+<li>getName是Thread的方法，第一种方法是继承Thread类，所以可以调用父类的方法，但是第二种是实现Ruunable接口，故没有该方法。(Thread.currentThread(),通过这个得到当前的线程）<br>ThreadRuunable.png</li>
+<li>如果一个类在使用多线程时已经继承了一个类（Java是单线程的），这个时候再去继承Thread就是不现实的了。</li>
+<li>以上多线程的实现是并发的，这几个线程在不停的相互抢占CPU资源。<h1 id="并发安全性"><a href="#并发安全性" class="headerlink" title="并发安全性"></a>并发安全性</h1><h2 id="Synchronized"><a href="#Synchronized" class="headerlink" title="Synchronized"></a>Synchronized</h2>Synchronized(锁对象————是一个共享对象）<br>{<br> //操作共享资源的代码（同步代码块）<br>}<br>同步代码加在什么地方？</li>
+<li>代码被多个线程使用</li>
+<li>代码中有共享的数据。</li>
+<li>共享数据被多条语句使用。<br>Synchronized同步代码块的锁对象可以是任意类对象（线程的实现方式是继承Thread）这个对象必须是线程类共享（静态的）</li>
+<li>修饰一个代码块，被修饰的代码块称为同步语句块，其作用的范围是大括号{}括起来的代码，作用的对象是调用这个代码块的对象； </li>
+<li>修饰一个方法，被修饰的方法称为同步方法，其作用的范围是整个方法，作用的对象是调用这个方法的对象； </li>
+<li>修改一个静态的方法，其作用的范围是整个静态方法，作用的对象是这个类的所有对象； </li>
+<li>修改一个类，其作用的范围是synchronized后面括号括起来的部分，作用主的对象是这个类的所有对象。</li>
+</ol>
 
 	  
 
@@ -460,7 +529,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/读书笔记/" rel="tag"># 读书笔记</a>
+            <a href="/tags/Java/" rel="tag"># Java</a>
           
         </div>
       
@@ -530,8 +599,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/fll.jpg"
@@ -544,7 +622,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -562,7 +640,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -623,6 +701,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一些小的概念"><span class="nav-number">1.</span> <span class="nav-text">一些小的概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程的生命周期"><span class="nav-number">2.</span> <span class="nav-text">线程的生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#新建"><span class="nav-number">2.1.</span> <span class="nav-text">新建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#就绪"><span class="nav-number">2.2.</span> <span class="nav-text">就绪</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行"><span class="nav-number">2.3.</span> <span class="nav-text">运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阻塞"><span class="nav-number">2.4.</span> <span class="nav-text">阻塞</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#销毁"><span class="nav-number">2.5.</span> <span class="nav-text">销毁</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实现"><span class="nav-number">3.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#并发安全性"><span class="nav-number">4.</span> <span class="nav-text">并发安全性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Synchronized"><span class="nav-number">4.1.</span> <span class="nav-text">Synchronized</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>

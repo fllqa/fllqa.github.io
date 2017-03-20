@@ -94,7 +94,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/02/19/variable/index.html">
 <meta property="og:site_name" content="fanlili's blog">
 <meta property="og:description" content="Java 中的成员变量、局部变量、静态变量、类变量、非静态变量、实例变量。在Java中变量大致上可以分为成员变量与局部变量两大类。">
-<meta property="og:updated_time" content="2017-03-03T13:06:58.484Z">
+<meta property="og:updated_time" content="2017-03-04T09:47:53.256Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="variable">
 <meta name="twitter:description" content="Java 中的成员变量、局部变量、静态变量、类变量、非静态变量、实例变量。在Java中变量大致上可以分为成员变量与局部变量两大类。">
@@ -396,7 +396,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">字数统计:</span>
-           <span class="post-count">981(字)</span>          
+           <span class="post-count">1,772(字)</span>          
          </span>
 		<!--
 		<span class="post-time">
@@ -405,7 +405,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">阅读时长:</span>
-           <span class="post-count">3(分)</span>         
+           <span class="post-count">7(分)</span>         
          </span>
 		-->
 		
@@ -454,7 +454,89 @@
 </li>
 <li><p>变量属于类的实例对象</p>
 </li>
-<li>随着类的实例被创建而分配内存空间。<h1 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h1>形参、方法内定义的变量、代码块中定义的变量。<h2 id="生存时间-2"><a href="#生存时间-2" class="headerlink" title="生存时间"></a>生存时间</h2>局部变量的生存时间和方法的生存时间一致，调用该方法声明该局部变量并初始化的时，该局部变量被创建并分配内存空间；直到该方法调用结束局部变量也就结束了；<h2 id="是否需要初始化-1"><a href="#是否需要初始化-1" class="headerlink" title="是否需要初始化"></a>是否需要初始化</h2>局部变量在使用前必须进行初始化，系统默认不会对局部变量进行初始化数据操作，如果局部 变量在使用前没有进行初始化则会在编译器报错；如果局部变量进行了声明没有进行初始化， 但是也一直没有被使用的话编译也是不会报错的；（局部变量使用前必须初始化话）<h2 id="创建位置-2"><a href="#创建位置-2" class="headerlink" title="创建位置"></a>创建位置</h2>局部变量是创建在栈内存中的<h1 id="在使用变量时需要遵循的原则"><a href="#在使用变量时需要遵循的原则" class="headerlink" title="在使用变量时需要遵循的原则"></a>在使用变量时需要遵循的原则</h1>就近原则<h1 id="代码测试"><a href="#代码测试" class="headerlink" title="代码测试"></a>代码测试</h1></li>
+<li><p>随着类的实例被创建而分配内存空间。</p>
+<h1 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h1><p>形参、方法内定义的变量、代码块中定义的变量。</p>
+<h2 id="生存时间-2"><a href="#生存时间-2" class="headerlink" title="生存时间"></a>生存时间</h2><p>局部变量的生存时间和方法的生存时间一致，调用该方法声明该局部变量并初始化的时，该局部变量被创建并分配内存空间；直到该方法调用结束局部变量也就结束了；</p>
+<h2 id="是否需要初始化-1"><a href="#是否需要初始化-1" class="headerlink" title="是否需要初始化"></a>是否需要初始化</h2><p>局部变量在使用前必须进行初始化，系统默认不会对局部变量进行初始化数据操作，如果局部 变量在使用前没有进行初始化则会在编译器报错；如果局部变量进行了声明没有进行初始化， 但是也一直没有被使用的话编译也是不会报错的；（局部变量使用前必须初始化话）</p>
+<h2 id="创建位置-2"><a href="#创建位置-2" class="headerlink" title="创建位置"></a>创建位置</h2><p>局部变量是创建在栈内存中的</p>
+<h1 id="在使用变量时需要遵循的原则"><a href="#在使用变量时需要遵循的原则" class="headerlink" title="在使用变量时需要遵循的原则"></a>在使用变量时需要遵循的原则</h1><p>就近原则</p>
+<h1 id="代码测试"><a href="#代码测试" class="headerlink" title="代码测试"></a>代码测试</h1><p> package variable;</p>
+<p> public class test<br> { </p>
+<pre><code>int count = 0;          //类成员变量计数器  
+static int sum = 0;     //静态变量计数器  
+String name=&quot;类中的成员变量&quot;;            
+test(String name)
+{  
+    this.name = name;  
+}  
+test()
+{
+
+}
+public void mytest()
+{    
+    count++;  
+    System.out.println(name+&quot;调用非静态成员变量的值：&quot;+count);  
+}  
+public void staticmytest() {    
+    sum++;  
+    System.out.println(name+&quot;调用静态成员变量的值：&quot;+sum);  
+}
+public void test1()
+{
+   //int count=20;
+   System.out.println(++count);
+}
+public void test2()
+{
+    String name =&quot;类体方法中定义的name&quot;;       //在方法speak中定义和成员变量名字相同的name并赋值  
+    System.out.println(name); 
+    System.out.println(this.name);      //通过this来访问类中的成员变量  
+}
+public void testtime()
+{
+    count++; 
+    sum++; 
+    System.out.println(&quot;count的值：&quot;+count); 
+    System.out.println(&quot;sum的值：&quot;+sum);
+}
+
+ public static void main(String[] args) 
+ {  
+       test mtest=new test(&quot;对象1&quot;);
+       test mtest2=new test(&quot;对象2&quot;); 
+       System.out.println(&quot;测试不同的对象调用非静态变量&quot;);
+       mtest.mytest(); 
+       mtest.mytest();
+       mtest2.mytest();
+       System.out.println(&quot;同一个对象多次调用同一非静态变量会累加，不同对象调用会重新初始化&quot;);
+       System.out.println(&quot;——————————————————————&quot;);
+       System.out.println(&quot;测试不同的对象调用非静态变量&quot;);
+       mtest.staticmytest();
+       mtest2.staticmytest();
+       mtest2.staticmytest();
+       System.out.println(&quot;同一个对象多次调用同一非静态变量会累加，不同对象调用也会累加，应为共享内存&quot;);
+       System.out.println(&quot;——————————————————————&quot;);
+       System.out.println(&quot;测试同一个对象调用同一个方法中的局部变量&quot;);
+       test mtest3=new test();
+       mtest3.test1();
+       mtest3.test1();
+       System.out.println(&quot;同名时会就近，局部变量不会累加，离开方法就无效&quot;);
+       System.out.println(&quot;——————————————————————&quot;);
+       System.out.println(&quot;测试在方法中对同名的成员变量与局部变量的访问&quot;);
+       mtest3.test2();
+       mtest.test2();
+       System.out.println(&quot;通过this来访问类中的成员变量 &quot;);
+       System.out.println(&quot;——————————————————————&quot;);
+       System.out.println(&quot;测试同一对象调用静态成员与非静态成员&quot;);
+       mtest3.testtime();
+       mtest3.mytest();
+       mtest3.testtime();
+       System.out.println(&quot;——————————————————————&quot;);
+       }  
+</code></pre><p>  } </p>
+<h2 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h2><p> 测试不同的对象调用非静态变量<br> 对象1调用非静态成员变量的值：1<br> 对象1调用非静态成员变量的值：2<br> 对象2调用非静态成员变量的值：1<br> 同一个对象多次调用同一非静态变量会累加，不同对象调用会重新初始化<br> ——————————————————————<br> 测试不同的对象调用非静态变量<br> 对象1调用静态成员变量的值：1<br> 对象2调用静态成员变量的值：2<br> 对象2调用静态成员变量的值：3<br> 同一个对象多次调用同一非静态变量会累加，不同对象调用也会累加，应为共享内存<br> ——————————————————————<br> 测试同一个对象调用同一个方法中的局部变量<br> 1<br> 2<br> 同名时会就近，局部变量不会累加，离开方法就无效<br> ——————————————————————<br> 测试在方法中对同名的成员变量与局部变量的访问<br> 类体方法中定义的name<br> 类中的成员变量<br> 类体方法中定义的name<br> 对象1<br> 通过this来访问类中的成员变量<br> ——————————————————————<br> 测试同一对象调用静态成员与非静态成员<br> count的值：3<br> sum的值：4<br> 类中的成员变量调用非静态成员变量的值：4<br> count的值：5<br> sum的值：5<br> ——————————————————————</p>
+</li>
 </ol>
 
 	  
@@ -573,7 +655,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -591,7 +673,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -662,7 +744,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#全局变量"><span class="nav-number">1.</span> <span class="nav-text">全局变量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#静态变量"><span class="nav-number">1.1.</span> <span class="nav-text">静态变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#静态全局变量的定义"><span class="nav-number">1.1.1.</span> <span class="nav-text">静态全局变量的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生存时间"><span class="nav-number">1.1.2.</span> <span class="nav-text">生存时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#是否初始化"><span class="nav-number">1.1.3.</span> <span class="nav-text">是否初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建位置"><span class="nav-number">1.1.4.</span> <span class="nav-text">创建位置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非静态变量"><span class="nav-number">1.2.</span> <span class="nav-text">非静态变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非静态全局变量的定义"><span class="nav-number">1.2.1.</span> <span class="nav-text">非静态全局变量的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生存时间-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">生存时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#是否需要初始化"><span class="nav-number">1.2.3.</span> <span class="nav-text">是否需要初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建位置-1"><span class="nav-number">1.2.4.</span> <span class="nav-text">创建位置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#局部变量"><span class="nav-number">2.</span> <span class="nav-text">局部变量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#生存时间-2"><span class="nav-number">2.1.</span> <span class="nav-text">生存时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#是否需要初始化-1"><span class="nav-number">2.2.</span> <span class="nav-text">是否需要初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建位置-2"><span class="nav-number">2.3.</span> <span class="nav-text">创建位置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在使用变量时需要遵循的原则"><span class="nav-number">3.</span> <span class="nav-text">在使用变量时需要遵循的原则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码测试"><span class="nav-number">4.</span> <span class="nav-text">代码测试</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#全局变量"><span class="nav-number">1.</span> <span class="nav-text">全局变量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#静态变量"><span class="nav-number">1.1.</span> <span class="nav-text">静态变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#静态全局变量的定义"><span class="nav-number">1.1.1.</span> <span class="nav-text">静态全局变量的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生存时间"><span class="nav-number">1.1.2.</span> <span class="nav-text">生存时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#是否初始化"><span class="nav-number">1.1.3.</span> <span class="nav-text">是否初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建位置"><span class="nav-number">1.1.4.</span> <span class="nav-text">创建位置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非静态变量"><span class="nav-number">1.2.</span> <span class="nav-text">非静态变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非静态全局变量的定义"><span class="nav-number">1.2.1.</span> <span class="nav-text">非静态全局变量的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生存时间-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">生存时间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#是否需要初始化"><span class="nav-number">1.2.3.</span> <span class="nav-text">是否需要初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建位置-1"><span class="nav-number">1.2.4.</span> <span class="nav-text">创建位置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#局部变量"><span class="nav-number">2.</span> <span class="nav-text">局部变量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#生存时间-2"><span class="nav-number">2.1.</span> <span class="nav-text">生存时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#是否需要初始化-1"><span class="nav-number">2.2.</span> <span class="nav-text">是否需要初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建位置-2"><span class="nav-number">2.3.</span> <span class="nav-text">创建位置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在使用变量时需要遵循的原则"><span class="nav-number">3.</span> <span class="nav-text">在使用变量时需要遵循的原则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码测试"><span class="nav-number">4.</span> <span class="nav-text">代码测试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#输出结果"><span class="nav-number">4.1.</span> <span class="nav-text">输出结果</span></a></li></ol></li></ol></div>
             
 
           </div>

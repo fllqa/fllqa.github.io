@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-24T09:34:16.675Z</updated>
+  <updated>2017-03-20T08:37:48.415Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,507 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Abstract</title>
+    <link href="http://yoursite.com/2017/03/20/Abstract/"/>
+    <id>http://yoursite.com/2017/03/20/Abstract/</id>
+    <published>2017-03-20T08:37:48.000Z</published>
+    <updated>2017-03-20T08:37:48.415Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>redis</title>
+    <link href="http://yoursite.com/2017/03/18/redis/"/>
+    <id>http://yoursite.com/2017/03/18/redis/</id>
+    <published>2017-03-18T13:58:20.000Z</published>
+    <updated>2017-03-18T14:12:44.684Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>REmote DIctionary Server，是完全开源免费的，用C语言编写的，遵守BSD协议，是一个高性能的(key/value)分布式内存数据库，基于内存运行，并支持持久化的NoSQL数据库，是当前最热门的NoSql数据库之一,也被人们称为数据结构服务器。</p>
+<h1 id="与Memcached相比的优点"><a href="#与Memcached相比的优点" class="headerlink" title="与Memcached相比的优点"></a>与Memcached相比的优点</h1><ol>
+<li>Redis支持数据的持久化，可以将内存中的数据保持在磁盘中。</li>
+<li>Redis不仅仅支持简单的key-value类型的数据，同时还提供list，set，zset，hash等数据结构的存储。支持很多较为复杂的数据类型。</li>
+<li>Redis支持数据的备份。<h1 id="能干嘛"><a href="#能干嘛" class="headerlink" title="能干嘛"></a>能干嘛</h1></li>
+<li>内存存储和持久化：redis支持异步将内存中的数据写到硬盘上，同时不影响继续服务。</li>
+<li>取最新N个数据的操作，如：可以将最新的10条评论的ID放在Redis的List集合里面。</li>
+<li>模拟类似于HttpSession这种需要设定过期时间的功能。</li>
+<li>发布、订阅消息系统。<br>#</li>
+<li>单进程模型来处理客户端的请求。对读写等事件的响应是通过对epoll函数的包装来做到的。</li>
+<li>默认16个数据库，类似数组下表从零开始，初始默认使用零号库。</li>
+<li>Select命令切换数据库 select 2 Redis索引都是从零开始</li>
+<li>Dbsize查看当前数据库的key的数量 tab可以补全。</li>
+<li>Flushdb：清空当前库。</li>
+<li>Flushall；通杀全部库。<h1 id="5大数据类型"><a href="#5大数据类型" class="headerlink" title="5大数据类型"></a>5大数据类型</h1><h2 id="String（字符串）"><a href="#String（字符串）" class="headerlink" title="String（字符串）"></a>String（字符串）</h2></li>
+<li>string是redis最基本的类型，你可以理解成与Memcached一模一样的类型，一个key对应一个value。</li>
+<li>是二进制安全的。即redis的string可以包含任何数据。</li>
+<li>string类型是Redis最基本的数据类型，一个redis中字符串value最多可以是512M<h2 id="Hash（哈希）"><a href="#Hash（哈希）" class="headerlink" title="Hash（哈希）"></a>Hash（哈希）</h2></li>
+<li>是一个键值对集合。</li>
+<li>是一个string类型的field和value的映射表，hash特别适合用于存储对象。类似Java里面的Map<string,object>（散列表，要无都无，无序，不能重复）<h2 id="List（列表）"><a href="#List（列表）" class="headerlink" title="List（列表）"></a>List（列表）</h2>列表是简单的字符串列表，按照插入顺序排序。你可以添加一个元素导列表的头部（左边）或者尾部（右边）。它的底层实际是个链表（LinkedList要有都有，有序，可以重复）<h2 id="Set（集合）"><a href="#Set（集合）" class="headerlink" title="Set（集合）"></a>Set（集合）</h2>Redis的Set是string类型的无序集合。它是通过HashTable实现实现的。（Java中HashTable,HashMash底层一样都是Hashmap）<h2 id="zset-sorted-set：有序集合"><a href="#zset-sorted-set：有序集合" class="headerlink" title="zset(sorted set：有序集合)"></a>zset(sorted set：有序集合)</h2>Redis zset 和 set 一样也是string类型元素的集合,且不允许重复的成员。<br>不同的是每个元素都会关联一个double类型的分数。<br>redis正是通过分数来为集合中的成员进行从小到大的排序。zset的成员是唯一的,但分数(score)却可以重复。<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1>keys *<br>判断某个key是否存在 exists key1<br>当前库就没有了，被移除了，移到另一个库中 move k2 2<br>为给定的key设置过期时间  expire  k2 10<br>查看你的key是什么类型 type k3<br>查看还有多少秒过期，-1表示永不过期，-2表示已过期（过期已经死，被移除） ttl key1<br>append<br>strlen</string,object></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h1&gt;&lt;p&gt;REmote DIctionary Server，是完全开源免费的，用C语言编写的，遵守BSD协议，是一个高性能的(key/value)分布
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux常用命令</title>
+    <link href="http://yoursite.com/2017/03/18/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2017/03/18/Linux常用命令/</id>
+    <published>2017-03-18T03:08:18.000Z</published>
+    <updated>2017-03-18T08:32:45.889Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h1><ol>
+<li>拷贝文件file1并更名为file2 cp file1 file2</li>
+<li>拷贝kerry目录下文件到tmp目录下 cp /home/kerry/*  /tmp</li>
+<li>将目录下的所有目录包括子目录陆续复制到另外一个目录 cp -r /home/tomcat/ /tmp/bak</li>
+<li>cp redis.conf  /myredis<h1 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h1>将file_1.txt移动到/home/pungki/office这里（原来的txt将没有）mv file_1.txt /home/pungki/office</li>
+</ol>
+<p>tar -zxvf redis-3.0.4.tar.gz</p>
+<p>ls -l</p>
+<p>gcc -v<br>make<br>/usr 相当于program files<br>cd /usr/local/bin默认的安装路径<br>mkdir /myredis 新建一个文件夹<br>ls -l /myredis<br>vim redis.conf<br>查看有没有启动redis服务， ps -ef|grep redis<br>启动 redis-server /myredis/redis.conf<br>redis-cli -p 6379<br>set k1 hello<br>get k1<br>shutdown<br>redis-benchmark(整redis)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;cp&quot;&gt;&lt;a href=&quot;#cp&quot; class=&quot;headerlink&quot; title=&quot;cp&quot;&gt;&lt;/a&gt;cp&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;拷贝文件file1并更名为file2 cp file1 file2&lt;/li&gt;
+&lt;li&gt;拷贝kerry目录下文件到tmp目录下 c
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>nosqlStudy</title>
+    <link href="http://yoursite.com/2017/03/18/nosqlStudy/"/>
+    <id>http://yoursite.com/2017/03/18/nosqlStudy/</id>
+    <published>2017-03-18T00:54:57.000Z</published>
+    <updated>2017-03-18T02:41:43.089Z</updated>
+    
+    <content type="html"><![CDATA[<p>这次简单的总结了一下自己对NoSql的理解。</p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>传统的是关系型数据库RDMBS（Relational Database Management System）,NoSQL(Not Only SQL)用于超大规模数据的存储。这些类型的数据存储不需要固定的模式，无需多余操作就可以横向扩展。</p>
+<h1 id="遵循的规则对比"><a href="#遵循的规则对比" class="headerlink" title="遵循的规则对比"></a>遵循的规则对比</h1><h2 id="关系型数据库"><a href="#关系型数据库" class="headerlink" title="关系型数据库"></a>关系型数据库</h2><p>遵循ACID原则</p>
+<ol>
+<li>A原子性<br>原子性很容易理解，也就是说事务里的所有操作要么全部做完，要么都不做，事务成功的条件是事务里的所有操作都成功，只要有一个操作失败，整个事务就失败，需要回滚。比如银行转账，从A账户转100元至B账户，分为两个步骤：1）从A账户取100元；2）存入100元至B账户。这两步要么一起完成，要么一起不完成，如果只完成第一步，第二步失败，钱会莫名其妙少了100元。</li>
+<li>C一致性<br>一致性也比较容易理解，也就是说数据库要一直处于一致的状态，事务的运行不会改变数据库原本的一致性约束。</li>
+<li>I独立性<br>所谓的独立性是指并发的事务之间不会互相影响，如果一个事务要访问的数据正在被另外一个事务修改，只要另外一个事务未提交，它所访问的数据就不受未提交事务的影响。比如现有有个交易是从A账户转100元至B账户，在这个交易还未完成的情况下，如果此时B查询自己的账户，是看不到新增加的100元的</li>
+<li><p>D原子性<br>持久性是指一旦事务提交后，它所做的修改将会永久的保存在数据库上，即使出现宕机也不会丢失</p>
+<h2 id="Nosql数据库"><a href="#Nosql数据库" class="headerlink" title="Nosql数据库"></a>Nosql数据库</h2><h3 id="遵循CAP"><a href="#遵循CAP" class="headerlink" title="遵循CAP"></a>遵循CAP</h3><h3 id="Base"><a href="#Base" class="headerlink" title="Base"></a>Base</h3><p>BASE就是为了解决关系数据库强一致性引起的问题而引起的可用性降低而提出的解决方案。</p>
+<p> 基本可用（Basically Available）<br> 软状态（Soft state）<br> 最终一致（Eventually consistent）<br>它的思想是通过让系统放松对某一时刻数据一致性的要求来换取系统整体伸缩性和性能上改观。</p>
+<h3 id="一些需要注意的"><a href="#一些需要注意的" class="headerlink" title="一些需要注意的"></a>一些需要注意的</h3></li>
+<li>CAP理论就是说在分布式存储系统中，最多只能实现上面的两点。</li>
+<li>根据 CAP 原理将 NoSQL 数据库分成了满足 CA 原则、满足 CP 原则和满足 AP 原则三 大类：</li>
+</ol>
+<p>CA - 单点集群，满足一致性，可用性的系统，通常在可扩展性上不太强大。</p>
+<p>CP - 满足一致性，分区容忍必的系统，通常性能不是特别高。</p>
+<p>AP - 满足可用性，分区容忍性的系统，通常可能对一致性要求低一些。</p>
+<h1 id="为什么要使用Nosql"><a href="#为什么要使用Nosql" class="headerlink" title="为什么要使用Nosql"></a>为什么要使用Nosql</h1><h1 id="NoSQL数据模型简介"><a href="#NoSQL数据模型简介" class="headerlink" title="NoSQL数据模型简介"></a>NoSQL数据模型简介</h1><h2 id="Bason"><a href="#Bason" class="headerlink" title="Bason"></a>Bason</h2><p>BSON（）是一种类json的一种二进制形式的存储格式，简称Binary JSON，它和JSON一样，支持内嵌的文档对象和数组对象。</p>
+<h2 id="聚合模型"><a href="#聚合模型" class="headerlink" title="聚合模型"></a>聚合模型</h2><p>key-Value<br>Bason<br>列族<br>图形</p>
+<h1 id="Nosql数据库的4大分类"><a href="#Nosql数据库的4大分类" class="headerlink" title="Nosql数据库的4大分类"></a>Nosql数据库的4大分类</h1><h2 id="KV键值"><a href="#KV键值" class="headerlink" title="KV键值"></a>KV键值</h2><h2 id="文档型数据库"><a href="#文档型数据库" class="headerlink" title="文档型数据库"></a>文档型数据库</h2><h2 id="列存储数据库"><a href="#列存储数据库" class="headerlink" title="列存储数据库"></a>列存储数据库</h2><h2 id="图关系数据库"><a href="#图关系数据库" class="headerlink" title="图关系数据库"></a>图关系数据库</h2><h1 id="三大基石"><a href="#三大基石" class="headerlink" title="三大基石"></a>三大基石</h1><h2 id="CAP"><a href="#CAP" class="headerlink" title="CAP"></a>CAP</h2><h2 id="Base-1"><a href="#Base-1" class="headerlink" title="Base"></a>Base</h2><h2 id="最终一致性"><a href="#最终一致性" class="headerlink" title="最终一致性"></a>最终一致性</h2><p>1分布式：不同的多台服务器上面部署不同的服务模块（工程），他们之间通过Rpc/Rmi之间通信和调用，对外提供服务和组内协作。</p>
+<p>2集群：不同的多台服务器上面部署相同的服务模块，通过分布式调度软件进行统一的调度，对外提供服务和访问。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这次简单的总结了一下自己对NoSql的理解。&lt;/p&gt;
+&lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;传统的是关系型数据库RDMBS（Relational Database Mana
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>thread2</title>
+    <link href="http://yoursite.com/2017/03/17/thread2/"/>
+    <id>http://yoursite.com/2017/03/17/thread2/</id>
+    <published>2017-03-17T00:25:05.000Z</published>
+    <updated>2017-03-17T14:04:17.194Z</updated>
+    
+    <content type="html"><![CDATA[<p>在同步中休眠的时候锁会不会被释放。（在第一个线程休眠的时候，第二个线程可以进入么）答案是不可以的。线程的休眠是很必要的，为了减少服务器的压力，需要休眠。</p>
+<h1 id="线程间的通信"><a href="#线程间的通信" class="headerlink" title="线程间的通信"></a>线程间的通信</h1><h2 id="生产者"><a href="#生产者" class="headerlink" title="生产者"></a>生产者</h2><h2 id="消费者"><a href="#消费者" class="headerlink" title="消费者"></a>消费者</h2><p>wait 与notify是成对出现的，并且都在synchronized之中，生产者与消费者的实现一定在while（true)中。</p>
+<h1 id="线程之间的优先级问题"><a href="#线程之间的优先级问题" class="headerlink" title="线程之间的优先级问题"></a>线程之间的优先级问题</h1><ol>
+<li>线程的优先级是为了在多线程环境中便于系统对线程的调度，优先级高的线程将优先执行。</li>
+<li>一个线程的优先级设置遵从以下原则：</li>
+</ol>
+<p>　　线程创建时，子继承父的优先级。</p>
+<p>　　线程创建后，可通过调用setPriority()方法改变优先级。</p>
+<p>　　线程的优先级是1-10之间的正整数。</p>
+<p>　　1- MIN_PRIORITY</p>
+<p>　　10-MAX_PRIORITY</p>
+<p>　　5-NORM_PRIORITY</p>
+<p>　　如果什么都没有设置，默认值是5。</p>
+<p>　　但是不能依靠线程的优先级来决定线程的执行顺序。只能是值越大占有资源多些。</p>
+<h1 id="join"><a href="#join" class="headerlink" title="join"></a>join</h1><p>等待该线程终止，就是在一个线程start()之后，join会抢先拿到CPU执行线程，其他的线程都要等这个线程终止了才可以继续抢占CPU。<br>暂停当前正在执行的线程对象，并执行其他线程。</p>
+<h1 id="yield"><a href="#yield" class="headerlink" title="yield"></a>yield</h1><p>yield 回到就绪状态，让出CPU。</p>
+<h1 id="守护线程"><a href="#守护线程" class="headerlink" title="守护线程"></a>守护线程</h1><p>setDaemon 将该线程标记为守护线程或用户线程<br>会随着主线程的结束而结束。</p>
+<h1 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h1>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在同步中休眠的时候锁会不会被释放。（在第一个线程休眠的时候，第二个线程可以进入么）答案是不可以的。线程的休眠是很必要的，为了减少服务器的压力，需要休眠。&lt;/p&gt;
+&lt;h1 id=&quot;线程间的通信&quot;&gt;&lt;a href=&quot;#线程间的通信&quot; class=&quot;headerlink&quot; tit
+    
+    </summary>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JunitTest</title>
+    <link href="http://yoursite.com/2017/03/16/JunitTest/"/>
+    <id>http://yoursite.com/2017/03/16/JunitTest/</id>
+    <published>2017-03-16T09:41:24.000Z</published>
+    <updated>2017-03-16T09:41:24.440Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>log4j</title>
+    <link href="http://yoursite.com/2017/03/16/log4j/"/>
+    <id>http://yoursite.com/2017/03/16/log4j/</id>
+    <published>2017-03-16T09:41:03.000Z</published>
+    <updated>2017-03-16T09:41:03.199Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>数据库存储引擎</title>
+    <link href="http://yoursite.com/2017/03/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/"/>
+    <id>http://yoursite.com/2017/03/15/数据库存储引擎/</id>
+    <published>2017-03-15T11:33:38.000Z</published>
+    <updated>2017-03-15T11:33:38.568Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SQL常用语句</title>
+    <link href="http://yoursite.com/2017/03/15/SQL%E5%B8%B8%E7%94%A8%E8%AF%AD%E5%8F%A5/"/>
+    <id>http://yoursite.com/2017/03/15/SQL常用语句/</id>
+    <published>2017-03-15T09:29:28.000Z</published>
+    <updated>2017-03-15T12:21:36.359Z</updated>
+    
+    <content type="html"><![CDATA[<p>(constraints distinct)<br>cd c:\Program Files\MySQL\MySQL Server 5.7\bin<br>mysql -uroot -p<br>show databases<br>use taotao<br>create database test1<br>desc taotao<br>create table emp(ename varchar(10),hiredate date,sal decimal(10,2), deptno int(2));<br>insert into emp(ename,hiredate,sal,deptno) values(‘tom’,’2003-11-10’,’3000’,2);<br>insert into emp values(‘Lisa’,’2003-11-10’,’3000’,2);valuse的顺序与后面字段的排列顺序一致。<br>insert into emp values(‘Lisa’,’2003-11-10’,’3000’,3),(‘Lishi’,’2003-11-10’,’3000’,4);<br>可以一次性插入多条数据。<br>update emp set sal=4000 where ename=’lisa’;<br>多表更新<br>update emp a,dept b set a.sal=a.sal*b.deptno,b.deptname=a.ename where a.deptno=b.deptno;<br>alter table dept change deptame deptname varchar(10);更改字段名<br>delete from emp where ename=’Lisi’;</p>
+<p>select * from emp;<br>select distinct deptno from emp;(只显示不重复的deptno，只有deptno这一列）。</p>
+<p>表类型的选择（就是存储引擎的选择）<br>show variables like ‘table_type’;（不能用无效果）<br>show variables like ‘have%’;查询当前数据库支持的存储引擎。<br>create table test2(name char(10))engine=myisam;（必须有一列才可以）<br>show create table test2 \G(看搜索引擎 不要分号）<br>show tables<br>insert into test2 values(‘abcde’),(‘abcde ‘),(‘ abcde’),(‘ abcde ‘);<br>select name,length(name) from test2;</p>
+<p>测试一下InnoDB的自增长<br>create table autoincre_demo(i smallint not null auto_increment,name varchar(10),primary key(i))engine=innodb;<br>insert into autoincre_demo values(1,’1’),(2,’2’),(3,’3’),(null,’4’);<br>select LAST_INSERT_ID();一次性插入多条则返回的是第一个。<br>只有InnoDB支持外键，要求父表必须有对应的</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;(constraints distinct)&lt;br&gt;cd c:\Program Files\MySQL\MySQL Server 5.7\bin&lt;br&gt;mysql -uroot -p&lt;br&gt;show databases&lt;br&gt;use taotao&lt;br&gt;create dat
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>zhizhen</title>
+    <link href="http://yoursite.com/2017/03/15/zhizhen/"/>
+    <id>http://yoursite.com/2017/03/15/zhizhen/</id>
+    <published>2017-03-15T08:14:48.000Z</published>
+    <updated>2017-03-15T08:31:23.545Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>类型标识符  数组名[常量表达式];<br>常量表达式可以包括常量、常变量和符号常量，但不能包含变量。</p>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><ol>
+<li><p>在定义数组时分别对数组元素赋予初值</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">int a[10]=&#123;0,1,2,3,4,5,6,7,8,9&#125;;</div></pre></td></tr></table></figure>
+</li>
+<li><p>在对全部数组元素赋初值时，可以不指定数组长度。</p>
+<h1 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h1><h2 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h2><p> 类型标识符 数组名[常量表达式][常量表达式];<br>我们可以把二维数组看作是一种特殊的一维数组：它的元素又是一个一维数组。例如，可以把a看作是一个一维数组，它有3个元素：a[0]，a[1]，a[2]，每个元素又是一个包含4个元素的一维数组。</p>
+<h3 id="初始化-1"><a href="#初始化-1" class="headerlink" title="初始化"></a>初始化</h3></li>
+<li>分行给二维数组赋初值。</li>
+<li><p>可以将所有数据写在一个花括号内，按数组排列的顺序对各元素赋初值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">int a[3][4]=&#123;&#123;1,2,3,4&#125;,&#123;5,6,7,8&#125;,&#123;9,10,11,12&#125;&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果对全部元素都赋初值（即提供全部初始数据），则定义数组时对第一维的长度可以不指定，但第二维的长度不能省。</p>
+<h3 id="关于-的一些操作"><a href="#关于-的一些操作" class="headerlink" title="关于*的一些操作"></a>关于*的一些操作</h3><p>####一维数组<br> int a[5]={1,3,5,7,9};<br> cout&lt;&lt;”a: “&lt;&lt;a&lt;&lt;endl;<br> cout&lt;&lt;”a+1 :”&lt;&lt;a+1&lt;&lt;endl;<br> cout&lt;&lt;”<em>a: “&lt;&lt;</em>a&lt;&lt;endl;<br> cout&lt;&lt;”<em>a+1 :”&lt;&lt;</em>a+1&lt;&lt;endl;<br> cout&lt;&lt;”a[0]: “&lt;&lt;a[0]&lt;&lt;endl;<br> cout&lt;&lt;”a[1]: “&lt;&lt;a[1]&lt;&lt;endl;<br> cout&lt;&lt;”a[0]+1: “&lt;&lt;a[0]+1&lt;&lt;endl;<br> cout&lt;&lt;”——————————————————————“&lt;&lt;endl;</p>
+<p> cout&lt;&lt;”<em>(a+1) :”&lt;&lt;</em>(a+1)&lt;&lt;endl;<br> cout&lt;&lt;”——————————————————————“&lt;&lt;endl;</p>
+<h4 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h4><p> <img src="/images/指针运行结果1.png" alt="img"></p>
+<h4 id="二维数组-1"><a href="#二维数组-1" class="headerlink" title="二维数组"></a>二维数组</h4><p> int main(int argc, char* argv[])<br> {</p>
+<pre><code>int a[][5]={{1,3,5,7,9},{11,13,15,17,19},{21,23,25,27,29}};
+cout&lt;&lt;&quot;a: &quot;&lt;&lt;a&lt;&lt;endl;
+cout&lt;&lt;&quot;a+1 :&quot;&lt;&lt;a+1&lt;&lt;endl;
+cout&lt;&lt;&quot;*a: &quot;&lt;&lt;*a&lt;&lt;endl;
+cout&lt;&lt;&quot;*a+1 :&quot;&lt;&lt;*a+1&lt;&lt;endl;
+cout&lt;&lt;&quot;a[0]: &quot;&lt;&lt;a[0]&lt;&lt;endl;
+cout&lt;&lt;&quot;a[1]: &quot;&lt;&lt;a[1]&lt;&lt;endl;
+cout&lt;&lt;&quot;a[0]+1: &quot;&lt;&lt;a[0]+1&lt;&lt;endl;
+cout&lt;&lt;&quot;(a+1)[0] :&quot;&lt;&lt;(a+1)[0]&lt;&lt;endl;
+cout&lt;&lt;&quot;——————————————————————&quot;&lt;&lt;endl;
+
+cout&lt;&lt;&quot;*(a+1) :&quot;&lt;&lt;*(a+1)&lt;&lt;endl;
+cout&lt;&lt;&quot;*(*a+1) :&quot;&lt;&lt;*(*a+1)&lt;&lt;endl;
+cout&lt;&lt;&quot;*a[1]: &quot;&lt;&lt;*a[1]&lt;&lt;endl;
+cout&lt;&lt;&quot;——————————————————————&quot;&lt;&lt;endl;
+
+cout&lt;&lt;&quot;(*a)[1] :&quot;&lt;&lt;(*a)[1]&lt;&lt;endl;
+cout&lt;&lt;&quot;*(a+1)[1] :&quot;&lt;&lt;*(a+1)[1]&lt;&lt;endl;
+cout&lt;&lt;&quot;(*a+1)[0] :&quot;&lt;&lt;(*a+1)[0]&lt;&lt;endl;
+
+cout&lt;&lt;&quot;——————————————————————&quot;&lt;&lt;endl;
+cout&lt;&lt;&quot;**a&quot;&lt;&lt;**a&lt;&lt;endl;
+</code></pre><p> }</p>
+<h4 id="运行结果-1"><a href="#运行结果-1" class="headerlink" title="运行结果"></a>运行结果</h4><p> <img src="/images/指针运行结果2.png" alt="img"></p>
+<h4 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h4></li>
+<li>指针不光代表地址值标量，还蕴含其变化范围属性(反映其所指对象所占内存大小) </li>
+<li><ul>
+<li>–dereference操作,会将a退化为整形指针(变化范围每次1个字节，即04H)。</li>
+</ul>
+</li>
+<li>[] –加上偏移量后再做dereference操作</li>
+<li><em>()[] –[]的优先级高于</em>,先偏移N个( )指针单位 , 再对( )做dereference操作(取指针对象的值）。</li>
+<li>指向包含5个整型元素数组的指针 (变化范围每次20个字节，即14H) </li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一维数组&quot;&gt;&lt;a href=&quot;#一维数组&quot; class=&quot;headerlink&quot; title=&quot;一维数组&quot;&gt;&lt;/a&gt;一维数组&lt;/h1&gt;&lt;h2 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>this详解</title>
+    <link href="http://yoursite.com/2017/03/09/this%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://yoursite.com/2017/03/09/this详解/</id>
+    <published>2017-03-09T04:22:47.000Z</published>
+    <updated>2017-03-09T04:51:38.864Z</updated>
+    
+    <content type="html"><![CDATA[<p>this在Java中的几种用法<br>this关键字必须放在非静态方法中，代表自身。</p>
+<h1 id="几种用法"><a href="#几种用法" class="headerlink" title="几种用法"></a>几种用法</h1><h2 id="引用成员变量"><a href="#引用成员变量" class="headerlink" title="引用成员变量"></a>引用成员变量</h2><p>在一个类的方法或者构造方法内部，可用this.成员变量名来引用成员变量。如果变量名不发生重叠，则this可以省略。</p>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><pre><code>public class Test
+{
+    private int a;
+    public Test(int a)
+    {
+        this.a = a;
+    }
+    public int getA()
+    {
+        return a;
+    }
+    public void setA(int a)
+    {
+        this.a = a;
+    }
+}
+</code></pre><h2 id="引用构造方法"><a href="#引用构造方法" class="headerlink" title="引用构造方法"></a>引用构造方法</h2><p>在一个类的构造方法内部，也可以使用this关键字引用其它的构造方法，这样可以降低代码的重复，也可以使所有的构造方法保持统一，这样方便以后的代码修改和维护，也方便代码的阅读。</p>
+<h3 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h3><pre><code>public class Test 
+{
+    int a;
+    public Test(int a)
+    {
+       this.a = a;
+    }
+    public Test(int c, boolean b)
+    {
+        this(c);
+    }
+}
+</code></pre><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ol>
+<li>当一个类内部的构造方法比较多时，可以只书写一个构造方法的内部功能代码，然后其它的构造方法都通过调用该构造方法实现，这样既保证了所有的构造是统一的，也降低了代码的重复。</li>
+<li>在实际使用时，需要注意的是，在构造方法内部使用this关键字调用其它的构造方法时，调用的代码只能出现在构造方法内部的第一行可执行代码。<h2 id="代表自身对象"><a href="#代表自身对象" class="headerlink" title="代表自身对象"></a>代表自身对象</h2>可以用this代表自身类的对象，每个类中有一个隐含成员变量，变量类型为该类的类型。<h3 id="例子-2"><a href="#例子-2" class="headerlink" title="例子"></a>例子</h3> public class Test<br> {<pre><code>Test instance;
+public Test()
+{
+    instance = this;
+}
+public void test()
+{
+    System.out.println(this);
+}
+</code></pre> }<br>由于这个原因，在类的内部成员方法之间的相互调用可以采用this.方法名。</li>
+</ol>
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><p><a href="http://blog.csdn.net/javaniuniu/article/details/52447502" target="_blank" rel="external">http://blog.csdn.net/javaniuniu/article/details/52447502</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;this在Java中的几种用法&lt;br&gt;this关键字必须放在非静态方法中，代表自身。&lt;/p&gt;
+&lt;h1 id=&quot;几种用法&quot;&gt;&lt;a href=&quot;#几种用法&quot; class=&quot;headerlink&quot; title=&quot;几种用法&quot;&gt;&lt;/a&gt;几种用法&lt;/h1&gt;&lt;h2 id=&quot;引用成员变量&quot;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>StackandQueue</title>
+    <link href="http://yoursite.com/2017/03/04/StackandQueue/"/>
+    <id>http://yoursite.com/2017/03/04/StackandQueue/</id>
+    <published>2017-03-04T13:15:44.000Z</published>
+    <updated>2017-03-09T11:56:41.311Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>怎么说呢，栈就是一种特殊的线性表，线性表的删除与插入可以在任意位置进行，而栈只允许在一端进行，允许操作的是栈顶，不允许操作的是栈底，是先进后出。把握好top即可。</p>
+<h2 id="一些特点"><a href="#一些特点" class="headerlink" title="一些特点"></a>一些特点</h2><p>top很关键:表示栈顶元素的位置。<br>top=0，指向栈顶元素的下一个存储位置。<br>top=-1,指向栈顶元素存储位置。<br>代码均采用top等于0来测试即指向栈顶元素的下一个存储位置。</p>
+<h2 id="按实现方式来进行分类"><a href="#按实现方式来进行分类" class="headerlink" title="按实现方式来进行分类"></a>按实现方式来进行分类</h2><h3 id="顺序栈"><a href="#顺序栈" class="headerlink" title="顺序栈"></a>顺序栈</h3><p>用连续的空间来存放元素，用数组来实现。需要注意的是栈的存储单元maxSize与top之间的关系maxSize&gt;=top。<br>其实顺序栈特别的简单就把握住一下4点即可。</p>
+<pre><code>1. 栈空的条件时top=0.
+2. 栈满的条件时top=stackElem.length=maxSize
+3. 栈顶元素是stackElem[top-1]
+4. 栈的长度为top
+</code></pre><h4 id="图示"><a href="#图示" class="headerlink" title="图示"></a>图示</h4><h4 id="形成"><a href="#形成" class="headerlink" title="形成"></a>形成</h4><h4 id="入栈"><a href="#入栈" class="headerlink" title="入栈"></a>入栈</h4><ol>
+<li>判断栈是否满，满则抛出异常，不满去2.</li>
+<li>将新元素放在top位置上</li>
+<li><p>top加1</p>
+<pre><code>public void push(Object x) throws Exception 
+    {
+        //没有考虑到栈满的情况
+        if(top==stackElem.length)
+            throw new Exception(&quot;栈已经满&quot;);
+        stackElem[top]=x;
+        top++;
+    }
+</code></pre></li>
+</ol>
+<h4 id="出栈"><a href="#出栈" class="headerlink" title="出栈"></a>出栈</h4><pre><code>    public Object pop() throws Exception 
+{
+    //出栈需要返回栈顶元素stackElem[top-1]=null;top--还要记得判断栈是不是为空
+    if (top == 0)
+        return null;
+    return stackElem [--top];
+}
+</code></pre><h4 id="查询某一个索引的元素"><a href="#查询某一个索引的元素" class="headerlink" title="查询某一个索引的元素"></a>查询某一个索引的元素</h4><h4 id="查询某一个元素的索引"><a href="#查询某一个元素的索引" class="headerlink" title="查询某一个元素的索引"></a>查询某一个元素的索引</h4><h4 id="遍历输出"><a href="#遍历输出" class="headerlink" title="遍历输出"></a>遍历输出</h4><h4 id="置空"><a href="#置空" class="headerlink" title="置空"></a>置空</h4><h4 id="栈中元素个数"><a href="#栈中元素个数" class="headerlink" title="栈中元素个数"></a>栈中元素个数</h4><h3 id="链栈"><a href="#链栈" class="headerlink" title="链栈"></a>链栈</h3><h4 id="图示-1"><a href="#图示-1" class="headerlink" title="图示"></a>图示</h4><h4 id="形成-1"><a href="#形成-1" class="headerlink" title="形成"></a>形成</h4><h4 id="输出栈的长度"><a href="#输出栈的长度" class="headerlink" title="输出栈的长度"></a>输出栈的长度</h4><h4 id="入栈-1"><a href="#入栈-1" class="headerlink" title="入栈"></a>入栈</h4><h4 id="出栈-1"><a href="#出栈-1" class="headerlink" title="出栈"></a>出栈</h4><h4 id="查询某一个索引的元素-1"><a href="#查询某一个索引的元素-1" class="headerlink" title="查询某一个索引的元素"></a>查询某一个索引的元素</h4><h4 id="查询某一个元素的索引-1"><a href="#查询某一个元素的索引-1" class="headerlink" title="查询某一个元素的索引"></a>查询某一个元素的索引</h4><h4 id="遍历输出-1"><a href="#遍历输出-1" class="headerlink" title="遍历输出"></a>遍历输出</h4><h4 id="置空-1"><a href="#置空-1" class="headerlink" title="置空"></a>置空</h4>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;栈&quot;&gt;&lt;a href=&quot;#栈&quot; class=&quot;headerlink&quot; title=&quot;栈&quot;&gt;&lt;/a&gt;栈&lt;/h1&gt;&lt;h2 id=&quot;基本概念&quot;&gt;&lt;a href=&quot;#基本概念&quot; class=&quot;headerlink&quot; title=&quot;基本概念&quot;&gt;&lt;/a&gt;基本概念&lt;/h2&gt;&lt;p
+    
+    </summary>
+    
+    
+      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sort</title>
+    <link href="http://yoursite.com/2017/03/04/sort/"/>
+    <id>http://yoursite.com/2017/03/04/sort/</id>
+    <published>2017-03-04T11:41:20.000Z</published>
+    <updated>2017-03-13T15:25:28.373Z</updated>
+    
+    <content type="html"><![CDATA[<p>这次主要是总结一下排序的相关知识</p>
+<h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>将一组无序的记录序列调整为有序的记录序列的一种操作。</p>
+<h2 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h2><p>是数据元素中某个数据项的值，用以标识一个数据元素。有主关键字，次关键字。</p>
+<h2 id="稳定排序"><a href="#稳定排序" class="headerlink" title="稳定排序"></a>稳定排序</h2><p>相同的关键字的记录(Ki=kj),在排序前（Ri&lt;Rj),排序后Ri&lt;Rj,则是稳定的。</p>
+<h2 id="不稳定排序"><a href="#不稳定排序" class="headerlink" title="不稳定排序"></a>不稳定排序</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这次主要是总结一下排序的相关知识&lt;/p&gt;
+&lt;h1 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h1&gt;&lt;p&gt;将一组无序的记录序列调整为有序的记录序列的一种操作。&lt;/p&gt;
+&lt;h2 id=&quot;关键字&quot;&gt;&lt;a
+    
+    </summary>
+    
+    
+      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WebService</title>
+    <link href="http://yoursite.com/2017/03/04/WebService/"/>
+    <id>http://yoursite.com/2017/03/04/WebService/</id>
+    <published>2017-03-04T11:38:46.000Z</published>
+    <updated>2017-03-04T11:38:46.740Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SSM框架整合</title>
+    <link href="http://yoursite.com/2017/03/04/SSM%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88/"/>
+    <id>http://yoursite.com/2017/03/04/SSM框架整合/</id>
+    <published>2017-03-04T11:38:16.000Z</published>
+    <updated>2017-03-04T11:38:16.480Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>LengthandSize</title>
+    <link href="http://yoursite.com/2017/03/04/LengthandSize/"/>
+    <id>http://yoursite.com/2017/03/04/LengthandSize/</id>
+    <published>2017-03-04T09:40:29.000Z</published>
+    <updated>2017-03-04T09:47:50.313Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="length-length-与size-的区别"><a href="#length-length-与size-的区别" class="headerlink" title="length,length()与size()的区别"></a>length,length()与size()的区别</h2><ol>
+<li>java中的length属性是针对数组说的,比如说你声明了一个数组,想知道这个数组的长度则用到了length这个属。</li>
+<li>java中的length()方法是针对字符串String说的,如果想看这个字符串的长度则用到length()这个方法.</li>
+<li>java中的size()方法是针对泛型集合说的,如果想看这个泛型有多少个元素,就调用此方法来查看!</li>
+</ol>
+<h2 id="一个示例"><a href="#一个示例" class="headerlink" title="一个示例"></a>一个示例</h2><pre><code>public static void main(String[] args)
+    {
+        int [] list={1,2,3,4,5};
+        String a=&quot;macaoyuan&quot;;
+        System.out.println(list.length);
+        System.out.println(a.length());
+        List&lt;Object&gt; array=new ArrayList();
+        array.add(a);
+        System.out.println(array.size());
+    }
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;length-length-与size-的区别&quot;&gt;&lt;a href=&quot;#length-length-与size-的区别&quot; class=&quot;headerlink&quot; title=&quot;length,length()与size()的区别&quot;&gt;&lt;/a&gt;length,length()
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>UML</title>
     <link href="http://yoursite.com/2017/02/24/UML/"/>
     <id>http://yoursite.com/2017/02/24/UML/</id>
     <published>2017-02-24T08:47:30.000Z</published>
-    <updated>2017-02-24T09:34:16.675Z</updated>
+    <updated>2017-03-15T01:35:51.504Z</updated>
     
     <content type="html"><![CDATA[<p>在UML图中常见的有以下几种关系,泛化，实现，关联，聚合，组合，依赖。<br><a id="more"></a></p>
 <h2 id="泛化"><a href="#泛化" class="headerlink" title="泛化"></a>泛化</h2><h3 id="关系定义"><a href="#关系定义" class="headerlink" title="关系定义"></a>关系定义</h3><p>是一种继承关系，表示一般与特殊的关系，它指定了子类如何特化父类的所有特征和行为。例如：老虎是动物的一种，即有老虎的特性也有动物的共性。</p>
@@ -28,16 +524,16 @@
 <h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h3 id="关系定义-1"><a href="#关系定义-1" class="headerlink" title="关系定义"></a>关系定义</h3><p>是一种类与接口的关系，表示类是接口所有特征和行为的实现.</p>
 <h3 id="表示方法-1"><a href="#表示方法-1" class="headerlink" title="表示方法"></a>表示方法</h3><p>带三角箭头的虚线，箭头指向接口</p>
 <h2 id="关联"><a href="#关联" class="headerlink" title="关联"></a>关联</h2><h3 id="关系定义-2"><a href="#关系定义-2" class="headerlink" title="关系定义"></a>关系定义</h3><p>是一种拥有的关系，它使一个类知道另一个类的属性和方法；如：老师与学生，丈夫与妻子关联可以是双向的，也可以是单向的。双向的关联可以有两个箭头或者没有箭头，单向的关联有一个箭头。</p>
-<h3 id="表示方法-2"><a href="#表示方法-2" class="headerlink" title="表示方法"></a>表示方法</h3><p>带普通箭头的实心线，指向被拥有者<br><img src="/images/UML关联.png" alt="img"></p>
+<h3 id="表示方法-2"><a href="#表示方法-2" class="headerlink" title="表示方法"></a>表示方法</h3><p>带普通箭头的实心线，指向被拥有者<br>    <img src="/images/UML关联.png" alt="img"></p>
 <h2 id="聚合"><a href="#聚合" class="headerlink" title="聚合"></a>聚合</h2><h3 id="关系定义-3"><a href="#关系定义-3" class="headerlink" title="关系定义"></a>关系定义</h3><p>是整体与部分的关系，且部分可以离开整体而单独存在。如车和轮胎是整体和部分的关系，轮胎离开车仍然可以存在。</p>
-<h3 id="表示方法-3"><a href="#表示方法-3" class="headerlink" title="表示方法"></a>表示方法</h3><p>带空心菱形的实心线加普通箭头，菱形指向整体<br><img src="/images/UML聚合.jpg" alt="img"></p>
+<h3 id="表示方法-3"><a href="#表示方法-3" class="headerlink" title="表示方法"></a>表示方法</h3><p>带空心菱形的实心线加普通箭头，菱形指向整体<br>    <img src="/images/UML聚合.jpg" alt="img"></p>
 <h2 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h2><h3 id="关系定义-4"><a href="#关系定义-4" class="headerlink" title="关系定义"></a>关系定义</h3><p>是整体与部分的关系，但部分不能离开整体而单独存在。如公司和部门是整体和部分的关系，没有公司就不存在部门。<br>组合关系是关联关系的一种，是比聚合关系还要强的关系，它要求普通的聚合关系中代表整体的对象负责代表部分的对象的生命周期</p>
 <h3 id="表示方法-4"><a href="#表示方法-4" class="headerlink" title="表示方法"></a>表示方法</h3><p>带实心菱形的实线加普通箭头，菱形指向整体</p>
 <h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><h3 id="关系定义-5"><a href="#关系定义-5" class="headerlink" title="关系定义"></a>关系定义</h3><p>是一种使用的关系，即一个类的实现需要另一个类的协助，所以要尽量不使用双向的互相依赖.比如人与计算机</p>
 <h3 id="表示方法-5"><a href="#表示方法-5" class="headerlink" title="表示方法"></a>表示方法</h3><p>带普通箭头的虚线，指向被使用者</p>
 <h2 id="各种关系的强弱顺序"><a href="#各种关系的强弱顺序" class="headerlink" title="各种关系的强弱顺序"></a>各种关系的强弱顺序</h2><p>泛化 = 实现 &gt; 组合 &gt; 聚合 &gt; 关联 &gt; 依赖 </p>
-<h2 id="展示各类关系"><a href="#展示各类关系" class="headerlink" title="展示各类关系"></a>展示各类关系</h2><p><img src="/images/UML.png" alt="img"></p>
-]]></content>
+<h2 id="展示各类关系"><a href="#展示各类关系" class="headerlink" title="展示各类关系"></a>展示各类关系</h2><pre><code>[img](/images/UML.png)
+</code></pre>]]></content>
     
     <summary type="html">
     
@@ -69,12 +565,39 @@
     <link href="http://yoursite.com/2017/02/24/Tree/"/>
     <id>http://yoursite.com/2017/02/24/Tree/</id>
     <published>2017-02-24T06:52:50.000Z</published>
-    <updated>2017-02-24T06:52:50.435Z</updated>
+    <updated>2017-03-09T13:00:42.616Z</updated>
+    
+    <content type="html"><![CDATA[<p>可以用树一种表示元素与逻辑关系。树是由n&gt;=0个节点构成的有限集合，n&gt;0时结点必须满足有且仅有一个根节点，其余结点又可以分层m(m&gt;0)个集合，每个集合都是一棵树。</p>
+<h1 id="一些基本概念"><a href="#一些基本概念" class="headerlink" title="一些基本概念"></a>一些基本概念</h1><h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><h3 id="一些性质"><a href="#一些性质" class="headerlink" title="一些性质"></a>一些性质</h3><h3 id="二叉树的链式存储结构"><a href="#二叉树的链式存储结构" class="headerlink" title="二叉树的链式存储结构"></a>二叉树的链式存储结构</h3><p>既然是链式存储，那一定会有结点类，链式本来就是元素+指针。</p>
+<h4 id="结点类部分展示"><a href="#结点类部分展示" class="headerlink" title="结点类部分展示"></a>结点类部分展示</h4><pre><code>private Object data;
+private BiTreeNode rchild,lchild;
+public BiTreeNode() 
+{
+    this(null);
+}
+public BiTreeNode(Object data) 
+{
+    this(data,null,null);
+}
+public BiTreeNode(Object data, BiTreeNode rchild, BiTreeNode lchild) 
+{
+
+    this.data = data;
+    this.rchild = rchild;
+    this.lchild = lchild;
+}
+</code></pre><h4 id="建立"><a href="#建立" class="headerlink" title="建立"></a>建立</h4><h4 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h4><h4 id="增"><a href="#增" class="headerlink" title="增"></a>增</h4><h4 id="删"><a href="#删" class="headerlink" title="删"></a>删</h4><h4 id="查"><a href="#查" class="headerlink" title="查"></a>查</h4><h4 id="长度"><a href="#长度" class="headerlink" title="长度"></a>长度</h4><h4 id="判断是否为空"><a href="#判断是否为空" class="headerlink" title="判断是否为空"></a>判断是否为空</h4><p>####</p>
+<h2 id="满二叉树"><a href="#满二叉树" class="headerlink" title="满二叉树"></a>满二叉树</h2><h2 id="完全二叉树"><a href="#完全二叉树" class="headerlink" title="完全二叉树"></a>完全二叉树</h2><h2 id="平衡二叉树（Huffman树）"><a href="#平衡二叉树（Huffman树）" class="headerlink" title="平衡二叉树（Huffman树）"></a>平衡二叉树（Huffman树）</h2><h2 id="二叉搜索树"><a href="#二叉搜索树" class="headerlink" title="二叉搜索树"></a>二叉搜索树</h2><h2 id="高度平衡"><a href="#高度平衡" class="headerlink" title="高度平衡"></a>高度平衡</h2>]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;可以用树一种表示元素与逻辑关系。树是由n&amp;gt;=0个节点构成的有限集合，n&amp;gt;0时结点必须满足有且仅有一个根节点，其余结点又可以分层m(m&amp;gt;0)个集合，每个集合都是一棵树。&lt;/p&gt;
+&lt;h1 id=&quot;一些基本概念&quot;&gt;&lt;a href=&quot;#一些基本概念&quot; class=
+    
     </summary>
     
+    
+      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
@@ -83,849 +606,128 @@
     <link href="http://yoursite.com/2017/02/24/LinearList/"/>
     <id>http://yoursite.com/2017/02/24/LinearList/</id>
     <published>2017-02-24T06:52:26.000Z</published>
-    <updated>2017-02-26T14:12:15.822Z</updated>
+    <updated>2017-03-09T11:49:25.588Z</updated>
     
-    <content type="html"><![CDATA[<p>线性表中第一个元素的存储地址为线性表的起始地址，称为头指针，若果有头结点，头结点没有数据，指向头结点的指针称为头指针。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;线性表中第一个元素的存储地址为线性表的起始地址，称为头指针，若果有头结点，头结点没有数据，指向头结点的指针称为头指针。&lt;/p&gt;
-
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JavaDesign</title>
-    <link href="http://yoursite.com/2017/02/23/JavaDesign/"/>
-    <id>http://yoursite.com/2017/02/23/JavaDesign/</id>
-    <published>2017-02-23T04:39:06.000Z</published>
-    <updated>2017-03-03T13:04:33.247Z</updated>
-    
-    <content type="html"><![CDATA[<p>23种设计模式总结<br>特别喜欢这句话，招式与内功哪个更重要，Java、C#、C++等编程语言，Eclipse、Visual Studio等开发工具，JSP、ASP.net等开发技术，Struts、Hibernate等框架技术，所有这些我们都可以认为是招式;而数据结构、算法、设计模式、重构、软件工程等则为内功。招式可以很快学会，但是内功的修炼需要更长的时间。<br><a id="more"></a></p>
-<h2 id="常用设计模式一览表"><a href="#常用设计模式一览表" class="headerlink" title="常用设计模式一览表"></a>常用设计模式一览表</h2><h3 id="创建型模式"><a href="#创建型模式" class="headerlink" title="创建型模式"></a>创建型模式</h3><p><img src="/images/创建型模式.jpg" alt="img"></p>
-<h3 id="结构型模式"><a href="#结构型模式" class="headerlink" title="结构型模式"></a>结构型模式</h3><p><img src="/images/结构型模式.jpg" alt="img"></p>
-<h3 id="行为型模式"><a href="#行为型模式" class="headerlink" title="行为型模式"></a>行为型模式</h3><p><img src="/images/行为型模式.jpg" alt="img"></p>
-<h2 id="7种面向对象设计原则"><a href="#7种面向对象设计原则" class="headerlink" title="7种面向对象设计原则"></a>7种面向对象设计原则</h2><p><img src="/images/面向对象设计原则.jpg" alt="img"></p>
-<h2 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h2><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
-<li>Head First 设计模式</li>
-<li>网上的其他资料</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;23种设计模式总结&lt;br&gt;特别喜欢这句话，招式与内功哪个更重要，Java、C#、C++等编程语言，Eclipse、Visual Studio等开发工具，JSP、ASP.net等开发技术，Struts、Hibernate等框架技术，所有这些我们都可以认为是招式;而数据结构、算法、设计模式、重构、软件工程等则为内功。招式可以很快学会，但是内功的修炼需要更长的时间。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://yoursite.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="读书笔记" scheme="http://yoursite.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mybatis</title>
-    <link href="http://yoursite.com/2017/02/23/Mybatis/"/>
-    <id>http://yoursite.com/2017/02/23/Mybatis/</id>
-    <published>2017-02-23T04:36:34.000Z</published>
-    <updated>2017-02-23T04:36:34.989Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>SpringMvc</title>
-    <link href="http://yoursite.com/2017/02/23/SpringMvc/"/>
-    <id>http://yoursite.com/2017/02/23/SpringMvc/</id>
-    <published>2017-02-23T04:36:25.000Z</published>
-    <updated>2017-02-23T04:36:25.098Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Spring</title>
-    <link href="http://yoursite.com/2017/02/23/Spring/"/>
-    <id>http://yoursite.com/2017/02/23/Spring/</id>
-    <published>2017-02-23T04:36:08.000Z</published>
-    <updated>2017-02-23T04:36:08.740Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>thread</title>
-    <link href="http://yoursite.com/2017/02/20/thread/"/>
-    <id>http://yoursite.com/2017/02/20/thread/</id>
-    <published>2017-02-20T07:35:07.000Z</published>
-    <updated>2017-02-23T14:38:07.276Z</updated>
-    
-    <content type="html"><![CDATA[<p>在 Java 语言中使用多线程要远比在C++ 中来得简单。</p>
-<p>在操作系统中两个比较容易混淆的概念是进程（process）和线程（thread）。</p>
-<p>##</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在 Java 语言中使用多线程要远比在C++ 中来得简单。&lt;/p&gt;
-&lt;p&gt;在操作系统中两个比较容易混淆的概念是进程（process）和线程（thread）。&lt;/p&gt;
-&lt;p&gt;##&lt;/p&gt;
-
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://yoursite.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="读书笔记" scheme="http://yoursite.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>exception</title>
-    <link href="http://yoursite.com/2017/02/20/exception/"/>
-    <id>http://yoursite.com/2017/02/20/exception/</id>
-    <published>2017-02-20T07:34:43.000Z</published>
-    <updated>2017-02-23T06:48:40.211Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文主要是深入理解一下Java异常处理机制。异常指不期而至的各种状况，Java通 过API中Throwable类的众多子类描述各种不同的异常。因而，Java异常都是对象，是Throwable子类的实例，描述了出现在一段编码中的错误条件。<br><a id="more"></a></p>
-<h1 id="java异常类层次结构图"><a href="#java异常类层次结构图" class="headerlink" title="java异常类层次结构图"></a>java异常类层次结构图</h1><p><img src="/images/java异常类层次结构图.jpg" alt="img"></p>
-<h2 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h2><p>表示运行应用程序中较严重问题,大多数错误与代码编写者执行的操作无关，而表示代码运行时 JVM（Java 虚拟机）出现的问题,出现这种情况你唯一能做的就是听之任之，交由JVM来处理，不过JVM在大多数情况下会选择终止线程。<br>这些错误表示故障发生于虚拟机自身、或者发生在虚拟机试图执行应用时，如Java虚拟机运行错误（Virtual MachineError）、类定义错误（NoClassDefFoundError）等。这些错误是不可查的，因为它们在应用程序的控制和处理能力之 外，而且绝大多数是程序运行时不允许出现的状况。</p>
-<h2 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h2><p>是应用程序中可能的可预测、可恢复问题。一般大多数异常表示中度到轻度的问题。异常一般是在特定环境下产生的，通常出现在代码的特定方法和操作中。<br>Exception 这种异常分两大类运行时异常和非运行时异常(编译异常)。</p>
-<h3 id="运行时异常"><a href="#运行时异常" class="headerlink" title="运行时异常"></a>运行时异常</h3><p>都是RuntimeException类及其子类异常，如NullPointerException(空指针异常)、IndexOutOfBoundsException(下标越界异常)等，这些异常是不检查异常，程序中可以选择捕获处理，也可以不处理。这些异常一般是由程序逻辑错误引起的，程序应该从逻辑角度尽可能避免这类异常的发生。<br>运行时异常的特点是Java编译器不会检查它，也就是说，当程序中可能出现这类异常，即使没有用try-catch语句捕获它，也没有用throws子句声明抛出它，也会编译通过。</p>
-<h3 id="非运行时异常-（编译异常）"><a href="#非运行时异常-（编译异常）" class="headerlink" title="非运行时异常 （编译异常）"></a>非运行时异常 （编译异常）</h3><p>是RuntimeException以外的异常，从程序语法角度讲是必须进行处理的异常，如果不处理，程序就不能编译通过。如IOException、SQLException等以及用户自定义的Exception异常，一般情况下不自定义检查异常。</p>
-<h1 id="Java-异常分类"><a href="#Java-异常分类" class="headerlink" title="Java 异常分类"></a>Java 异常分类</h1><p>Java 异常可分为可检测异常，非检测异常和自定义异常。</p>
-<h2 id="可检测异常"><a href="#可检测异常" class="headerlink" title="可检测异常"></a>可检测异常</h2><p>可检测异常经编译器验证，对于声明抛出异常的任何方法，编译器将强制执行处理或声明规则，例如：sqlExecption 这个异常就是一个检测异常。你连接 JDBC 时，不捕捉这个异常，编译器就通不过，不允许编译。</p>
-<h2 id="非检测异常"><a href="#非检测异常" class="headerlink" title="非检测异常"></a>非检测异常</h2><p>非检测异常不遵循处理或声明规则。在产生此类异常时，不一定非要采取任何适当操作，编译器不会检查是否已解决了这样一个异常。例如：一个数组为 3 个长度，当你使用下标为３时，就会产生数组下标越界异常。这个异常 JVM 不会进行检测，要靠程序员来判断。有两个主要类定义非检测异常：RuntimeException 和 Error。</p>
-<h2 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h2><p>自定义异常是为了表示应用程序的一些错误类型，为代码可能发生的一个或多个问题提供新含义。</p>
-<h1 id="一个测试代码"><a href="#一个测试代码" class="headerlink" title="一个测试代码"></a>一个测试代码</h1><pre><code>package exception;
-
-public class TestException 
-{  
-    public TestException()
-    { }  
-
-    boolean testEx() throws Exception 
-    {  
-        boolean ret = true;  
-        try 
-        {  
-            ret = testEx1();  
-        } catch (Exception e) 
-        {  
-            System.out.println(&quot;testEx, catch exception&quot;);  
-            ret = false;  
-            throw e;  
-        } finally 
-        {  
-            System.out.println(&quot;testEx, finally; return value=&quot; + ret);  
-            return ret;  
-        }  
-    }  
-
-    boolean testEx1() throws Exception 
-    {  
-        boolean ret = true;  
-        try 
-        {  
-            ret = testEx2();  
-            if (!ret) 
-            {  
-                return false;  
-            }  
-            System.out.println(&quot;testEx1, at the end of try&quot;);  
-            return ret;  
-        } catch (Exception e) 
-        {  
-            System.out.println(&quot;testEx1, catch exception&quot;);  
-            ret = false;  
-            throw e;  
-        } finally 
-        {  
-            System.out.println(&quot;testEx1, finally; return value=&quot; + ret);  
-            return ret;  
-        }  
-    }  
-
-    boolean testEx2() throws Exception 
-    {  
-        boolean ret = true;  
-        try {  
-                int b = 12;  
-                int c;  
-                for (int i = 2; i &gt;= -2; i--) {  
-                    c = b / i;  
-                    System.out.println(&quot;i=&quot; + i);  
-            }  
-            return true;  
-        } catch (Exception e) 
-        {  
-            System.out.println(&quot;testEx2, catch exception&quot;);  
-            ret = false;  
-            throw e;  
-        } finally
-        {  
-            System.out.println(&quot;testEx2, finally; return value=&quot; + ret);  
-            return ret;  
-        }  
-    }  
-
-    public static void main(String[] args) 
-    {  
-        TestException testException1 = new TestException();  
-        try 
-        {  
-            testException1.testEx();  
-        } catch (Exception e)
-        {  
-            e.printStackTrace();  
-        }  
-    }  
-} 
-</code></pre><h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><pre><code>i=2
-i=1
-testEx2, catch exception
-testEx2, finally; return value=false
-testEx1, finally; return value=false
-testEx, finally; return value=false
-</code></pre><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>testEx()的try调用testEx1(),testEx1()的try调用testEx2(),12/2,12/1,12/0异常，执行testEx2()的catch,然后执行testEx2()的finally,接着执行testEx1()的finally,最后执行testEx()的finally。<br>需要注意的是在testEx2()catch后并没有执行testEx1()的catch。</p>
-<h1 id="Java-异常的处理"><a href="#Java-异常的处理" class="headerlink" title="Java 异常的处理"></a>Java 异常的处理</h1><p>在 Java 应用程序中，对异常的处理有两种方式：处理异常和声明异常。</p>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ol>
-<li><a href="http://blog.csdn.net/hguisu/article/details/6155636" target="_blank" rel="external">http://blog.csdn.net/hguisu/article/details/6155636</a></li>
-<li>Java核心技术I</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文主要是深入理解一下Java异常处理机制。异常指不期而至的各种状况，Java通 过API中Throwable类的众多子类描述各种不同的异常。因而，Java异常都是对象，是Throwable子类的实例，描述了出现在一段编码中的错误条件。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://yoursite.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="读书笔记" scheme="http://yoursite.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>refelection</title>
-    <link href="http://yoursite.com/2017/02/20/refelection/"/>
-    <id>http://yoursite.com/2017/02/20/refelection/</id>
-    <published>2017-02-20T07:27:35.000Z</published>
-    <updated>2017-02-20T07:27:35.056Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>variable</title>
-    <link href="http://yoursite.com/2017/02/19/variable/"/>
-    <id>http://yoursite.com/2017/02/19/variable/</id>
-    <published>2017-02-19T12:46:32.000Z</published>
-    <updated>2017-03-03T13:06:58.484Z</updated>
-    
-    <content type="html"><![CDATA[<p>Java 中的成员变量、局部变量、静态变量、类变量、非静态变量、实例变量。<br>在Java中变量大致上可以分为成员变量与局部变量两大类。<br><a id="more"></a></p>
-<h1 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h1><p>全局变量也叫成员变量</p>
-<ol>
-<li>在类里面定义的变量称为成员变量。</li>
-<li>如果前面有static修饰，则该成员变量为静态变量或者类变量。</li>
-<li>如果前面无static修饰，则该成员变量为非静态变量或实例变量。</li>
-<li></li>
-<li>全局变量不需要初始化。</li>
-<li><p>存在于堆内存中。</p>
-<h2 id="静态变量"><a href="#静态变量" class="headerlink" title="静态变量"></a>静态变量</h2><p>静态全局变量</p>
-<h3 id="静态全局变量的定义"><a href="#静态全局变量的定义" class="headerlink" title="静态全局变量的定义"></a>静态全局变量的定义</h3><p>静态的类成员变量</p>
-<h3 id="生存时间"><a href="#生存时间" class="headerlink" title="生存时间"></a>生存时间</h3><p>静态全局变量随着类的字节码文件加载而加载产生，随着字节码文件的消失而消失，生存时间比类的对象还要长；</p>
-<h3 id="是否初始化"><a href="#是否初始化" class="headerlink" title="是否初始化"></a>是否初始化</h3><p>凡是全局变量都是可以不要初始化的，静态变量也是一样，系统会自动根据其数据类型进行赋默认值，但是建议变量在声明时都进行初始化；</p>
-<h3 id="创建位置"><a href="#创建位置" class="headerlink" title="创建位置"></a>创建位置</h3><p>静态变量是存在于堆内存中的，所以静态全局变量也是存在于堆内存中的。</p>
-</li>
-<li><p>类变量不依赖类的实例，类变量只在初始化时候在栈内存中被分配一次空间，无论类的实例被创建几次，都不再为类变量分配空间，即而且所有对象的同一个类变量都是共享同一块内存空间的</p>
-</li>
-<li>通过类的任意一个实例来访问类变量，底层都将将其转为通过类本身来访问类变量，它们的效果是一样的</li>
-<li>一旦类变量的值被改变，通过类或类的任意一个实例来访问类变量，得到的都将是被改变后的值</li>
-<li><p>将在类的初始化之前初始化</p>
-<h2 id="非静态变量"><a href="#非静态变量" class="headerlink" title="非静态变量"></a>非静态变量</h2><h3 id="非静态全局变量的定义"><a href="#非静态全局变量的定义" class="headerlink" title="非静态全局变量的定义"></a>非静态全局变量的定义</h3><p>非静态全局变量都是定在类中，是类的成员变量或者说是成员属性属于类的一部分（或 者说是对象的一部分）；</p>
-<h3 id="生存时间-1"><a href="#生存时间-1" class="headerlink" title="生存时间"></a>生存时间</h3><p>非静态全局变量加载在堆内存中，随着声明初始化而创建，随着对象消亡而消亡；</p>
-<h3 id="是否需要初始化"><a href="#是否需要初始化" class="headerlink" title="是否需要初始化"></a>是否需要初始化</h3><p>全局变量都是不需要被强制初始化的，系统都会默认根据其数据类型进行默认赋值；但是建议在声明时都进行初始化操作；</p>
-<h3 id="创建位置-1"><a href="#创建位置-1" class="headerlink" title="创建位置"></a>创建位置</h3><p>创建在堆内存中，因为非静态的全局变量数对象的成员变量是对象的一部分；</p>
-</li>
-<li><p>变量属于类的实例对象</p>
-</li>
-<li>随着类的实例被创建而分配内存空间。<h1 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h1>形参、方法内定义的变量、代码块中定义的变量。<h2 id="生存时间-2"><a href="#生存时间-2" class="headerlink" title="生存时间"></a>生存时间</h2>局部变量的生存时间和方法的生存时间一致，调用该方法声明该局部变量并初始化的时，该局部变量被创建并分配内存空间；直到该方法调用结束局部变量也就结束了；<h2 id="是否需要初始化-1"><a href="#是否需要初始化-1" class="headerlink" title="是否需要初始化"></a>是否需要初始化</h2>局部变量在使用前必须进行初始化，系统默认不会对局部变量进行初始化数据操作，如果局部 变量在使用前没有进行初始化则会在编译器报错；如果局部变量进行了声明没有进行初始化， 但是也一直没有被使用的话编译也是不会报错的；（局部变量使用前必须初始化话）<h2 id="创建位置-2"><a href="#创建位置-2" class="headerlink" title="创建位置"></a>创建位置</h2>局部变量是创建在栈内存中的<h1 id="在使用变量时需要遵循的原则"><a href="#在使用变量时需要遵循的原则" class="headerlink" title="在使用变量时需要遵循的原则"></a>在使用变量时需要遵循的原则</h1>就近原则<h1 id="代码测试"><a href="#代码测试" class="headerlink" title="代码测试"></a>代码测试</h1></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Java 中的成员变量、局部变量、静态变量、类变量、非静态变量、实例变量。&lt;br&gt;在Java中变量大致上可以分为成员变量与局部变量两大类。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://yoursite.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="读书笔记" scheme="http://yoursite.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>extends</title>
-    <link href="http://yoursite.com/2017/02/19/extends/"/>
-    <id>http://yoursite.com/2017/02/19/extends/</id>
-    <published>2017-02-19T11:40:58.000Z</published>
-    <updated>2017-02-23T05:34:56.387Z</updated>
-    
-    <content type="html"><![CDATA[<p>这次主要分析一下类的关键字</p>
-<a id="more"></a>
-<h2 id="extends"><a href="#extends" class="headerlink" title="extends"></a>extends</h2><p>extends表示的是继承，孩子类继承父类，子类继承超类，继承是一种is-a的关系。</p>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><pre><code>public class Manager extends Employee()
-{
-}
-</code></pre><h3 id="子类可以重写父类的方法（覆盖）"><a href="#子类可以重写父类的方法（覆盖）" class="headerlink" title="子类可以重写父类的方法（覆盖）"></a>子类可以重写父类的方法（覆盖）</h3><p>这里需要注意，如果子类中重写的这个方法也要用到父类中同名的方法，可以用到super.getSalary()</p>
-<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><p>一个对象变量可以指示多种实际类型的现象为多态。</p>
-<h2 id="final"><a href="#final" class="headerlink" title="final"></a>final</h2><p>不允许扩展的类称为final类，即final类不能定义子类。同样子类不能覆盖的方法叫做final方法</p>
-<h3 id="final类"><a href="#final类" class="headerlink" title="final类"></a>final类</h3><h4 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h4><pre><code>public final class Manager extends Employee()
-{
-}
-</code></pre><h3 id="final方法"><a href="#final方法" class="headerlink" title="final方法"></a>final方法</h3><h4 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h4><pre><code>public class test
-{
-    public final String getName()
+    <content type="html"><![CDATA[<p>按元素之间的逻辑关系不同可以分为线性表，图，树，集合。之前分析了集合，接下来会一次分析那几个。<br><a id="more"></a></p>
+<p>线性表</p>
+<h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>线性表就是n个元素（n&gt;=0)构成的有限序列。<br>线性表中第一个元素的存储地址为线性表的起始地址，称为头指针，若果有头结点，头结点没有数据，指向头结点的指针称为头指针。关键就是把握好头指针，以及是否有头结点。</p>
+<h1 id="一些基本概念"><a href="#一些基本概念" class="headerlink" title="一些基本概念"></a>一些基本概念</h1><ol>
+<li>同类型的元素组成</li>
+<li>线性表只是一种逻辑结构，其具体存储结构可以分为顺序存储结构和链式储存结构来完成,可以得到顺序表和链表。</li>
+<li>对线性表的入表和出表顺序做一定的限定，可以得到特殊的线性表，栈(FILO)和队列（FIFO）<h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><h2 id="顺序表"><a href="#顺序表" class="headerlink" title="顺序表"></a>顺序表</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3></li>
+<li>由地址连续的存储单元依次存放线性表中的数据。</li>
+<li>基地址：线性表的起始地址。</li>
+<li>地址计算公式loc(i)=loc(0)+(i-1)*C=LOC(i-1)+C<h3 id="一些基本操作"><a href="#一些基本操作" class="headerlink" title="一些基本操作"></a>一些基本操作</h3><h4 id="图示"><a href="#图示" class="headerlink" title="图示"></a>图示</h4><h4 id="形成"><a href="#形成" class="headerlink" title="形成"></a>形成</h4><h4 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h4>在第i个元素前插入<br> public void insert(int i, Object x) throws Exception<pre><code>{
+    if(curLen == listElem.length)
+       throw new Exception(&quot;顺序表已经满了&quot;);
+    if(i&lt;0 || i&gt;curLen)
+       throw new Exception(&quot;插入位置不合理&quot;);
+    for(int j=curLen;j&gt;i;j--)
     {
+        listElem[j]=listElem[j-1];
+    }
+    listElem[i]=x;
+    curLen++;
+}
+</code></pre><h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4>删除第i个元素<br> public void remove(int i) throws Exception<pre><code>{
+    if(i&lt;0 || i&gt;curLen-1)
+        throw new Exception(&quot;删除位置不合理&quot;);
+    for(int j=i;j&lt;curLen-1;j++)
+    {
+        listElem[j]=listElem[j+1];
+    }
+    curLen--;
+}
+</code></pre><h4 id="查询某一个索引的元素"><a href="#查询某一个索引的元素" class="headerlink" title="查询某一个索引的元素"></a>查询某一个索引的元素</h4> public Object get(int i) throws Exception<pre><code>{
+    if(i&lt;0||i&gt;curLen-1)
+        throw new Exception(&quot;第&quot; + i + &quot;个元素不存在&quot;);
+    return listElem[i];
+}
+</code></pre><h4 id="查询某一个元素的索引"><a href="#查询某一个元素的索引" class="headerlink" title="查询某一个元素的索引"></a>查询某一个元素的索引</h4> public int indexOf(Object x) <pre><code>{
+    int j=0;
+    while(j&lt;curLen&amp;&amp;x!=listElem[j])
+    {
+        j++;
+        if(j&gt;curLen-1)
+            System.out.println(&quot;元素不存在&quot;);
+    }
+    return 0;
+}
+</code></pre><h4 id="遍历输出"><a href="#遍历输出" class="headerlink" title="遍历输出"></a>遍历输出</h4> public void display()<pre><code>{
+    for (int j = 0; j &lt; curLen; j++)
+        System.out.print(listElem[j] + &quot; &quot;);
+    System.out.println();// 换行
+}
+</code></pre><h4 id="置空"><a href="#置空" class="headerlink" title="置空"></a>置空</h4> public void clear() <pre><code>{
+    curLen=0;
+}
+</code></pre><h4 id="输出表的长度"><a href="#输出表的长度" class="headerlink" title="输出表的长度"></a>输出表的长度</h4> public int length() <pre><code>{
+    return curLen;
+}
+</code></pre><h4 id="判断当前线性表中元素个数是否为0"><a href="#判断当前线性表中元素个数是否为0" class="headerlink" title="判断当前线性表中元素个数是否为0"></a>判断当前线性表中元素个数是否为0</h4> public boolean isEmpty() <pre><code>{
+    if(curLen==0)
+       return true;
+    return false;
+}
+</code></pre><h3 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h3>支持随机访问；空间利用率高（连续分配，不存在空间浪费）<br>大小固定（一开始就要固定顺序表的最大长度）；插入和删除元素需要移动大量的数据<h3 id="顺序表效率分析"><a href="#顺序表效率分析" class="headerlink" title="顺序表效率分析"></a>顺序表效率分析</h3></li>
+</ol>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>插入操作：移动元素时，要从后往前操作，不能从前往后操作，不然元素会被覆盖的。<br>删除元素：移动元素时，要从前往后操作。</p>
+<h3 id="应用举例"><a href="#应用举例" class="headerlink" title="应用举例"></a>应用举例</h3><h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><h3 id="基本概念-1"><a href="#基本概念-1" class="headerlink" title="基本概念"></a>基本概念</h3><p>用一组地址任意的存储单元来存线性表中的元素。用结点（数据域+指针）的序列来表示。这个指针指向列表中的下一个节点，而最后一个节点则指向一个空值</p>
+<h3 id="分类-1"><a href="#分类-1" class="headerlink" title="分类"></a>分类</h3><h4 id="有头结点单链表"><a href="#有头结点单链表" class="headerlink" title="有头结点单链表"></a>有头结点单链表</h4><ol>
+<li>头指针：线性表中第一个元素的存储地址。</li>
+<li>头结点：头结点的数据域可以不存储任何信息，也可以存储如线性表长度等类的附加信息，头结点的指针域存储指向第一个结点的指针。这时头指针指向头结点的位置。</li>
+<li><p>什么时候单链表为空，头结点的指针域为空或是当前的表长度为0。<br>结点类的描述:<br> private Object data;<br> private MNode next;</p>
+<h5 id="一些基本操作-1"><a href="#一些基本操作-1" class="headerlink" title="一些基本操作"></a>一些基本操作</h5><h5 id="图示-1"><a href="#图示-1" class="headerlink" title="图示"></a>图示</h5><h5 id="形成-1"><a href="#形成-1" class="headerlink" title="形成"></a>形成</h5><p>可以通过头插法、尾插法来插入形成一个带有头结点的单链表<br> private void create2(int n) throws Exception </p>
+<pre><code>{
+    //其实可以采用传参的形式，这里借鉴那个采用输入,，由于需要一个结束循环的，所以n代表链表的长度
+    Scanner sc=new Scanner(System.in);
+    for (int m = 0; m&lt; n; m++)
+    {
+        insert(0,sc.next());
     }
 }
-</code></pre><h3 id="final变量（实例变量，静态变量，常量）"><a href="#final变量（实例变量，静态变量，常量）" class="headerlink" title="final变量（实例变量，静态变量，常量）"></a>final变量（实例变量，静态变量，常量）</h3><h4 id="示例-3"><a href="#示例-3" class="headerlink" title="示例"></a>示例</h4><pre><code>public class finalTest 
-{ 
-    private final String S = &quot;final实例变量S&quot;; 
-    private final int A = 100; 
-    public final int B = 90; 
-
-    public static final int C = 80; //同static一起定义常量
-    private static final int D = 70; 
-
-    public final int E; //final空白,必须在初始化对象的时候赋初值 
-
-    public finalTest(int x) 
-    { 
-        E = x; 
-    } 
-
-    /** 
-     * @param args 
-     */ 
-    public static void main(String[] args)
-    { 
-        finalTest t = new finalTest(2); 
-        //t.A=101;    //出错,final变量的值一旦给定就无法改变 
-        //t.B=91; //出错,final变量的值一旦给定就无法改变 
-        //t.C=81; //出错,final变量的值一旦给定就无法改变 
-        //t.D=71; //出错,final变量的值一旦给定就无法改变 
-
-        System.out.println(t.A); 
-        System.out.println(t.B); 
-        System.out.println(t.C); //不推荐用对象方式访问静态字段 
-        System.out.println(t.D); //不推荐用对象方式访问静态字段 
-        System.out.println(finalTest.C); 
-        System.out.println(finalTest.D); 
-        //System.out.println(Test3.E); //出错,因为E为final空白,依据不同对象值有所不同. 
-        System.out.println(t.E); 
-
-        finalTest t1 = new finalTest(3); 
-        System.out.println(t1.E); //final空白变量E依据对象的不同而不同 
-    } 
-}
-</code></pre><h2 id="abstract抽象类"><a href="#abstract抽象类" class="headerlink" title="abstract抽象类"></a>abstract抽象类</h2><p>包含一个或多个抽象方法的类必须被声明为抽象的。在子类中都有必要的操作要进行，但是在超类中却没有什么相关操作需要进行的方法为抽象方法,具体的实现在子类。</p>
-<h3 id="示例-4"><a href="#示例-4" class="headerlink" title="示例"></a>示例</h3><pre><code>public abstract class Person
-{
-    private String name;
-    public Person(String name)
-    {
-        this.name=name;
-    }
-    public abstract String getDescription();
-}
-</code></pre><h3 id="一些注意的地方"><a href="#一些注意的地方" class="headerlink" title="一些注意的地方"></a>一些注意的地方</h3><ol>
-<li>abstract不能被实例化，即不能创建这个类的对象，但是可以创建一个具体子类的对象。只能引用非抽象子类的对象。</li>
-<li>扩展抽象类有两种方法：抽象类中定义部分或者不定义抽象类方法，子类也为abstract类。</li>
-<li>抽象类中定义全部抽象方法，子类不是abstract类。</li>
-<li>abstract 关键字不能应用于 static、private 或 final 方法，因为这些方法不能被重写，因此，不能在子类中实现。</li>
-<li>final 类的方法都不能是 abstract，因为 final 类不能有子类。<h2 id="java中的访问权限"><a href="#java中的访问权限" class="headerlink" title="java中的访问权限"></a>java中的访问权限</h2></li>
-<li>private只有本类可见</li>
-<li>Protected本包与所有子类可见</li>
-<li>public所有类都可以看到</li>
-<li>没有修饰符，只对本包可见。default,不能声明变量。<br><img src="/images/Java访问权限.jpg" alt="img"></li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这次主要分析一下类的关键字&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://yoursite.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="读书笔记" scheme="http://yoursite.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java集合</title>
-    <link href="http://yoursite.com/2017/02/18/Collection/"/>
-    <id>http://yoursite.com/2017/02/18/Collection/</id>
-    <published>2017-02-18T10:38:23.000Z</published>
-    <updated>2017-02-23T05:13:34.355Z</updated>
-    
-    <content type="html"><![CDATA[<p>Java集合框架为不同类型的集合定义了大量的接口，这里主要讲解Collection接口，Map接口，Iterator接口。<br><a id="more"></a></p>
-<h2 id="Collection接口"><a href="#Collection接口" class="headerlink" title="Collection接口"></a>Collection接口</h2><h3 id="Collection集合体系继承树"><a href="#Collection集合体系继承树" class="headerlink" title="Collection集合体系继承树"></a>Collection集合体系继承树</h3><p><img src="/images/Collection集合体系继承树.jpg" alt="img"></p>
-<h3 id="Collection接口定义的常用方法"><a href="#Collection接口定义的常用方法" class="headerlink" title="Collection接口定义的常用方法"></a>Collection接口定义的常用方法</h3><ol>
-<li>Set中的数据对象没有顺序且不可以重复。</li>
-<li><p>List中的数据对象有顺序且可以重复。</p>
-<pre><code>public class CollectioDemo 
-{
-    public static void main(String[] args)
-    {
-        Collection li=new ArrayList();
-        System.out.println(li);//tostring()方法
-        li.add(&quot;fanlili&quot;);
-        li.add(&quot;徐ss&quot;);
-        System.out.println(li);
-        Collection li2=new ArrayList();//将一个集合加入到另一个集合中
-        li2.add(&quot;kek&quot;);
-        li2.add(&quot;mm&quot;);
-        li2.addAll(li);
-        System.out.println(li2);
-        Collection li3=new ArrayList();//对数字的添加直接做了装箱，其实就是Integer
-        li3.add(1);
-        li3.add(3);
-        li3.add(&quot;既有数值又有字符串&quot;);//一般存储同一类型的数据
-        System.out.println(li3);
-        System.out.println(&quot;-----------------------删除&quot;);
-        /*li2.clear();
-        System.out.println(li2);*/
-
-        /*li3.remove(1);
-        System.out.println(li3);/*?????li2为什么结果不同？？？*/
-
-        /*li2.removeAll(li);
-        System.out.println(li2);*/
-        System.out.println(&quot;-----------------------是否包含&quot;);
-        boolean isexist=li.contains(&quot;fanlili&quot;);
-        System.out.println(isexist);
-
-        boolean isexist2=li2.containsAll(li);
-        System.out.println(isexist2);
-
-        boolean isempty=li2.isEmpty();
-        System.out.println(isempty);
-
-        Object[] obarray=li2.toArray();//较为重要的将集合转换为数组
-        for(int i=0;i&lt;obarray.length;i++)
-        {
-            System.out.println(obarray[i]);
-        }
-    }
+</code></pre><p> public void create1(int n) throws Exception</p>
+<pre><code>{
+    Scanner sc=new Scanner(System.in);
+    for (int m1 = 0; m1&lt; n; m1++)
+        insert(m1,sc.next());
 }
 </code></pre></li>
 </ol>
-<p>运行结果：</p>
-<pre><code>[]
-[fanlili, 徐ss]
-[kek, mm, fanlili, 徐ss]
-[1, 3, 既有数值又有字符串]
------------------------删除
------------------------是否包含
-true
-true
-false
-kek
-mm
-fanlili
-徐ss
-</code></pre><h4 id="List"><a href="#List" class="headerlink" title="List"></a>List</h4><h5 id="ArrrayList常用方法（也有collection的那些方法）"><a href="#ArrrayList常用方法（也有collection的那些方法）" class="headerlink" title="ArrrayList常用方法（也有collection的那些方法）"></a>ArrrayList常用方法（也有collection的那些方法）</h5><pre><code>public class ListDemo 
-{
-    public static void main(String[] args)
+<h5 id="插入-1"><a href="#插入-1" class="headerlink" title="插入"></a>插入</h5><p>a. 找到第i个结点的前驱<br>b.将新的结点的后继指向第i个结点<br>c.将前驱的后继指向新结点<br>    public void insert(int i, Object x) throws Exception<br>        {</p>
+<pre><code>    MNode p=head;
+    int j=-1;
+    while(p != null &amp;&amp; j &lt; i - 1)
     {
-        List list=new ArrayList();
-        list.add(&quot;fanlili&quot;);
-        list.add(&quot;ggg&quot;);
-        list.add(1, &quot;xumeng&quot;);//在哪个后面插
-        list.add(&quot;fanliliwww&quot;);
-        System.out.println(list);
-        Object ob=list.get(2);//根据索引获取元素
-        System.out.println(ob);
-        int num=list.size(); //获取list的元素个数
-        System.out.println(num);
-        ListIterator iter=list.listIterator();//ListIterator功能更加强大
-        while(iter.hasNext())
-        {
-            Object obj=iter.next();
-            System.out.println(obj);
-        }
-        System.out.println(&quot;----------------------------------------&quot;);
-        String str= (String)iter.previous();//实现从后向前遍历
-        System.out.println(str);
-        int pindex=iter.previousIndex();//previousIndex来指示下一个previous()要读取的元素位置
-        System.out.println(pindex);
+        p=p.getNext();
+        j++;
     }
+    if (j &gt; i - 1 || p == null) // i不合法
+        throw new Exception(&quot;插入位置不合理&quot;);// 输出异常
+    MNode s=new MNode(x,p);
+    s.setNext(p.getNext());
+    p.setNext(s);
 }
-</code></pre><p>运行结果如下：</p>
-<pre><code>[fanlili, xumeng, ggg, fanliliwww]
-ggg
-4
-fanlili
-xumeng
-ggg
-fanliliwww
-----------------------------------------
-fanliliwww
-2
-</code></pre><h5 id="vector常用方法（也有collection的那些方法）"><a href="#vector常用方法（也有collection的那些方法）" class="headerlink" title="vector常用方法（也有collection的那些方法）"></a>vector常用方法（也有collection的那些方法）</h5><pre><code>public class VectorDemo 
-{
-    public static void main(String[] args) 
-    {
-        Vector al=new Vector();//构造一个空向量
-        al.addElement(1);
-        System.out.println(al);
-        al.addElement(new student(&quot;徐ww&quot;,30));
-        al.addElement(new student(&quot;樊dd&quot;,88));
-        al.addElement(new student(&quot;文ww&quot;,30));
-        System.out.println(al);
-        student stu=(student) al.elementAt(1);
-        System.out.println(stu);
-    }
-}
-</code></pre><p>运行结果：</p>
-<pre><code>[1]
-[1, student [name=徐ww, age=30], student [name=樊dd, age=88], student [name=文dd, age=30]]
-student [name=徐ww, age=30]
-</code></pre><h5 id="LinkedList常用方法"><a href="#LinkedList常用方法" class="headerlink" title="LinkedList常用方法"></a>LinkedList常用方法</h5><pre><code>    boolean    add(E e) 
-              将指定元素添加到此列表的结尾。
-     void    add(int index, E element) 
-              在此列表中指定的位置插入指定的元素。
-     boolean    addAll(Collection&lt;? extends E&gt; c) 
-              添加指定 collection 中的所有元素到此列表的结尾，顺序是指定 collection 的迭代器返回这些元素的顺序。
-     boolean    addAll(int index, Collection&lt;? extends E&gt; c) 
-              将指定 collection 中的所有元素从指定位置开始插入此列表。
-     void    addFirst(E e) 
-              将指定元素插入此列表的开头。
-     void    addLast(E e) 
-              将指定元素添加到此列表的结尾。
-     void    clear() 
-              从此列表中移除所有元素。
-     Object
-    clone() 
-              返回此 LinkedList 的浅表副本。
-     boolean    contains(Object o) 
-              如果此列表包含指定元素，则返回 true。
-     Iterator&lt;E&gt;
-    descendingIterator() 
-              返回以逆向顺序在此双端队列的元素上进行迭代的迭代器。
-     E
-    element() 
-              获取但不移除此列表的头（第一个元素）。
-     E
-    get(int index) 
-              返回此列表中指定位置处的元素。
-     E
-    getFirst() 
-              返回此列表的第一个元素。
-     E
-    getLast() 
-              返回此列表的最后一个元素。
-     int    indexOf(Object o) 
-              返回此列表中首次出现的指定元素的索引，如果此列表中不包含该元素，则返回 -1。
-     int    lastIndexOf(Object o) 
-              返回此列表中最后出现的指定元素的索引，如果此列表中不包含该元素，则返回 -1。
-     ListIterator&lt;E&gt;
-    listIterator(int index) 
-              返回此列表中的元素的列表迭代器（按适当顺序），从列表中指定位置开始。
-     boolean    offer(E e) 
-              将指定元素添加到此列表的末尾（最后一个元素）。
-     boolean    offerFirst(E e) 
-              在此列表的开头插入指定的元素。
-     boolean    offerLast(E e) 
-              在此列表末尾插入指定的元素。
-     E
-    peek() 
-              获取但不移除此列表的头（第一个元素）。
-     E
-    peekFirst() 
-              获取但不移除此列表的第一个元素；如果此列表为空，则返回 null。
-     E
-    peekLast() 
-              获取但不移除此列表的最后一个元素；如果此列表为空，则返回 null。
-     E
-    poll() 
-              获取并移除此列表的头（第一个元素）
-     E
-    pollFirst() 
-              获取并移除此列表的第一个元素；如果此列表为空，则返回 null。
-     E
-    pollLast() 
-              获取并移除此列表的最后一个元素；如果此列表为空，则返回 null。
-     E
-    pop() 
-              从此列表所表示的堆栈处弹出一个元素。
-     void    push(E e) 
-              将元素推入此列表所表示的堆栈。
-     E
-    remove() 
-              获取并移除此列表的头（第一个元素）。
-     E
-    remove(int index) 
-              移除此列表中指定位置处的元素。
-     boolean    remove(Object o) 
-              从此列表中移除首次出现的指定元素（如果存在）。
-     E
-    removeFirst() 
-              移除并返回此列表的第一个元素。
-     boolean    removeFirstOccurrence(Object o) 
-              从此列表中移除第一次出现的指定元素（从头部到尾部遍历列表时）。
-     E
-    removeLast() 
-              移除并返回此列表的最后一个元素。
-     boolean    removeLastOccurrence(Object o) 
-              从此列表中移除最后一次出现的指定元素（从头部到尾部遍历列表时）。
-     E
-    set(int index, E element) 
-              将此列表中指定位置的元素替换为指定的元素。
-     int    size() 
-              返回此列表的元素数。
-     Object[]
-    toArray() 
-              返回以适当顺序（从第一个元素到最后一个元素）包含此列表中所有元素的数组。
-    &lt;T&gt; T[]
-        toArray(T[] a) 
-              返回以适当顺序（从第一个元素到最后一个元素）包含此列表中所有元素的数组；返回数组的运行时类型为指定数组的类型。
-public class LinkedListDemo 
-{
-    public static void main(String[] args) 
-    {
-        stack();
-    }
-    public static void stack()
-    {
-        LinkedList al=new LinkedList();
-        al.push(new student(&quot;徐ww&quot;,30));
-        al.push(new student(&quot;樊dd&quot;,88));
-        al.push(new student(&quot;文dd&quot;,30));
-        student stu=(student) al.pop();
-        System.out.println(&quot;------------------------&quot;);
-        Iterator iter=al.iterator();
-        while(iter.hasNext())
-        {
-            //获得集合中的一个元素
-            Object obj=iter.next();
-            System.out.println(obj);
-        }
-    }
-}
-</code></pre><p>运行结果：</p>
-<pre><code>------------------------
-student [name=樊dd, age=88]
-student [name=徐ww, age=30]
-</code></pre><p> *push元素推入此列表所表示的堆栈，add是将指定元素添加到此列表的结尾。</p>
-<h5 id="三者的区别："><a href="#三者的区别：" class="headerlink" title="三者的区别："></a>三者的区别：</h5><ol>
-<li>ArrayList是最常用的List实现类，内部是通过数组实现的，它允许对元素进行快速随机访问。数组的缺点是每个元素之间不能有间隔，当数组大小不满足时需要增加存储能力，就要讲已经有数组的数据复制到新的存储空间中。当从ArrayList的中间位置插入或者删除元素时，需要对数组进行复制、移动、代价比较高。因此，它适合随机查找和遍历，不适合插入和删除。</li>
-<li>Vector与ArrayList一样，也是通过数组实现的，不同的是它支持线程的同步，即某一时刻只有一个线程能够写Vector，避免多线程同时写而引起的不一致性，但实现同步需要很高的花费，因此，访问它比访问ArrayList慢。</li>
-<li><p>LinkedList是用链表结构存储数据的，很适合数据的动态插入和删除，随机访问和遍历速度比较慢。另外，他还提供了List接口中没有定义的方法，专门用于操作表头和表尾元素，可以当作堆栈、队列和双向队列使用。</p>
-<h4 id="插入一个泛型示例"><a href="#插入一个泛型示例" class="headerlink" title="插入一个泛型示例"></a>插入一个泛型示例</h4><p>*为了创建容器类，有了泛型，用&lt;&gt;括起来，在编译期，是无法知道K和V具体是什么类型，只有在运行时才会真正根据类型来构造和分配内存。</p>
-</li>
-<li><p>泛型接口</p>
-<pre><code>public interface Generator&lt;T&gt;
-public class FruitGenerator implements Generator&lt;String&gt;
-FruitGenerator generator = new FruitGenerator();
-</code></pre></li>
-<li><p>泛型类 </p>
-<pre><code>public class Test&lt;T&gt;{}
-Test&lt;Object&gt; t = new Test&lt;Object&gt;();
-</code></pre></li>
-<li><p>泛型方法</p>
-<pre><code>public static &lt;T&gt; void out(T t) 
-{
-   System.out.println(t);
-}
-</code></pre></li>
-<li><p>结合集合的示例</p>
-<pre><code>public interface BaseDao&lt;T&gt; 
-{
-    public void save(T t);
-    public T getT(Integer i);
-    public List&lt;T&gt;     listT();
-}
-
-public class StudentImplDemo implements BaseDao&lt;student&gt; 
-{
-    List&lt;student&gt; sList=new ArrayList&lt;student&gt;();
-
-    @Override
-    public void save(student t) 
-    {
-
-        sList.add(t);
-    }
-
-    @Override
-    public student getT(Integer i) 
-    {
-        sList.get(i);
-        return null;
-    }
-
-    @Override
-    public List&lt;student&gt; listT() 
-    {
-
-        return sList;
-    }
-
-}
-
-public class studentTest 
-{
-    private static BaseDao&lt;student&gt; basedao=new StudentImplDemo();
-
-    public static void main(String[] args) 
-    {
-        student s=new student(&quot;xumeng&quot; ,88);
-        student s1=new student(&quot;xumengf&quot; ,80);
-        basedao.save(s);
-        basedao.save(s1);
-        List&lt;student&gt; slist=basedao.listT();
-        System.out.println(slist);
-
-    }
-}   
-</code></pre></li>
+</code></pre><h5 id="删除-1"><a href="#删除-1" class="headerlink" title="删除"></a>删除</h5><h5 id="查询某一个索引的元素-1"><a href="#查询某一个索引的元素-1" class="headerlink" title="查询某一个索引的元素"></a>查询某一个索引的元素</h5><h5 id="查询某一个元素的索引-1"><a href="#查询某一个元素的索引-1" class="headerlink" title="查询某一个元素的索引"></a>查询某一个元素的索引</h5><h5 id="遍历输出-1"><a href="#遍历输出-1" class="headerlink" title="遍历输出"></a>遍历输出</h5><h5 id="置空-1"><a href="#置空-1" class="headerlink" title="置空"></a>置空</h5><h5 id="输出表的长度-1"><a href="#输出表的长度-1" class="headerlink" title="输出表的长度"></a>输出表的长度</h5><h4 id="无头结点的单链表"><a href="#无头结点的单链表" class="headerlink" title="无头结点的单链表"></a>无头结点的单链表</h4><h5 id="一些基本操作-2"><a href="#一些基本操作-2" class="headerlink" title="一些基本操作"></a>一些基本操作</h5><h5 id="图示-2"><a href="#图示-2" class="headerlink" title="图示"></a>图示</h5><h5 id="形成-2"><a href="#形成-2" class="headerlink" title="形成"></a>形成</h5><h5 id="插入-2"><a href="#插入-2" class="headerlink" title="插入"></a>插入</h5><p>头插法<br>尾插法</p>
+<h5 id="删除-2"><a href="#删除-2" class="headerlink" title="删除"></a>删除</h5><h5 id="查询某一个索引的元素-2"><a href="#查询某一个索引的元素-2" class="headerlink" title="查询某一个索引的元素"></a>查询某一个索引的元素</h5><h5 id="查询某一个元素的索引-2"><a href="#查询某一个元素的索引-2" class="headerlink" title="查询某一个元素的索引"></a>查询某一个元素的索引</h5><h5 id="遍历输出-2"><a href="#遍历输出-2" class="headerlink" title="遍历输出"></a>遍历输出</h5><h5 id="置空-2"><a href="#置空-2" class="headerlink" title="置空"></a>置空</h5><h5 id="输出表的长度-2"><a href="#输出表的长度-2" class="headerlink" title="输出表的长度"></a>输出表的长度</h5><h4 id="双链表"><a href="#双链表" class="headerlink" title="双链表"></a>双链表</h4><h5 id="一些基本操作-3"><a href="#一些基本操作-3" class="headerlink" title="一些基本操作"></a>一些基本操作</h5><h5 id="图示-3"><a href="#图示-3" class="headerlink" title="图示"></a>图示</h5><h5 id="形成-3"><a href="#形成-3" class="headerlink" title="形成"></a>形成</h5><h5 id="插入-3"><a href="#插入-3" class="headerlink" title="插入"></a>插入</h5><p>头插法<br>尾插法</p>
+<h5 id="删除-3"><a href="#删除-3" class="headerlink" title="删除"></a>删除</h5><h5 id="查询某一个索引的元素-3"><a href="#查询某一个索引的元素-3" class="headerlink" title="查询某一个索引的元素"></a>查询某一个索引的元素</h5><h5 id="查询某一个元素的索引-3"><a href="#查询某一个元素的索引-3" class="headerlink" title="查询某一个元素的索引"></a>查询某一个元素的索引</h5><h5 id="遍历输出-3"><a href="#遍历输出-3" class="headerlink" title="遍历输出"></a>遍历输出</h5><h5 id="置空-3"><a href="#置空-3" class="headerlink" title="置空"></a>置空</h5><h5 id="输出表的长度-3"><a href="#输出表的长度-3" class="headerlink" title="输出表的长度"></a>输出表的长度</h5><h4 id="循环列表"><a href="#循环列表" class="headerlink" title="循环列表"></a>循环列表</h4><h5 id="一些基本操作-4"><a href="#一些基本操作-4" class="headerlink" title="一些基本操作"></a>一些基本操作</h5><h5 id="图示-4"><a href="#图示-4" class="headerlink" title="图示"></a>图示</h5><h5 id="形成-4"><a href="#形成-4" class="headerlink" title="形成"></a>形成</h5><h5 id="插入-4"><a href="#插入-4" class="headerlink" title="插入"></a>插入</h5><p>头插法<br>尾插法</p>
+<h5 id="删除-4"><a href="#删除-4" class="headerlink" title="删除"></a>删除</h5><h5 id="查询某一个索引的元素-4"><a href="#查询某一个索引的元素-4" class="headerlink" title="查询某一个索引的元素"></a>查询某一个索引的元素</h5><h5 id="查询某一个元素的索引-4"><a href="#查询某一个元素的索引-4" class="headerlink" title="查询某一个元素的索引"></a>查询某一个元素的索引</h5><h5 id="遍历输出-4"><a href="#遍历输出-4" class="headerlink" title="遍历输出"></a>遍历输出</h5><h5 id="置空-4"><a href="#置空-4" class="headerlink" title="置空"></a>置空</h5><h5 id="输出表的长度-4"><a href="#输出表的长度-4" class="headerlink" title="输出表的长度"></a>输出表的长度</h5><h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><h3 id="基本概念-2"><a href="#基本概念-2" class="headerlink" title="基本概念"></a>基本概念</h3><ol>
+<li>由地址连续的存储单元依次存放线性表中的数据。</li>
+<li>基地址：线性表的起始地址。</li>
+<li>地址计算公式<h3 id="一些特点"><a href="#一些特点" class="headerlink" title="一些特点"></a>一些特点</h3><h3 id="一些基本操作-5"><a href="#一些基本操作-5" class="headerlink" title="一些基本操作"></a>一些基本操作</h3><h4 id="图示-5"><a href="#图示-5" class="headerlink" title="图示"></a>图示</h4><h4 id="形成-5"><a href="#形成-5" class="headerlink" title="形成"></a>形成</h4><h4 id="插入-5"><a href="#插入-5" class="headerlink" title="插入"></a>插入</h4><h4 id="删除-5"><a href="#删除-5" class="headerlink" title="删除"></a>删除</h4><h4 id="查询某一个索引的元素-5"><a href="#查询某一个索引的元素-5" class="headerlink" title="查询某一个索引的元素"></a>查询某一个索引的元素</h4><h4 id="查询某一个元素的索引-5"><a href="#查询某一个元素的索引-5" class="headerlink" title="查询某一个元素的索引"></a>查询某一个元素的索引</h4><h4 id="遍历输出-5"><a href="#遍历输出-5" class="headerlink" title="遍历输出"></a>遍历输出</h4><h4 id="置空-5"><a href="#置空-5" class="headerlink" title="置空"></a>置空</h4><h4 id="输出表的长度-5"><a href="#输出表的长度-5" class="headerlink" title="输出表的长度"></a>输出表的长度</h4></li>
 </ol>
-<h4 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h4><h5 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h5>]]></content>
+]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Java集合框架为不同类型的集合定义了大量的接口，这里主要讲解Collection接口，Map接口，Iterator接口。&lt;br&gt;
+      &lt;p&gt;按元素之间的逻辑关系不同可以分为线性表，图，树，集合。之前分析了集合，接下来会一次分析那几个。&lt;br&gt;
     
     </summary>
     
       <category term="读书笔记" scheme="http://yoursite.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="读书笔记" scheme="http://yoursite.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MavenStudy</title>
-    <link href="http://yoursite.com/2017/01/30/MavenStudy/"/>
-    <id>http://yoursite.com/2017/01/30/MavenStudy/</id>
-    <published>2017-01-30T08:33:14.000Z</published>
-    <updated>2017-02-05T15:14:17.091Z</updated>
-    
-    <content type="html"><![CDATA[<p>Maven是用来干什么的<br>管理项目的工具<br>下载<br>我的jdk是1.8<br>下载版本为3.3.9<br>配置环境变量<br>配置 maven 环境变量(系统变量)：MAVEN_HOME F:\maven\apache-maven-3.3.9<br>在path中添加：;%MAVEN_HOME%\bin<br>maven 版的helloworld<br>maven 要用到本地仓库，没有会去联网下载</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Maven是用来干什么的&lt;br&gt;管理项目的工具&lt;br&gt;下载&lt;br&gt;我的jdk是1.8&lt;br&gt;下载版本为3.3.9&lt;br&gt;配置环境变量&lt;br&gt;配置 maven 环境变量(系统变量)：MAVEN_HOME F:\maven\apache-maven-3.3.9&lt;br&gt;在path
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>你好</title>
-    <link href="http://yoursite.com/2017/01/29/tet/"/>
-    <id>http://yoursite.com/2017/01/29/tet/</id>
-    <published>2017-01-29T04:04:28.000Z</published>
-    <updated>2017-03-03T12:23:43.238Z</updated>
-    
-    <content type="html"><![CDATA[<p>首先需要明白在这里怎么发表博客怎么来玩<br>我觉得我们都要这样爱初二呼和扩说扩军多活菌多菌或扩多索扩所扩军多敷或多敷或获付俊福军副扩<br><a id="more"></a><br><img src="/images/fll.jpg" alt="img"><br><img src="http://ok9uy2u37.bkt.clouddn.com/fll.jpg" alt="img"></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;首先需要明白在这里怎么发表博客怎么来玩&lt;br&gt;我觉得我们都要这样爱初二呼和扩说扩军多活菌多菌或扩多索扩所扩军多敷或多敷或获付俊福军副扩&lt;br&gt;
-    
-    </summary>
-    
-      <category term="测试" scheme="http://yoursite.com/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="练习" scheme="http://yoursite.com/tags/%E7%BB%83%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://yoursite.com/2017/01/29/test/"/>
-    <id>http://yoursite.com/2017/01/29/test/</id>
-    <published>2017-01-28T16:08:17.000Z</published>
-    <updated>2017-01-29T06:58:14.098Z</updated>
-    
-    <content type="html"><![CDATA[<p>hwhwhwhwhwhwhwhwwhwhhwhwhwhwhwwwwwwwww是护手霜上海市<br><a id="more"></a><br>jdjdjdjdj是护手霜上海市shh</p>
-<div id="jj" class="post-more-link"><br>  <a href="#" class="btn">MyButton</a><br></div>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;hwhwhwhwhwhwhwhwwhwhhwhwhwhwhwwwwwwwww是护手霜上海市&lt;br&gt;
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://yoursite.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2017/01/25/hello-world/"/>
-    <id>http://yoursite.com/2017/01/25/hello-world/</id>
-    <published>2017-01-24T16:48:04.881Z</published>
-    <updated>2017-02-23T03:34:31.760Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br><a id="more"></a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-<h2 id="Quick-Start-1"><a href="#Quick-Start-1" class="headerlink" title="Quick Start"></a>Quick Start</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;br&gt;
-    
-    </summary>
-    
+      <category term="数据结构" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   

@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="数据结构," />
 
 
 
@@ -88,16 +88,25 @@
 
 
 
-<meta name="description" content="一个搬砖的女娃">
+<meta name="description" content="可以用树一种表示元素与逻辑关系。树是由n&amp;gt;=0个节点构成的有限集合，n&amp;gt;0时结点必须满足有且仅有一个根节点，其余结点又可以分层m(m&amp;gt;0)个集合，每个集合都是一棵树。
+一些基本概念分类二叉树基本概念一些性质二叉树的链式存储结构既然是链式存储，那一定会有结点类，链式本来就是元素+指针。
+结点类部分展示private Object data;
+private BiTreeNode r">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tree">
 <meta property="og:url" content="http://yoursite.com/2017/02/24/Tree/index.html">
 <meta property="og:site_name" content="fanlili's blog">
-<meta property="og:description" content="一个搬砖的女娃">
-<meta property="og:updated_time" content="2017-02-24T06:52:50.435Z">
+<meta property="og:description" content="可以用树一种表示元素与逻辑关系。树是由n&amp;gt;=0个节点构成的有限集合，n&amp;gt;0时结点必须满足有且仅有一个根节点，其余结点又可以分层m(m&amp;gt;0)个集合，每个集合都是一棵树。
+一些基本概念分类二叉树基本概念一些性质二叉树的链式存储结构既然是链式存储，那一定会有结点类，链式本来就是元素+指针。
+结点类部分展示private Object data;
+private BiTreeNode r">
+<meta property="og:updated_time" content="2017-03-09T13:00:42.616Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tree">
-<meta name="twitter:description" content="一个搬砖的女娃">
+<meta name="twitter:description" content="可以用树一种表示元素与逻辑关系。树是由n&amp;gt;=0个节点构成的有限集合，n&amp;gt;0时结点必须满足有且仅有一个根节点，其余结点又可以分层m(m&amp;gt;0)个集合，每个集合都是一棵树。
+一些基本概念分类二叉树基本概念一些性质二叉树的链式存储结构既然是链式存储，那一定会有结点类，链式本来就是元素+指针。
+结点类部分展示private Object data;
+private BiTreeNode r">
 
 
 
@@ -374,7 +383,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">字数统计:</span>
-           <span class="post-count">0(字)</span>          
+           <span class="post-count">209(字)</span>          
          </span>
 		<!--
 		<span class="post-time">
@@ -383,7 +392,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">阅读时长:</span>
-           <span class="post-count">0(分)</span>         
+           <span class="post-count">1(分)</span>         
          </span>
 		-->
 		
@@ -405,7 +414,27 @@
       
 
       
-        
+        <p>可以用树一种表示元素与逻辑关系。树是由n&gt;=0个节点构成的有限集合，n&gt;0时结点必须满足有且仅有一个根节点，其余结点又可以分层m(m&gt;0)个集合，每个集合都是一棵树。</p>
+<h1 id="一些基本概念"><a href="#一些基本概念" class="headerlink" title="一些基本概念"></a>一些基本概念</h1><h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><h3 id="一些性质"><a href="#一些性质" class="headerlink" title="一些性质"></a>一些性质</h3><h3 id="二叉树的链式存储结构"><a href="#二叉树的链式存储结构" class="headerlink" title="二叉树的链式存储结构"></a>二叉树的链式存储结构</h3><p>既然是链式存储，那一定会有结点类，链式本来就是元素+指针。</p>
+<h4 id="结点类部分展示"><a href="#结点类部分展示" class="headerlink" title="结点类部分展示"></a>结点类部分展示</h4><pre><code>private Object data;
+private BiTreeNode rchild,lchild;
+public BiTreeNode() 
+{
+    this(null);
+}
+public BiTreeNode(Object data) 
+{
+    this(data,null,null);
+}
+public BiTreeNode(Object data, BiTreeNode rchild, BiTreeNode lchild) 
+{
+
+    this.data = data;
+    this.rchild = rchild;
+    this.lchild = lchild;
+}
+</code></pre><h4 id="建立"><a href="#建立" class="headerlink" title="建立"></a>建立</h4><h4 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h4><h4 id="增"><a href="#增" class="headerlink" title="增"></a>增</h4><h4 id="删"><a href="#删" class="headerlink" title="删"></a>删</h4><h4 id="查"><a href="#查" class="headerlink" title="查"></a>查</h4><h4 id="长度"><a href="#长度" class="headerlink" title="长度"></a>长度</h4><h4 id="判断是否为空"><a href="#判断是否为空" class="headerlink" title="判断是否为空"></a>判断是否为空</h4><p>####</p>
+<h2 id="满二叉树"><a href="#满二叉树" class="headerlink" title="满二叉树"></a>满二叉树</h2><h2 id="完全二叉树"><a href="#完全二叉树" class="headerlink" title="完全二叉树"></a>完全二叉树</h2><h2 id="平衡二叉树（Huffman树）"><a href="#平衡二叉树（Huffman树）" class="headerlink" title="平衡二叉树（Huffman树）"></a>平衡二叉树（Huffman树）</h2><h2 id="二叉搜索树"><a href="#二叉搜索树" class="headerlink" title="二叉搜索树"></a>二叉搜索树</h2><h2 id="高度平衡"><a href="#高度平衡" class="headerlink" title="高度平衡"></a>高度平衡</h2>
 	  
 
     </div>
@@ -426,6 +455,12 @@
 
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
+          
+        </div>
       
 
       
@@ -493,8 +528,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/fll.jpg"
@@ -507,7 +551,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -525,7 +569,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -586,6 +630,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一些基本概念"><span class="nav-number">1.</span> <span class="nav-text">一些基本概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分类"><span class="nav-number">2.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树"><span class="nav-number">2.1.</span> <span class="nav-text">二叉树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本概念"><span class="nav-number">2.1.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一些性质"><span class="nav-number">2.1.2.</span> <span class="nav-text">一些性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二叉树的链式存储结构"><span class="nav-number">2.1.3.</span> <span class="nav-text">二叉树的链式存储结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#结点类部分展示"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">结点类部分展示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#建立"><span class="nav-number">2.1.3.2.</span> <span class="nav-text">建立</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遍历"><span class="nav-number">2.1.3.3.</span> <span class="nav-text">遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#增"><span class="nav-number">2.1.3.4.</span> <span class="nav-text">增</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删"><span class="nav-number">2.1.3.5.</span> <span class="nav-text">删</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查"><span class="nav-number">2.1.3.6.</span> <span class="nav-text">查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#长度"><span class="nav-number">2.1.3.7.</span> <span class="nav-text">长度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#判断是否为空"><span class="nav-number">2.1.3.8.</span> <span class="nav-text">判断是否为空</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#满二叉树"><span class="nav-number">2.2.</span> <span class="nav-text">满二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完全二叉树"><span class="nav-number">2.3.</span> <span class="nav-text">完全二叉树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平衡二叉树（Huffman树）"><span class="nav-number">2.4.</span> <span class="nav-text">平衡二叉树（Huffman树）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉搜索树"><span class="nav-number">2.5.</span> <span class="nav-text">二叉搜索树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高度平衡"><span class="nav-number">2.6.</span> <span class="nav-text">高度平衡</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
